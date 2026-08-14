@@ -19,6 +19,17 @@ gilt: projektspezifische Angaben hier überschreiben die globalen Defaults.
 - **Social-Media:** keine bestätigten Profile bekannt, `business.socials` ist
   bewusst leer.
 
+## Sprachregel – verbindlich für das gesamte Projekt
+
+Körpergfüh ist Viktorias persönliches Studio. Überall, wo Viktoria über ihre
+Arbeit, Betreuung, Philosophie, Qualifikation oder den Kontakt spricht, wird
+konsequent die **Ich-Perspektive** verwendet ("Ich nehme mir Zeit …", nicht
+"Viktoria nimmt sich Zeit …"). Kundinnen und Kunden werden durchgehend mit
+**„du"** angesprochen. Sachliche Bereiche (Preise, Leistungslisten, FAQs,
+Terminregelungen) dürfen neutral formuliert sein. Gilt für alle bestehenden
+und künftigen Seiten – bei neuen Texten immer gegenprüfen, ob unabsichtlich
+in die dritte Person gerutscht wird.
+
 ## Branding
 
 - **Farben:** aus dem bestehenden Logo (`public/images/logo.png`) abgeleitet,
@@ -29,6 +40,10 @@ gilt: projektspezifische Angaben hier überschreiben die globalen Defaults.
   - `--color-mint-deep` (#5c9c82) – kräftigeres Mint für Hover-Zustände
   - `--color-petrol` (#1f3a34) – dunkles Petrol/Grün für Headlines & Nav
   - `--color-gold` (#c8a86b) – warmer Goldton, nur sehr sparsam als Akzent
+  - `--color-mist` (#eaeaea) – sekundäre neutrale Fläche aus der bisherigen
+    Körpergfüh-Website, bewusst erhalten. Einsatz für ruhige Sections, FAQs,
+    Preisbereiche oder Hintergrundelemente (z.B. Onkologie-Bereich und FAQ
+    auf `/fusspflege`), nicht als dominante Grundfarbe.
   - **Sobald die Original-Logodatei (Vektor/hochauflösend) vorliegt: Farbwerte
     exakt gegen das Original abgleichen und diese Tokens ggf. feinjustieren.**
 - **Typografie Headlines:** Cormorant Garamond (`--font-cormorant`)
@@ -47,8 +62,9 @@ Implementiert in `src/components/ui/ImagePlaceholder.tsx` über die Prop
 ## Leistungen / Seitenstruktur
 
 - [x] Home (vollständig nach Konzept umgesetzt)
-- [x] `/fusspflege` (Platzhalter – volle Leistungsseite folgt)
-- [x] `/haarentfernung` (Platzhalter – volle Leistungsseite folgt)
+- [x] `/fusspflege` (vollständig nach Konzept umgesetzt, siehe unten)
+- [ ] `/haarentfernung` (aktuell Platzhalter – volle Leistungsseite folgt,
+  analog zu `/fusspflege` aufbauen)
 - [ ] Preise (im aktuellen Konzept nicht vorgesehen – ggf. später ergänzen)
 - [x] Über uns (Anchor `#ueber-mich` auf der Startseite, keine eigene Seite)
 - [x] Kontakt (Anchor `#kontakt` auf der Startseite, keine eigene Seite)
@@ -79,6 +95,16 @@ Testimonials: `src/lib/data/business.ts` → `testimonials` ist bewusst leer.
 Die Komponente `Testimonials.tsx` rendert `null`, solange das Array leer ist.
 Keine Bewertungen, Namen oder Sterne erfinden – erst nach echter Freigabe
 befüllen.
+
+## `/fusspflege` – Datenstruktur & Inhalte
+
+Alle Leistungen, Preise, FAQs, Neukundenstatus und Stornoregelung liegen
+zentral in `src/lib/data/fusspflege.ts` (Preisänderungen ausschließlich dort
+vornehmen). Texte auf der Seite sind wortgetreu aus der Kundenvorgabe
+übernommen – keine Umformulierungen ohne Rücksprache. Keine Heilversprechen
+im Onkologie-Bereich ergänzen (keine Aussagen zu Komplikationsvermeidung,
+Krankheitsbehandlung, garantierter Linderung, Schädigungsvermeidung oder
+Ersatz einer medizinischen Behandlung).
 
 ## Setup-Status
 

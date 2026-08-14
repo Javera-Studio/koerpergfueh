@@ -12,6 +12,7 @@
   --color-mint-deep: #5c9c82; /* etwas kräftigeres Mint für Hover/Kontrast */
   --color-petrol: #1f3a34; /* dunkles Petrol/Grün für Headlines & Navigation */
   --color-gold: #c8a86b; /* warmer Beige-/Goldton, nur sehr sparsam als Akzent */
+  --color-mist: #eaeaea; /* sekundäre neutrale Fläche aus der bisherigen Website, bewusst erhalten */
   --color-cream-foreground: var(--color-petrol);
 }
 
@@ -22,6 +23,7 @@
   --color-mint-deep: var(--color-mint-deep);
   --color-petrol: var(--color-petrol);
   --color-gold: var(--color-gold);
+  --color-mist: var(--color-mist);
 
   --font-display: var(--font-cormorant);
   --font-sans: var(--font-dm-sans);

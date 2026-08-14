@@ -15,8 +15,8 @@ export default function HaarentfernungPage() {
       </h1>
       <p className="mt-6 font-sans text-lg leading-relaxed text-petrol/80">
         Die ausführliche Leistungsseite zur dauerhaften Haarentfernung wird in
-        Kürze ergänzt. Wende dich gerne direkt an Viktoria, wenn du jetzt
-        schon Fragen hast.
+        Kürze ergänzt. Melde dich gerne direkt bei mir, wenn du jetzt schon
+        Fragen hast.
       </p>
       <Link
         href="/#kontakt"

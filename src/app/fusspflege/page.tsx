@@ -1,28 +1,53 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { business } from "@/lib/data/business";
+import { fusspflegeFaqs } from "@/lib/data/fusspflege";
+import { FaqJsonLd } from "@/components/seo/FaqJsonLd";
+import { FusspflegeHero } from "@/components/fusspflege/Hero";
+import { FusspflegePainpoints } from "@/components/fusspflege/Painpoints";
+import { FusspflegeTransition } from "@/components/fusspflege/Transition";
+import { FusspflegeMainTreatments } from "@/components/fusspflege/MainTreatments";
+import { FusspflegeOncology } from "@/components/fusspflege/Oncology";
+import { FusspflegeMoreServices } from "@/components/fusspflege/MoreServices";
+import { FusspflegeManicure } from "@/components/fusspflege/Manicure";
+import { FusspflegeProcess } from "@/components/fusspflege/Process";
+import { FusspflegeTrust } from "@/components/fusspflege/Trust";
+import { FusspflegeFaq } from "@/components/fusspflege/Faq";
+import { FusspflegeCancellationPolicy } from "@/components/fusspflege/CancellationPolicy";
+import { FusspflegeFinalCta } from "@/components/fusspflege/FinalCta";
 
 export const metadata: Metadata = {
-  title: "Fußpflege in Lambach",
+  title: { absolute: "Fußpflege in Lambach | Körpergfüh by Viki" },
   description:
-    "Professionelle Fußpflege bei Körpergfüh by Viki in Lambach – Detailseite folgt in Kürze.",
+    "Professionelle Fußpflege in Lambach bei Körpergfüh by Viki – von regelmäßiger Pflege bis zur onkologisch-kosmetischen Fußpflege. Persönlich und individuell betreut.",
+  alternates: {
+    canonical: `https://${business.domain}/fusspflege`,
+  },
+  openGraph: {
+    title: "Fußpflege in Lambach | Körpergfüh by Viki",
+    description:
+      "Professionelle Fußpflege in Lambach bei Körpergfüh by Viki – von regelmäßiger Pflege bis zur onkologisch-kosmetischen Fußpflege. Persönlich und individuell betreut.",
+    url: `https://${business.domain}/fusspflege`,
+    locale: "de_AT",
+    type: "website",
+  },
 };
 
 export default function FusspflegePage() {
   return (
-    <section className="mx-auto max-w-3xl px-6 py-24 lg:px-10 lg:py-32">
-      <h1 className="font-display text-4xl leading-snug text-petrol sm:text-5xl">
-        Fußpflege
-      </h1>
-      <p className="mt-6 font-sans text-lg leading-relaxed text-petrol/80">
-        Die ausführliche Leistungsseite zur Fußpflege wird in Kürze ergänzt.
-        Wende dich gerne direkt an Viktoria, wenn du jetzt schon Fragen hast.
-      </p>
-      <Link
-        href="/#kontakt"
-        className="mt-8 inline-block rounded-full bg-mint px-7 py-3 font-sans text-sm font-medium text-petrol hover:bg-mint-deep hover:text-cream"
-      >
-        Kontakt aufnehmen
-      </Link>
-    </section>
+    <>
+      <FaqJsonLd faqs={fusspflegeFaqs} />
+      <FusspflegeHero />
+      <FusspflegePainpoints />
+      <FusspflegeTransition />
+      <FusspflegeMainTreatments />
+      <FusspflegeOncology />
+      <FusspflegeMoreServices />
+      <FusspflegeManicure />
+      <FusspflegeProcess />
+      <FusspflegeTrust />
+      <FusspflegeFaq />
+      <FusspflegeCancellationPolicy />
+      <FusspflegeFinalCta />
+    </>
   );
 }
