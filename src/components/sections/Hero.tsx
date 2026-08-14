@@ -11,16 +11,16 @@ export function Hero() {
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(234,228,227,0.65)_0%,rgba(234,228,227,0.68)_45%,rgba(234,228,227,0.78)_100%)]" />
 
         <div className="relative w-full px-6 pb-12 sm:px-10 sm:pb-16 lg:px-16 lg:pb-20">
-          <p className="font-sans text-xs font-medium tracking-[0.2em] text-petrol/80">
+          <p className="hero-intro-1 font-sans text-xs font-medium tracking-[0.2em] text-petrol/80">
             KÖRPERGFÜH · LAMBACH
           </p>
-          <h1 className="mt-4 max-w-2xl font-display text-5xl leading-tight text-petrol sm:text-6xl lg:text-7xl">
+          <h1 className="hero-intro-2 mt-4 max-w-2xl font-display text-5xl leading-tight text-petrol sm:text-6xl lg:text-7xl">
             Zeit, dich wohlzufühlen.
           </h1>
-          <p className="mt-5 max-w-lg font-sans text-lg text-petrol/90">
+          <p className="hero-intro-3 mt-5 max-w-lg font-sans text-lg text-petrol/90">
             Professionelle Fußpflege &amp; dauerhafte Haarentfernung in Lambach.
           </p>
-          <div className="mt-8 flex flex-wrap items-center gap-6">
+          <div className="hero-intro-3 mt-8 flex flex-wrap items-center gap-6">
             <Link
               href="#leistungen"
               className="rounded-full bg-mint px-7 py-3 font-sans text-sm font-medium text-petrol transition-colors hover:bg-mint-deep hover:text-cream"

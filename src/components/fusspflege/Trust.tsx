@@ -12,6 +12,7 @@ export function FusspflegeTrust() {
             rectTone="mint"
             aspect="aspect-[4/5]"
             className="mx-auto max-w-sm lg:mx-0 lg:order-2"
+            parallax
           />
 
           <div className="lg:order-1">

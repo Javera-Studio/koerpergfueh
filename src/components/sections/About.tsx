@@ -3,7 +3,30 @@ import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 
 export function About() {
   return (
-    <section id="ueber-mich" className="mx-auto max-w-6xl px-6 py-24 lg:px-10 lg:py-32">
+    <section
+      id="ueber-mich"
+      className="relative overflow-hidden py-24 lg:py-32"
+    >
+      {/* Botanisches Signature-Element: einzige animierte Vorkommen auf der
+          gesamten Website, zeichnet sich beim Scrollen langsam nach –
+          rein dekorativ, überlagert keinen Text (bleedet in die Ecke aus). */}
+      <svg
+        aria-hidden
+        className="botanical-draw pointer-events-none absolute -bottom-12 -right-12 h-56 w-56 text-mint opacity-20 lg:h-72 lg:w-72"
+        viewBox="0 0 200 200"
+        fill="none"
+      >
+        <path
+          d="M100 10 C 120 60, 120 140, 100 190"
+          stroke="currentColor"
+          strokeWidth="1.5"
+        />
+        <path d="M100 40 C 130 55, 150 70, 160 60" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M100 80 C 70 95, 50 110, 40 100" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M100 120 C 130 135, 150 150, 160 140" stroke="currentColor" strokeWidth="1.5" />
+      </svg>
+
+      <div className="relative mx-auto max-w-6xl px-6 lg:px-10">
       <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
         <ImagePlaceholder
           label="Portrait: Viktoria"
@@ -11,6 +34,7 @@ export function About() {
           rectTone="mint"
           aspect="aspect-[4/5]"
           className="mx-auto max-w-sm lg:mx-0"
+          parallax
         />
 
         <div>
@@ -37,6 +61,7 @@ export function About() {
             ))}
           </ul>
         </div>
+      </div>
       </div>
     </section>
   );

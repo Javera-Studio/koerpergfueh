@@ -37,11 +37,17 @@ export function FusspflegeFaq() {
                     {isOpen ? "−" : "+"}
                   </span>
                 </button>
-                {isOpen && (
-                  <p className="pb-6 font-sans text-base leading-relaxed text-petrol/80">
-                    {faq.answer}
-                  </p>
-                )}
+                <div
+                  className={`grid transition-[grid-template-rows] duration-300 ease-out motion-reduce:transition-none ${
+                    isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <p className="pb-6 font-sans text-base leading-relaxed text-petrol/80">
+                      {faq.answer}
+                    </p>
+                  </div>
+                </div>
               </div>
             );
           })}

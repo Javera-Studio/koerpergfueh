@@ -3,20 +3,20 @@ import { oncologyTreatment } from "@/lib/data/fusspflege";
 
 export function FusspflegeOncology() {
   return (
-    <section className="bg-mist py-24 lg:py-32">
+    <section className="oncology-bg-reveal bg-mist py-24 lg:py-32">
       <div className="mx-auto max-w-4xl px-6 lg:px-10">
-        <p className="font-sans text-xs font-medium tracking-[0.2em] text-mint-deep">
+        <p className="reveal font-sans text-xs font-medium tracking-[0.2em] text-mint-deep">
           BESONDERE ACHTSAMKEIT · BESONDERE BEDÜRFNISSE
         </p>
-        <h2 className="mt-4 font-display text-4xl leading-snug text-petrol sm:text-5xl">
+        <h2 className="reveal reveal-d1 mt-4 font-display text-4xl leading-snug text-petrol sm:text-5xl">
           In einer herausfordernden Zeit darfst du dich besonders gut
           aufgehoben fühlen.
         </h2>
-        <p className="mt-3 font-display text-2xl text-mint-deep">
+        <p className="reveal reveal-d2 mt-3 font-display text-2xl text-mint-deep">
           Onkologisch-kosmetische Fußpflege
         </p>
 
-        <div className="mt-8 flex flex-col gap-5 font-sans text-lg leading-relaxed text-petrol/80">
+        <div className="reveal reveal-d3 mt-8 flex flex-col gap-5 font-sans text-lg leading-relaxed text-petrol/80">
           <p>
             Als zertifizierte onkologische Fußpflegerin weiß ich, dass eine
             Krebserkrankung und insbesondere eine Chemotherapie auch Haut und
@@ -36,7 +36,7 @@ export function FusspflegeOncology() {
           </p>
         </div>
 
-        <div className="mt-12 rounded-sm bg-cream p-8">
+        <div className="reveal reveal-d4 mt-12 rounded-sm bg-cream p-8">
           <h3 className="font-display text-2xl text-petrol">
             Was zu dieser besonderen Betreuung gehört
           </h3>

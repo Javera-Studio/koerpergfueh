@@ -65,6 +65,60 @@ versetzt hinter ausgewählten Fotos (Viktoria-Portrait, Studio-Bilder).
 Implementiert in `src/components/ui/ImagePlaceholder.tsx` über die Prop
 `offset` (`top-left` / `top-right` / `none`). Nicht bei jedem Bild einsetzen.
 
+## Motion-Konzept
+
+Bewusst wenige, gezielte Momente statt durchgängiger Bewegung – Ziel sind
+ca. 3–4 wahrnehmbare interaktive Momente auf der gesamten Website, nicht pro
+Section. Ausschließlich CSS, keine Animationsbibliothek hinzugefügt.
+Scroll-gebundene Effekte laufen über die native CSS-Scroll-Driven-Animations-
+API (`animation-timeline: view()`), gated über `@supports` – Browser ohne
+Unterstützung zeigen Inhalte sofort vollständig sichtbar (kein Layout Shift,
+kein Risiko dauerhaft unsichtbarer Inhalte). Alle Effekte sind zusätzlich in
+`@media (prefers-reduced-motion: no-preference)` gekapselt. Definiert in
+`src/app/globals.css`, Klassen `.reveal` / `.reveal-d1`–`.reveal-d4` /
+`.parallax-photo` / `.oncology-bg-reveal` / `.botanical-draw` /
+`.hero-intro-1`–`.hero-intro-3`.
+
+Die vier bewussten Momente:
+
+1. **Painpoints (gestaffeltes Reveal).** Die vier Painpoint-Items (Startseite
+   & `/fusspflege`) blenden beim Scrollen leicht zeitversetzt ein
+   (`.reveal .reveal-d1`–`.reveal-d4`), unterstützt die Lesereihenfolge.
+2. **Versetzte Bildflächen als Signature-Element (minimaler Parallax).** Das
+   Foto bewegt sich beim Scrollen wenige Pixel relativ zum feststehenden
+   Hintergrundrechteck (`ImagePlaceholder`-Prop `parallax`). Bewusst nur an
+   ausgewählten Stellen: Viktoria-Portrait (`About.tsx`, Fußpflege
+   `Trust.tsx`) und ein Studiofoto (`Studio.tsx`). Nicht bei jedem Bild.
+3. **Onkologisch-kosmetische Fußpflege (ruhiges Ankommen).** Die Section
+   (`FusspflegeOncology`) blendet Text und Karte gestaffelt ein, der
+   Hintergrund geht beim Erreichen weich zu `--color-mist` über
+   (`.oncology-bg-reveal`) – signalisiert bewusst „hier beginnt ein
+   sensibler Bereich", ohne dramatische Effekte.
+4. **Botanisches Signature-Element (Line-Draw).** Genau eine Stelle auf der
+   gesamten Website: die dekorative botanische Linie in `About.tsx`
+   (`#ueber-mich`) zeichnet sich beim Scrollen langsam nach
+   (`.botanical-draw`). Rein dekorativ, bleedet in die Ecke aus, überlagert
+   keinen Text. Das gleiche Motiv in `Studio.tsx` bleibt bewusst statisch
+   (nicht animiert), um die Regel „nur eine animierte Stelle" einzuhalten.
+
+Ergänzend, ohne als eigener „Moment" zu zählen:
+
+- **Hero-Ladesequenz:** Eyebrow → Headline → Sub/CTA erscheinen beim ersten
+  Laden kurz zeitversetzt (`.hero-intro-1`–`.hero-intro-3`, ~500ms,
+  zeitbasiert statt scroll-gebunden). Kein Bild-Reveal, kein Layout Shift.
+- **FAQ-Accordion:** Öffnen/Schließen läuft über eine CSS
+  `grid-template-rows`-Transition (`src/components/fusspflege/Faq.tsx`),
+  keine Sprünge mehr durch Mount/Unmount des Antworttexts.
+
+Bewusst NICHT umgesetzt: Expand/Collapse für die Preislisten unter „Weitere
+Behandlungen & Preise" – die Listen sind kurz genug, dass Aufklappen die
+Informationsarchitektur nicht verbessern würde und Preise stattdessen
+unnötig verstecken würde.
+
+Bei neuen Sections: neue Motion nur ergänzen, wenn sie Aufmerksamkeit führt,
+Inhalte verständlicher macht, Orientierung verbessert, Hierarchien
+unterstützt oder einen kleinen Markenmoment schafft – nicht als Selbstzweck.
+
 ## Leistungen / Seitenstruktur
 
 - [x] Home (vollständig nach Konzept umgesetzt)

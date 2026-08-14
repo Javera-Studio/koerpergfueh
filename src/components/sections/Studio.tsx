@@ -39,6 +39,7 @@ export function Studio() {
             rectTone="mint"
             aspect="aspect-[4/5]"
             className="sm:col-span-1"
+            parallax
           />
           <ImagePlaceholder label="Studio-Foto" aspect="aspect-[4/5]" />
           <ImagePlaceholder label="Studio-Foto" aspect="aspect-[4/5]" />
