@@ -1,26 +1,38 @@
 @import "tailwindcss";
 
+/*
+ * Design-Tokens – Körpergfüh by Viki
+ * Farbwerte aus dem bestehenden Logo (Aquarell-Mint + dunkles Petrolgrün-Schriftzug)
+ * abgeleitet. Nach Erhalt der Original-Logodatei hier final feinjustieren.
+ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-cream: #f8f6f0; /* warmes Off-White, primärer Seitenhintergrund */
+  --color-mint-pale: #e6f1ea; /* sehr helles Mint für ruhige Flächen */
+  --color-mint: #7fb8a0; /* Körpergfüh-Mint, primäre Marken-/Akzentfarbe */
+  --color-mint-deep: #5c9c82; /* etwas kräftigeres Mint für Hover/Kontrast */
+  --color-petrol: #1f3a34; /* dunkles Petrol/Grün für Headlines & Navigation */
+  --color-gold: #c8a86b; /* warmer Beige-/Goldton, nur sehr sparsam als Akzent */
+  --color-cream-foreground: var(--color-petrol);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-cream: var(--color-cream);
+  --color-mint-pale: var(--color-mint-pale);
+  --color-mint: var(--color-mint);
+  --color-mint-deep: var(--color-mint-deep);
+  --color-petrol: var(--color-petrol);
+  --color-gold: var(--color-gold);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-display: var(--font-cormorant);
+  --font-sans: var(--font-dm-sans);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-cream);
+  color: var(--color-petrol);
+  font-family: var(--font-dm-sans);
+}
+
+html {
+  scroll-behavior: smooth;
 }
