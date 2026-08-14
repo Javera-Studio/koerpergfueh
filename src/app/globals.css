@@ -13,6 +13,7 @@
   --color-petrol: #1f3a34; /* dunkles Petrol/Grün für Headlines & Navigation */
   --color-gold: #c8a86b; /* warmer Beige-/Goldton, nur sehr sparsam als Akzent */
   --color-mist: #eaeaea; /* sekundäre neutrale Fläche aus der bisherigen Website, bewusst erhalten */
+  --color-hero-overlay: #eae4e3; /* warmes Rosé-Greige für das Hero-Bild-Overlay, zentraler Bestandteil der visuellen Identität zusammen mit Mint & Petrol */
   --color-cream-foreground: var(--color-petrol);
 }
 
@@ -24,6 +25,7 @@
   --color-petrol: var(--color-petrol);
   --color-gold: var(--color-gold);
   --color-mist: var(--color-mist);
+  --color-hero-overlay: var(--color-hero-overlay);
 
   --font-display: var(--font-cormorant);
   --font-sans: var(--font-dm-sans);
