@@ -11,9 +11,10 @@ gilt: projektspezifische Angaben hier überschreiben die globalen Defaults.
 - **Adresse (Schema.org):** Bahnhofstraße 9, 4650 Lambach, Österreich
 - **Domain:** koerpergfuel.at
 - **Telefon:** 0676 388 46 71 (`tel:+436763884671`)
-- **E-Mail:** noch nicht final bestätigt – zentraler Platzhalter `EMAIL_TO_CONFIRM`
-  in `src/lib/data/business.ts`. Auf der bestehenden Website sind
-  unterschiedliche Adressen angegeben – vor Go-Live mit Kundin klären.
+- **E-Mail:** ollingerv@gmail.com (`mailto:ollingerv@gmail.com`), von Viktoria
+  bestätigt, in `src/lib/data/business.ts` hinterlegt und in Kontakt-Section
+  + Impressum sichtbar. Tatsächlicher Formular-Versand an diese Adresse ist
+  technisch noch nicht angebunden (siehe TODO in `src/app/actions/contact.ts`).
 - **Öffnungszeiten:** aktuell nicht eindeutig bestätigt, `business.openingHours`
   ist bewusst `null`. Keine Zeiten erfinden – erst nach Freigabe eintragen.
 - **Social-Media:** keine bestätigten Profile bekannt, `business.socials` ist
@@ -164,7 +165,7 @@ Wirkungen, Anzahl Behandlungen, Schmerzfreiheit, Lasertechnologie,
 Hauttyp-Eignung, Ergebnissen, Zertifizierungen, Berufserfahrung, Bewertungen,
 Öffnungszeiten, Social-Media-Kanälen oder Terminbuchungssystemen. Fehlende
 oder unbestätigte Informationen immer als klar gekennzeichneten Platzhalter
-eintragen (z.B. `EMAIL_TO_CONFIRM`, `TO_CONFIRM: ...`).
+eintragen (z.B. `TO_CONFIRM: ...`).
 
 Bestätigte Qualifikationen von Viktoria (ausschließlich diese verwenden):
 - Ausgebildete Fußpflegerin
@@ -197,8 +198,9 @@ Ersatz einer medizinischen Behandlung).
 7. [x] JSON-LD `BeautySalon`-Komponente (`src/components/seo/LocalBusinessJsonLd.tsx`)
    mit echten Kundendaten befüllt
 8. [x] Kontaktformular: Server Action (`src/app/actions/contact.ts`) + Honeypot.
-   **Offen:** tatsächlicher E-Mail-Versand (z.B. Resend) noch nicht
-   angebunden – TODO im Code markiert, wartet auf `EMAIL_TO_CONFIRM`.
+   **Offen:** tatsächlicher E-Mail-Versand an `business.email`
+   (ollingerv@gmail.com, z.B. via Resend) noch nicht angebunden – TODO im
+   Code markiert, aktuell wird nur validiert.
 9. [ ] Cookie-Consent-Banner – noch nicht eingebunden, da aktuell kein
    Tracking/Analytics im Projekt vorgesehen. Vor Einbindung von GA4/Meta-Pixel
    zwingend nachrüsten (harte DSGVO-Vorgabe).
@@ -206,9 +208,11 @@ Ersatz einer medizinischen Behandlung).
 
 ## Vor Übergabe an die Kundin (projektspezifisch, zusätzlich zur globalen Checkliste)
 
-- [ ] Echte Bilder von Viktoria & Studio einsetzen (ersetzen `ImagePlaceholder`)
-- [ ] Original-Logodatei einholen, Farbwerte final abgleichen
-- [ ] `EMAIL_TO_CONFIRM` durch finale E-Mail-Adresse ersetzen
+- [x] Echte Bilder von Viktoria, Carina & Studio eingesetzt (victoria1.jpg,
+  carina.jpg, studio1–5.jpe) – nur einzelne `ImagePlaceholder`-Stellen
+  (z.B. weitere Studiofotos, Fußpflege/Haarentfernung-Trust-Bilder) noch offen
+- [x] Logodatei aktualisiert (`public/images/logo.png`, transparent)
+- [x] E-Mail-Adresse bestätigt und eingetragen (ollingerv@gmail.com)
 - [ ] Öffnungszeiten mit Kundin bestätigen und eintragen
 - [ ] `/fusspflege` und `/haarentfernung` zu vollständigen Leistungsseiten ausbauen
 - [ ] Rechtsform & Pflichtangaben Impressum final klären

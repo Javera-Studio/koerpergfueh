@@ -30,8 +30,8 @@ export async function submitContactForm(
     return { status: "error", message: "Bitte fülle alle Felder aus." };
   }
 
-  // TODO: Versand an EMAIL_TO_CONFIRM einrichten, sobald die finale
-  // E-Mail-Adresse mit der Kundin bestätigt ist (z.B. via Resend/Nodemailer).
+  // TODO: E-Mail-Versand an business.email (ollingerv@gmail.com) technisch
+  // einrichten (z.B. via Resend/Nodemailer) – aktuell wird nur validiert.
 
   return { status: "success" };
 }

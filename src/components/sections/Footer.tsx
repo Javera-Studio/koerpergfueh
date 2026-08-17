@@ -8,7 +8,7 @@ export function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-14 lg:flex-row lg:items-start lg:justify-between lg:px-10">
         <div className="flex flex-col gap-3">
           <Image
-            src="/images/logo.jpg"
+            src="/images/logo.png"
             alt="Körpergfüh by Viki Logo"
             width={140}
             height={90}

@@ -9,6 +9,9 @@ type RealImage = {
   preload?: boolean;
   /** Responsive sizes-Attribut, an das tatsächliche Layout des Bildbereichs angepasst. */
   sizes?: string;
+  /** Tailwind object-position-Klasse (z.B. "object-[25%_30%]"), falls das
+   * Hauptmotiv beim Zuschnitt sonst verloren ginge. Default: object-center. */
+  objectPosition?: string;
 };
 
 /**
@@ -48,7 +51,7 @@ export function ImagePlaceholder({
       fill
       preload={image.preload}
       sizes={image.sizes ?? "(min-width: 1024px) 480px, 90vw"}
-      className="object-cover"
+      className={`object-cover ${image.objectPosition ?? ""}`}
     />
   ) : (
     <span className="px-4 text-center font-sans text-xs uppercase tracking-wide text-petrol/50">

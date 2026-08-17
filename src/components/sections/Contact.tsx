@@ -23,9 +23,15 @@ export function Contact() {
               </p>
               <a
                 href={business.phoneHref}
-                className="mt-3 inline-block font-medium text-mint-deep hover:underline"
+                className="mt-3 block font-medium text-mint-deep hover:underline"
               >
                 {business.phone}
+              </a>
+              <a
+                href={business.emailHref}
+                className="mt-1 block font-medium text-mint-deep hover:underline"
+              >
+                {business.email}
               </a>
             </div>
 

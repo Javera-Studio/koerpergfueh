@@ -14,9 +14,8 @@ export const business = {
   },
   phone: "0676 388 46 71",
   phoneHref: "tel:+436763884671",
-  // Auf der bestehenden Website sind unterschiedliche E-Mail-Adressen angegeben.
-  // Erst nach Rückbestätigung durch die Kundin final eintragen.
-  email: "EMAIL_TO_CONFIRM",
+  email: "ollingerv@gmail.com",
+  emailHref: "mailto:ollingerv@gmail.com",
   domain: "koerpergfuel.at",
   // Öffnungszeiten liegen aktuell nicht eindeutig bestätigt vor.
   openingHours: null as null | { day: string; hours: string }[], // TO_CONFIRM: Öffnungszeiten mit Kundin abstimmen
