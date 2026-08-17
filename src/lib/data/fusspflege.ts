@@ -24,7 +24,14 @@ export const mainTreatments = [
     subtitle: "Wenn deine Füße mehr Aufmerksamkeit brauchen.",
     description:
       "Manchmal reicht klassische Pflege nicht aus. Bei stärkeren Verhornungen, Problemnägeln oder anderen besonderen Anforderungen nehme ich mir gezielt Zeit für deine Füße. Die Behandlung wird individuell an den aktuellen Zustand und die Bedürfnisse deiner Füße angepasst.",
-    includes: [] as string[],
+    includes: [
+      "Fußbad",
+      "Entfernen der Hornhaut",
+      "Rhagaden",
+      "Holznägel",
+      "Pilznägel behandeln",
+      "feilen",
+    ],
     price: "61 €",
     cta: "Termin anfragen",
   },
