@@ -104,11 +104,16 @@ Die vier bewussten Momente:
    (`.oncology-bg-reveal`) – signalisiert bewusst „hier beginnt ein
    sensibler Bereich", ohne dramatische Effekte.
 4. **Botanisches Signature-Element (Line-Draw).** Genau eine Stelle auf der
-   gesamten Website: die dekorative botanische Linie in `About.tsx`
-   (`#ueber-mich`) zeichnet sich beim Scrollen langsam nach
-   (`.botanical-draw`). Rein dekorativ, bleedet in die Ecke aus, überlagert
-   keinen Text. Das gleiche Motiv in `Studio.tsx` bleibt bewusst statisch
-   (nicht animiert), um die Regel „nur eine animierte Stelle" einzuhalten.
+   gesamten Website: ein kleiner, feiner Zweig (`#ueber-mich` in
+   `About.tsx`, oben rechts, `right-8 top-8`, `h-28 w-14`, `opacity-10`,
+   nur ab `lg` sichtbar) zeichnet sich beim Scrollen langsam nach
+   (`.botanical-draw`). Bewusst als Wasserzeichen wahrnehmbar, nicht
+   dominant: vollständig innerhalb der Section (kein Bleed über den Rand),
+   ausreichend Abstand zu Text. Auf kleineren Screens komplett ausgeblendet
+   statt verkleinert, da genug Abstand zum Content dort nicht garantiert
+   werden kann. Das ähnliche, größere Motiv in `Studio.tsx` bleibt bewusst
+   statisch (nicht animiert), um die Regel „nur eine animierte Stelle"
+   einzuhalten.
 
 Ergänzend, ohne als eigener „Moment" zu zählen:
 

@@ -9,22 +9,22 @@ export function About() {
       className="relative overflow-hidden py-24 lg:py-32"
     >
       {/* Botanisches Signature-Element: einzige animierte Vorkommen auf der
-          gesamten Website, zeichnet sich beim Scrollen langsam nach –
-          rein dekorativ, überlagert keinen Text (bleedet in die Ecke aus). */}
+          gesamten Website. Bewusst klein, vollständig innerhalb dieser
+          Section (kein Bleed über den Rand), sehr niedrige Opacity –
+          Wasserzeichen-Wirkung statt dominanter Grafik. Nur ab lg sichtbar,
+          in der Weißraum-Ecke über dem Content, ausreichend Abstand zu Text. */}
       <svg
         aria-hidden
-        className="botanical-draw pointer-events-none absolute -bottom-12 -right-12 h-56 w-56 text-mint opacity-20 lg:h-72 lg:w-72"
-        viewBox="0 0 200 200"
+        className="botanical-draw pointer-events-none absolute right-8 top-8 hidden h-28 w-14 text-mint-deep opacity-10 lg:block"
+        viewBox="0 0 56 160"
         fill="none"
       >
-        <path
-          d="M100 10 C 120 60, 120 140, 100 190"
-          stroke="currentColor"
-          strokeWidth="1.5"
-        />
-        <path d="M100 40 C 130 55, 150 70, 160 60" stroke="currentColor" strokeWidth="1.5" />
-        <path d="M100 80 C 70 95, 50 110, 40 100" stroke="currentColor" strokeWidth="1.5" />
-        <path d="M100 120 C 130 135, 150 150, 160 140" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M28 4 C 26 50, 30 110, 28 156" stroke="currentColor" strokeWidth="1.25" />
+        <path d="M28 24 C 20 20, 12 22, 8 30" stroke="currentColor" strokeWidth="1.25" />
+        <path d="M28 48 C 36 44, 44 46, 48 54" stroke="currentColor" strokeWidth="1.25" />
+        <path d="M28 74 C 20 70, 12 72, 8 80" stroke="currentColor" strokeWidth="1.25" />
+        <path d="M28 100 C 36 96, 44 98, 48 106" stroke="currentColor" strokeWidth="1.25" />
+        <path d="M28 126 C 20 122, 13 124, 9 131" stroke="currentColor" strokeWidth="1.25" />
       </svg>
 
       <div className="relative mx-auto max-w-6xl px-6 lg:px-10">
