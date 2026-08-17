@@ -55,6 +55,14 @@ in die dritte Person gerutscht wird.
 - **Typografie Headlines:** Cormorant Garamond (`--font-cormorant`)
 - **Typografie Fließtext/Nav/Buttons:** DM Sans (`--font-dm-sans`) – bewusst
   abweichend vom globalen Default (Inter), da im Konzept explizit vorgegeben.
+- **Signature-Schrift:** Mrs Saint Delafield (`--font-signature`), angelehnt
+  an den handschriftlichen Logo-Schriftzug. Ausschließlich über die
+  `Signature`-Komponente (`src/components/ui/Signature.tsx`) einsetzen, nur
+  für kurze dekorative Akzente (einzelne Wörter/kurzer Satz, z.B. oberhalb
+  einer Cormorant-Garamond-Headline) – niemals für Fließtext, Navigation,
+  Buttons, Preise oder FAQs. Wenige bewusste Akzente, nicht in jeder
+  Section. Aktuell eingesetzt in `About.tsx` ("Schön, dass du da bist") und
+  `Studio.tsx` ("Mit viel Gefühl").
 - **Logo vorhanden?** Ja – `public/images/logo.png` (Wasserzeichen-Vorschau).
   Muss ggf. gegen Original/Vektorversion getauscht werden.
 

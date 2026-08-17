@@ -1,4 +1,5 @@
 import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
+import { Signature } from "@/components/ui/Signature";
 
 export function Studio() {
   return (
@@ -22,7 +23,8 @@ export function Studio() {
 
       <div className="relative mx-auto max-w-6xl px-6 lg:px-10">
         <div className="max-w-xl">
-          <h2 className="font-display text-4xl leading-snug text-petrol sm:text-5xl">
+          <Signature className="block">Mit viel Gefühl</Signature>
+          <h2 className="mt-3 font-display text-4xl leading-snug text-petrol sm:text-5xl">
             Ein Ort, an dem du dich gut aufgehoben fühlen darfst.
           </h2>
           <p className="mt-6 font-sans text-lg leading-relaxed text-petrol/80">

@@ -29,6 +29,10 @@
 
   --font-display: var(--font-cormorant);
   --font-sans: var(--font-dm-sans);
+  /* Signature-Schrift: ausschließlich für kurze, dekorative Markenakzente –
+     siehe src/components/ui/Signature.tsx. Niemals für Fließtext,
+     Navigation, Buttons, Preise oder FAQs. */
+  --font-signature: var(--font-signature);
 }
 
 body {

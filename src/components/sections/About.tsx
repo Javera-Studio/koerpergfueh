@@ -1,5 +1,6 @@
 import { qualifications } from "@/lib/data/business";
 import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
+import { Signature } from "@/components/ui/Signature";
 
 export function About() {
   return (
@@ -38,7 +39,8 @@ export function About() {
         />
 
         <div>
-          <p className="font-sans text-xs font-medium tracking-[0.2em] text-mint-deep">
+          <Signature className="block">Schön, dass du da bist</Signature>
+          <p className="mt-3 font-sans text-xs font-medium tracking-[0.2em] text-mint-deep">
             PERSÖNLICH FÜR DICH DA
           </p>
           <h2 className="mt-4 font-display text-4xl leading-snug text-petrol sm:text-5xl">
