@@ -13,7 +13,7 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-10">
         <Link href="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
           <Image
-            src="/images/logo.png"
+            src="/images/logo.jpg"
             alt="Körpergfüh by Viki Logo"
             width={160}
             height={100}

@@ -5,7 +5,7 @@ export function LocalBusinessJsonLd() {
     "@context": "https://schema.org",
     "@type": "BeautySalon",
     name: business.name,
-    image: `https://${business.domain}/images/logo.png`,
+    image: `https://${business.domain}/images/logo.jpg`,
     telephone: business.phone,
     address: {
       "@type": "PostalAddress",
