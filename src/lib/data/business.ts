@@ -62,11 +62,50 @@ export const painpoints = [
   },
 ] as const;
 
+// Verwendet in der (kürzeren) Fußpflege-Trust-Section – bewusst NICHT
+// verändern, auch wenn expertiseHighlights unten leicht abweichend
+// formuliert ist. Beide Texte sind jeweils final freigegeben.
 export const qualifications = [
   "Ausgebildete Fußpflegerin",
   "Onkologisch-kosmetische Zusatzausbildung",
   "Medizinischer & pflegerischer Hintergrund",
 ] as const;
+
+// Reduzierte Expertise-Leiste für die große Über-mich-Section auf der
+// Startseite (About.tsx). Final freigegebener Wortlaut, nicht verändern.
+export const expertiseHighlights = [
+  "Ausgebildete Fußpflegerin",
+  "Onkologisch-kosmetische Zusatzausbildung",
+  "Medizinisches & pflegerisches Fachwissen",
+  "Individuelle Betreuung",
+] as const;
+
+// Wortgetreu freigegebener Text für die Über-mich-Section (About.tsx).
+// Keine Umformulierungen, Kürzungen oder Ergänzungen ohne Rücksprache.
+export const viktoriaIntro = {
+  eyebrowSignature: "Persönlich für dich da",
+  heading: "Hallo, ich bin Viktoria.",
+  paragraphs: [
+    "Fußgesundheit bedeutet für mich mehr als gepflegte Füße. Es geht darum, Beschwerden ernst zu nehmen, genau hinzusehen und eine Behandlung zu wählen, bei der du dich fachlich und menschlich gut aufgehoben fühlst.",
+    "Als ausgebildete Fußpflegerin mit onkologisch-kosmetischer Zusatzausbildung sowie medizinischem und pflegerischem Fachwissen verbinde ich professionelle Fußpflege mit einem besonders achtsamen Blick auf die individuellen Bedürfnisse meiner Kundinnen und Kunden.",
+    "Gerade wenn Füße Beschwerden verursachen, sich Nägel oder Haut verändern oder aufgrund einer Erkrankung besondere Aufmerksamkeit notwendig ist, braucht es Sorgfalt, Erfahrung und Vertrauen. Deshalb nehme ich mir Zeit, deine Situation anzusehen und die Behandlung individuell darauf abzustimmen.",
+    "Neben der klassischen und medizinischen Fußpflege begleite ich auch Menschen während einer onkologischen Therapie. Durch meine entsprechende Zusatzausbildung kenne ich die besonderen Anforderungen, die beispielsweise eine Chemotherapie an Haut und Nägel stellen kann.",
+    "Mein Anspruch ist, dass du mein Studio nicht nur mit gepflegten Füßen verlässt, sondern auch mit dem Gefühl:",
+  ],
+  highlight: "Hier wurde ich gesehen, ernst genommen und gut betreut.",
+} as const;
+
+// Wortgetreu freigegebener Text für den Carina-Bereich (About.tsx). Keine
+// Qualifikationen, Tätigkeiten oder Erfahrungen ergänzen, die hier nicht
+// ausdrücklich genannt sind.
+export const carinaIntro = {
+  eyebrowSignature: "Unterstützung im Studio",
+  heading: "Hallo, ich bin Carina.",
+  paragraphs: [
+    "Ich absolviere derzeit mein Praktikum in der Fußpflege bei Körpergfüh und darf Viktoria im Studio begleiten und von ihrer Arbeit lernen.",
+    "Ich freue mich darauf, praktische Erfahrung zu sammeln und die Kundinnen und Kunden von Körpergfüh während meiner Ausbildung kennenzulernen.",
+  ],
+} as const;
 
 // Keine echten Bewertungen freigegeben. Struktur vorbereitet, Frontend blendet
 // die Section aus, solange dieses Array leer ist (siehe Testimonials-Komponente).

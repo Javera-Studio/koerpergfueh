@@ -1,4 +1,8 @@
-import { qualifications } from "@/lib/data/business";
+import {
+  expertiseHighlights,
+  viktoriaIntro,
+  carinaIntro,
+} from "@/lib/data/business";
 import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 import { Signature } from "@/components/ui/Signature";
 
@@ -28,42 +32,86 @@ export function About() {
       </svg>
 
       <div className="relative mx-auto max-w-6xl px-6 lg:px-10">
-      <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
-        <ImagePlaceholder
-          label="Portrait: Viktoria"
-          offset="top-right"
-          rectTone="mint"
-          aspect="aspect-[4/5]"
-          className="mx-auto max-w-sm lg:mx-0"
-          parallax
-        />
+        {/* Viktoria – zentraler Vertrauensbereich */}
+        <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
+          <ImagePlaceholder
+            label="Portrait: Viktoria"
+            offset="top-right"
+            rectTone="mint"
+            aspect="aspect-[4/5]"
+            className="mx-auto max-w-sm lg:mx-0"
+            parallax
+            image={{
+              src: "/images/victoria1.jpg",
+              alt: "Viktoria Ollinger, Inhaberin von Körpergfüh, in ihrem Studio in Lambach",
+              sizes: "(min-width: 1024px) 480px, 90vw",
+            }}
+          />
 
-        <div>
-          <Signature className="block">Schön, dass du da bist</Signature>
-          <p className="mt-3 font-sans text-xs font-medium tracking-[0.2em] text-mint-deep">
-            PERSÖNLICH FÜR DICH DA
-          </p>
-          <h2 className="mt-4 font-display text-4xl leading-snug text-petrol sm:text-5xl">
-            Hallo, ich bin Viktoria.
-          </h2>
-          <p className="mt-6 font-sans text-lg leading-relaxed text-petrol/80">
-            Bei Körpergfüh geht es für mich um mehr als eine Behandlung. Mir ist
-            wichtig, dass du dich gut aufgehoben fühlst und deine individuellen
-            Bedürfnisse im Mittelpunkt stehen.
-          </p>
+          <div>
+            <Signature className="block">
+              {viktoriaIntro.eyebrowSignature}
+            </Signature>
+            <h2 className="mt-4 font-display text-4xl leading-snug text-petrol sm:text-5xl">
+              {viktoriaIntro.heading}
+            </h2>
 
-          <ul className="mt-10 flex flex-col gap-4">
-            {qualifications.map((qualification) => (
-              <li key={qualification} className="flex items-start gap-3">
-                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-mint-deep" />
-                <span className="font-sans text-base text-petrol">
-                  {qualification}
-                </span>
-              </li>
-            ))}
-          </ul>
+            <div className="mt-6 flex flex-col gap-5 font-sans text-lg leading-relaxed text-petrol/80">
+              {viktoriaIntro.paragraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+
+            <p className="mt-8 max-w-md font-display text-2xl leading-snug text-mint-deep sm:text-3xl">
+              {viktoriaIntro.highlight}
+            </p>
+          </div>
         </div>
-      </div>
+
+        {/* Reduzierte Expertise-Leiste – bewusst keine großen Marketing-Cards */}
+        <ul className="mt-16 flex flex-wrap items-center justify-center gap-x-3 gap-y-4 border-y border-mint-pale py-8 lg:mt-20 lg:gap-x-4">
+          {expertiseHighlights.map((item, index) => (
+            <li key={item} className="flex items-center gap-3 lg:gap-4">
+              {index > 0 && (
+                <span
+                  aria-hidden
+                  className="hidden h-1 w-1 rounded-full bg-mint-deep/50 sm:block"
+                />
+              )}
+              <span className="font-sans text-sm text-petrol/80">{item}</span>
+            </li>
+          ))}
+        </ul>
+
+        {/* Carina – kleinerer, sympathischer Team-Bereich, klar untergeordnet */}
+        <div className="mt-16 lg:mt-20">
+          <div className="grid items-center gap-8 lg:grid-cols-[10rem_1fr] lg:gap-12">
+            <ImagePlaceholder
+              label="Portrait: Carina"
+              aspect="aspect-[4/5]"
+              className="mx-auto w-32 sm:w-40 lg:mx-0 lg:w-full"
+              image={{
+                src: "/images/carina.jpg",
+                alt: "Carina, Praktikantin in der Fußpflege bei Körpergfüh",
+                sizes: "160px",
+              }}
+            />
+
+            <div className="text-center lg:text-left">
+              <Signature className="block">
+                {carinaIntro.eyebrowSignature}
+              </Signature>
+              <h3 className="mt-2 font-display text-2xl text-petrol sm:text-3xl">
+                {carinaIntro.heading}
+              </h3>
+              <div className="mx-auto mt-4 flex max-w-xl flex-col gap-3 font-sans text-base leading-relaxed text-petrol/75 lg:mx-0">
+                {carinaIntro.paragraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
