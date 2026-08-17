@@ -1,9 +1,21 @@
+import Image from "next/image";
+
 type Offset = "top-right" | "top-left" | "none";
+
+type RealImage = {
+  src: string;
+  alt: string;
+  /** Above-the-fold/LCP-Bild: preloaden (ersetzt das veraltete `priority`-Prop ab Next.js 16). */
+  preload?: boolean;
+  /** Responsive sizes-Attribut, an das tatsächliche Layout des Bildbereichs angepasst. */
+  sizes?: string;
+};
 
 /**
  * Hochwertiger Bild-Platzhalter mit dem wiederkehrenden Gestaltungselement:
  * ein leicht versetztes Mint-Rechteck hinter dem eigentlichen Bildbereich.
- * Später wird der Platzhalter 1:1 durch <Image> ersetzt.
+ * Sobald ein echtes Foto vorliegt, per `image`-Prop einsetzen – ersetzt den
+ * Platzhalter-Text 1:1 durch ein responsives, optimiertes next/image.
  */
 export function ImagePlaceholder({
   label,
@@ -12,6 +24,7 @@ export function ImagePlaceholder({
   className = "",
   aspect = "aspect-[4/5]",
   parallax = false,
+  image,
 }: {
   label: string;
   offset?: Offset;
@@ -23,17 +36,32 @@ export function ImagePlaceholder({
    * Stellen einsetzen (Viktoria-Portrait, einzelne Studiofotos), nicht
    * bei jedem Bild. */
   parallax?: boolean;
+  /** Echtes Foto statt Platzhaltertext. */
+  image?: RealImage;
 }) {
   const rectColor = rectTone === "mint" ? "bg-mint" : "bg-mint-pale";
+
+  const content = image ? (
+    <Image
+      src={image.src}
+      alt={image.alt}
+      fill
+      preload={image.preload}
+      sizes={image.sizes ?? "(min-width: 1024px) 480px, 90vw"}
+      className="object-cover"
+    />
+  ) : (
+    <span className="px-4 text-center font-sans text-xs uppercase tracking-wide text-petrol/50">
+      {label}
+    </span>
+  );
 
   if (offset === "none") {
     return (
       <div
-        className={`${aspect} ${rectColor} flex items-center justify-center rounded-sm ${className}`}
+        className={`relative ${aspect} ${rectColor} flex items-center justify-center overflow-hidden rounded-sm ${className}`}
       >
-        <span className="px-4 text-center font-sans text-xs uppercase tracking-wide text-petrol/50">
-          {label}
-        </span>
+        {content}
       </div>
     );
   }
@@ -47,13 +75,11 @@ export function ImagePlaceholder({
     <div className={`relative ${className}`}>
       <div className={`absolute ${rectPos} h-full w-full ${rectColor} rounded-sm`} />
       <div
-        className={`relative ${aspect} flex items-center justify-center rounded-sm bg-cream ring-1 ring-mint-pale ${
+        className={`relative ${aspect} flex items-center justify-center overflow-hidden rounded-sm bg-cream ring-1 ring-mint-pale ${
           parallax ? "parallax-photo" : ""
         }`}
       >
-        <span className="px-4 text-center font-sans text-xs uppercase tracking-wide text-petrol/50">
-          {label}
-        </span>
+        {content}
       </div>
     </div>
   );

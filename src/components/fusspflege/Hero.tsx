@@ -39,6 +39,12 @@ export function FusspflegeHero() {
           rectTone="mint"
           aspect="aspect-[4/5]"
           className="mx-auto max-w-sm lg:mx-0"
+          image={{
+            src: "/images/fusspflege-hero.jpg",
+            alt: "Fußpflege-Behandlung bei Körpergfüh by Viki in Lambach",
+            preload: true,
+            sizes: "(min-width: 1024px) 480px, 90vw",
+          }}
         />
       </div>
     </section>
