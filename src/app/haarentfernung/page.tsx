@@ -1,29 +1,55 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { business } from "@/lib/data/business";
+import { haarentfernungFaqs } from "@/lib/data/haarentfernung";
+import { FaqJsonLd } from "@/components/seo/FaqJsonLd";
+import { HaarentfernungHero } from "@/components/haarentfernung/Hero";
+import { HaarentfernungPainpoints } from "@/components/haarentfernung/Painpoints";
+import { HaarentfernungSolution } from "@/components/haarentfernung/Solution";
+import { HaarentfernungBodyAreas } from "@/components/haarentfernung/BodyAreas";
+import { HaarentfernungPricing } from "@/components/haarentfernung/Pricing";
+import { HaarentfernungNinePlusOne } from "@/components/haarentfernung/NinePlusOne";
+import { HaarentfernungPackages } from "@/components/haarentfernung/Packages";
+import { HaarentfernungPersonalCare } from "@/components/haarentfernung/PersonalCare";
+import { HaarentfernungProcess } from "@/components/haarentfernung/Process";
+import { HaarentfernungFaq } from "@/components/haarentfernung/Faq";
+import { HaarentfernungPunctuality } from "@/components/haarentfernung/Punctuality";
+import { HaarentfernungCancellationPolicy } from "@/components/haarentfernung/CancellationPolicy";
+import { HaarentfernungFinalCta } from "@/components/haarentfernung/FinalCta";
 
 export const metadata: Metadata = {
-  title: "Dauerhafte Haarentfernung in Lambach",
+  title: { absolute: "Dauerhafte Haarentfernung in Lambach | Körpergfüh by Viki" },
   description:
-    "Dauerhafte Haarentfernung bei Körpergfüh by Viki in Lambach – Detailseite folgt in Kürze.",
+    "Dauerhafte Haarentfernung in Lambach bei Körpergfüh by Viki. Entdecke Behandlungen für Gesicht, Achseln, Beine, Intimbereich und weitere Körperzonen.",
+  alternates: {
+    canonical: `https://${business.domain}/haarentfernung`,
+  },
+  openGraph: {
+    title: "Dauerhafte Haarentfernung in Lambach | Körpergfüh by Viki",
+    description:
+      "Dauerhafte Haarentfernung in Lambach bei Körpergfüh by Viki. Entdecke Behandlungen für Gesicht, Achseln, Beine, Intimbereich und weitere Körperzonen.",
+    url: `https://${business.domain}/haarentfernung`,
+    locale: "de_AT",
+    type: "website",
+  },
 };
 
 export default function HaarentfernungPage() {
   return (
-    <section className="mx-auto max-w-3xl px-6 py-24 lg:px-10 lg:py-32">
-      <h1 className="font-display text-4xl leading-snug text-petrol sm:text-5xl">
-        Dauerhafte Haarentfernung
-      </h1>
-      <p className="mt-6 font-sans text-lg leading-relaxed text-petrol/80">
-        Die ausführliche Leistungsseite zur dauerhaften Haarentfernung wird in
-        Kürze ergänzt. Melde dich gerne direkt bei mir, wenn du jetzt schon
-        Fragen hast.
-      </p>
-      <Link
-        href="/#kontakt"
-        className="mt-8 inline-block rounded-full bg-mint px-7 py-3 font-sans text-sm font-medium text-petrol hover:bg-mint-deep hover:text-cream"
-      >
-        Kontakt aufnehmen
-      </Link>
-    </section>
+    <>
+      <FaqJsonLd faqs={haarentfernungFaqs} />
+      <HaarentfernungHero />
+      <HaarentfernungPainpoints />
+      <HaarentfernungSolution />
+      <HaarentfernungBodyAreas />
+      <HaarentfernungPricing />
+      <HaarentfernungNinePlusOne />
+      <HaarentfernungPackages />
+      <HaarentfernungPersonalCare />
+      <HaarentfernungProcess />
+      <HaarentfernungFaq />
+      <HaarentfernungPunctuality />
+      <HaarentfernungCancellationPolicy />
+      <HaarentfernungFinalCta />
+    </>
   );
 }

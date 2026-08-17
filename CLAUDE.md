@@ -123,8 +123,9 @@ unterstützt oder einen kleinen Markenmoment schafft – nicht als Selbstzweck.
 
 - [x] Home (vollständig nach Konzept umgesetzt)
 - [x] `/fusspflege` (vollständig nach Konzept umgesetzt, siehe unten)
-- [ ] `/haarentfernung` (aktuell Platzhalter – volle Leistungsseite folgt,
-  analog zu `/fusspflege` aufbauen)
+- [x] `/haarentfernung` (vollständig nach Konzept umgesetzt, siehe unten –
+  Technologie-/Fachinformations-Bereich bewusst noch nicht öffentlich
+  sichtbar, siehe TODOs in `src/lib/data/haarentfernung.ts`)
 - [ ] Preise (im aktuellen Konzept nicht vorgesehen – ggf. später ergänzen)
 - [x] Über uns (Anchor `#ueber-mich` auf der Startseite, keine eigene Seite)
 - [x] Kontakt (Anchor `#kontakt` auf der Startseite, keine eigene Seite)
@@ -132,10 +133,21 @@ unterstützt oder einen kleinen Markenmoment schafft – nicht als Selbstzweck.
 - [x] Datenschutz (Platzhalter, vor Go-Live final ausarbeiten)
 
 Die globale Sitelinks-Vorgabe (eigene URL je Hauptleistung, sprechende URLs)
-ist damit für die beiden Kernleistungen erfüllt. `/fusspflege` und
-`/haarentfernung` müssen vor Go-Live zu vollwertigen Leistungsseiten
-ausgebaut werden (Ablauf, Vorteile, FAQ, CTA) – siehe globale Vorgabe zu
-„keine dünnen Seiten".
+ist für beide Kernleistungen erfüllt.
+
+## `/haarentfernung` – Datenstruktur & offene Punkte
+
+Zonen, Einzelpreise, 9+1-Preise, Paketpreise, Aktionszeitraum, FAQs,
+Pünktlichkeits- und Stornoregel liegen zentral in
+`src/lib/data/haarentfernung.ts`. Zwei interne TODOs (als Kommentare, nicht
+öffentlich sichtbar) sind dort dokumentiert und müssen vor Ausbau ergänzt
+werden:
+1. Lasergerät/Technologie mit Viktoria bestätigen (Hersteller, Gerätename,
+   Wellenlänge, Eignung für Hauttypen/Haarfarben, Kühlung, Intervalle) –
+   erst danach einen Technologie-/Fachinformations-Bereich ergänzen.
+2. Liste weiterer FAQ-Fragen (Anzahl Behandlungen, Abstände, Vorbereitung,
+   Schmerzhaftigkeit etc.), die erst nach Bestätigung durch Viktoria
+   öffentlich beantwortet werden dürfen.
 
 ## Wichtige Content-Regel für dieses Projekt
 
