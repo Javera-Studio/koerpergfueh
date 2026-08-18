@@ -170,7 +170,9 @@ unterstützt oder einen kleinen Markenmoment schafft – nicht als Selbstzweck.
   GISA-Nummer, Gewerbebehörde, Berufsrecht/RIS-Link, Datenschutz-
   Verantwortliche, Bildnachweis; keine OS-Plattform, da seit Juli 2025
   aufgehoben)
-- [x] Datenschutz (Platzhalter, vor Go-Live final ausarbeiten)
+- [x] Datenschutz (vollständig, technisch mit tatsächlicher Implementierung
+  abgeglichen – Vercel-Hosting, Kontaktformular, Google Maps, next/font,
+  kein Tracking/keine Cookies aktuell im Einsatz)
 
 Die globale Sitelinks-Vorgabe (eigene URL je Hauptleistung, sprechende URLs)
 ist für beide Kernleistungen erfüllt.
@@ -249,7 +251,8 @@ Ersatz einer medizinischen Behandlung).
 - [x] Telefonische Erreichbarkeit mit Kundin bestätigt und eingetragen
 - [x] `/fusspflege` und `/haarentfernung` zu vollständigen Leistungsseiten ausgebaut
 - [x] Pflichtangaben Impressum final geklärt und eingetragen
-- [ ] Datenschutzerklärung final ausarbeiten (Formular, ggf. künftige Cookies)
+- [x] Datenschutzerklärung final ausgearbeitet (E-Mail-Adresse dort noch
+  final zu bestätigen, siehe TODO in `src/app/datenschutz/page.tsx`)
 - [ ] E-Mail-Versand für Kontaktformular anbinden
 
 ---
