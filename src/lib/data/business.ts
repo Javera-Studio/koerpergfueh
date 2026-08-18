@@ -116,6 +116,16 @@ export const carinaIntro = {
   ],
 } as const;
 
+// Sehr kurze, wortgetreu freigegebene Team-Notiz für die dezente Carina-
+// Erwähnung neben dem gemeinsamen Viktoria-&-Carina-Foto auf /fusspflege
+// (FusspflegeTrust.tsx). Bewusst eigener, knapperer Wortlaut als
+// carinaIntro oben – nicht zusammenlegen, beide sind einzeln freigegeben.
+export const carinaTeamNote = {
+  name: "Carina",
+  role: "Praktikantin in der Fußpflege",
+  text: "Carina absolviert derzeit ihr Praktikum in der Fußpflege bei Körpergfüh und sammelt hier praktische Erfahrung.",
+} as const;
+
 // Keine echten Bewertungen freigegeben. Struktur vorbereitet, Frontend blendet
 // die Section aus, solange dieses Array leer ist (siehe Testimonials-Komponente).
 export const testimonials: {

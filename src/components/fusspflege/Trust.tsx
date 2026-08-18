@@ -1,4 +1,4 @@
-import { qualifications } from "@/lib/data/business";
+import { qualifications, carinaTeamNote } from "@/lib/data/business";
 import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 
 export function FusspflegeTrust() {
@@ -6,14 +6,30 @@ export function FusspflegeTrust() {
     <section className="bg-mint-pale/40 py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-6 lg:px-10">
         <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
-          <ImagePlaceholder
-            label="Portrait: Viktoria"
-            offset="top-left"
-            rectTone="mint"
-            aspect="aspect-[4/5]"
-            className="mx-auto max-w-sm lg:mx-0 lg:order-2"
-            parallax
-          />
+          {/* Gemeinsames Foto statt reinem Viktoria-Portrait: Carina wird
+              hier sympathisch sichtbar, aber klar untergeordnet – nur eine
+              kleine, überlappende Notiz, keine eigene große Card. */}
+          <div className="relative mx-auto max-w-sm lg:order-2 lg:mx-0">
+            <ImagePlaceholder
+              label="Viktoria & Carina"
+              offset="top-left"
+              rectTone="mint"
+              aspect="aspect-[4/5]"
+              className="w-full"
+              parallax
+            />
+            <div className="absolute inset-x-4 -bottom-6 z-10 rounded-sm bg-cream px-4 py-3 ring-1 ring-mint-pale">
+              <p className="font-sans text-sm font-medium text-petrol">
+                {carinaTeamNote.name}
+              </p>
+              <p className="font-sans text-xs text-petrol/60">
+                {carinaTeamNote.role}
+              </p>
+              <p className="mt-2 font-sans text-xs leading-relaxed text-petrol/70">
+                {carinaTeamNote.text}
+              </p>
+            </div>
+          </div>
 
           <div className="lg:order-1">
             <h2 className="font-display text-4xl leading-snug text-petrol sm:text-5xl">
