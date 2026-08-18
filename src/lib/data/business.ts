@@ -17,10 +17,19 @@ export const business = {
   email: "ollingerv@gmail.com",
   emailHref: "mailto:ollingerv@gmail.com",
   domain: "koerpergfuel.at",
-  // Öffnungszeiten liegen aktuell nicht eindeutig bestätigt vor.
-  openingHours: null as null | { day: string; hours: string }[], // TO_CONFIRM: Öffnungszeiten mit Kundin abstimmen
   socials: [] as { label: string; href: string }[], // Keine bestätigten Profile bekannt – bewusst leer
 } as const;
+
+// Telefonische Erreichbarkeit, von Viktoria bestätigt. Montag bewusst ohne
+// Uhrzeit ("keine Zeit eintragen") – keine Zeit erfinden, bis bestätigt.
+export const openingHours: { day: string; hours: string }[] = [
+  { day: "Montag", hours: "" },
+  { day: "Dienstag", hours: "08:00 – 18:00 Uhr" },
+  { day: "Mittwoch", hours: "08:00 – 18:00 Uhr" },
+  { day: "Donnerstag", hours: "08:00 – 18:00 Uhr" },
+  { day: "Freitag", hours: "08:00 – 18:00 Uhr" },
+  { day: "Samstag", hours: "nach Vereinbarung" },
+];
 
 export const services = [
   {

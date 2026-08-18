@@ -5,6 +5,7 @@ import { About } from "@/components/sections/About";
 import { Studio } from "@/components/sections/Studio";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Contact } from "@/components/sections/Contact";
+import { Availability } from "@/components/sections/Availability";
 import { LocalBusinessJsonLd } from "@/components/seo/LocalBusinessJsonLd";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <Studio />
       <Testimonials />
       <Contact />
+      <Availability />
     </>
   );
 }

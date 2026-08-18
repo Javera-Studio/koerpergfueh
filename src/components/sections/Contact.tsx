@@ -35,26 +35,6 @@ export function Contact() {
               </a>
             </div>
 
-            {business.openingHours ? (
-              <div className="mt-8 font-sans text-sm text-petrol/80">
-                {business.openingHours.map((entry) => (
-                  <p key={entry.day}>
-                    {entry.day}: {entry.hours}
-                  </p>
-                ))}
-              </div>
-            ) : (
-              <p className="mt-8 font-sans text-sm italic text-petrol/50">
-                Öffnungszeiten werden in Kürze ergänzt.
-              </p>
-            )}
-
-            {/* Platz für Karte/Standort – nach Freigabe einbetten */}
-            <div className="mt-10 flex aspect-[16/9] items-center justify-center rounded-sm bg-mint-pale">
-              <span className="font-sans text-xs uppercase tracking-wide text-petrol/50">
-                Karte / Standort
-              </span>
-            </div>
           </div>
 
           <div className="rounded-sm bg-cream p-8 lg:p-10">

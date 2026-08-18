@@ -15,8 +15,11 @@ gilt: projektspezifische Angaben hier überschreiben die globalen Defaults.
   bestätigt, in `src/lib/data/business.ts` hinterlegt und in Kontakt-Section
   + Impressum sichtbar. Tatsächlicher Formular-Versand an diese Adresse ist
   technisch noch nicht angebunden (siehe TODO in `src/app/actions/contact.ts`).
-- **Öffnungszeiten:** aktuell nicht eindeutig bestätigt, `business.openingHours`
-  ist bewusst `null`. Keine Zeiten erfinden – erst nach Freigabe eintragen.
+- **Telefonische Erreichbarkeit:** von Viktoria bestätigt, in
+  `src/lib/data/business.ts` → `openingHours` hinterlegt (Di–Fr 08:00–18:00,
+  Sa nach Vereinbarung). Montag bewusst ohne Uhrzeit – nicht erfinden, bis
+  bestätigt. Dargestellt in `src/components/sections/Availability.tsx`
+  (eigene Section unterhalb von Contact, mit Google-Maps-Embed).
 - **Social-Media:** keine bestätigten Profile bekannt, `business.socials` ist
   bewusst leer.
 
@@ -163,7 +166,10 @@ unterstützt oder einen kleinen Markenmoment schafft – nicht als Selbstzweck.
 - [ ] Preise (im aktuellen Konzept nicht vorgesehen – ggf. später ergänzen)
 - [x] Über uns (Anchor `#ueber-mich` auf der Startseite, keine eigene Seite)
 - [x] Kontakt (Anchor `#kontakt` auf der Startseite, keine eigene Seite)
-- [x] Impressum (Platzhalter, rechtliche Details vor Go-Live final klären)
+- [x] Impressum (vollständig mit von Viktoria bestätigten Pflichtangaben:
+  GISA-Nummer, Gewerbebehörde, Berufsrecht/RIS-Link, Datenschutz-
+  Verantwortliche, Bildnachweis; keine OS-Plattform, da seit Juli 2025
+  aufgehoben)
 - [x] Datenschutz (Platzhalter, vor Go-Live final ausarbeiten)
 
 Die globale Sitelinks-Vorgabe (eigene URL je Hauptleistung, sprechende URLs)
@@ -240,9 +246,9 @@ Ersatz einer medizinischen Behandlung).
   (z.B. weitere Studiofotos, Fußpflege/Haarentfernung-Trust-Bilder) noch offen
 - [x] Logodatei aktualisiert (`public/images/logo.png`, transparent)
 - [x] E-Mail-Adresse bestätigt und eingetragen (ollingerv@gmail.com)
-- [ ] Öffnungszeiten mit Kundin bestätigen und eintragen
-- [ ] `/fusspflege` und `/haarentfernung` zu vollständigen Leistungsseiten ausbauen
-- [ ] Rechtsform & Pflichtangaben Impressum final klären
+- [x] Telefonische Erreichbarkeit mit Kundin bestätigt und eingetragen
+- [x] `/fusspflege` und `/haarentfernung` zu vollständigen Leistungsseiten ausgebaut
+- [x] Pflichtangaben Impressum final geklärt und eingetragen
 - [ ] Datenschutzerklärung final ausarbeiten (Formular, ggf. künftige Cookies)
 - [ ] E-Mail-Versand für Kontaktformular anbinden
 
