@@ -34,17 +34,46 @@ export function Studio() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-3">
+        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <ImagePlaceholder
             label="Studio-Foto"
             offset="top-left"
             rectTone="mint"
             aspect="aspect-[4/5]"
-            className="sm:col-span-1"
             parallax
+            image={{
+              src: "/images/studio1.jpe",
+              alt: "Einblick in das Körpergfüh-Studio in Lambach",
+              sizes: "(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 90vw",
+            }}
           />
-          <ImagePlaceholder label="Studio-Foto" aspect="aspect-[4/5]" />
-          <ImagePlaceholder label="Studio-Foto" aspect="aspect-[4/5]" />
+          <ImagePlaceholder
+            label="Studio-Foto"
+            aspect="aspect-[4/5]"
+            image={{
+              src: "/images/studio2.jpe",
+              alt: "Einblick in das Körpergfüh-Studio in Lambach",
+              sizes: "(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 90vw",
+            }}
+          />
+          <ImagePlaceholder
+            label="Studio-Foto"
+            aspect="aspect-[4/5]"
+            image={{
+              src: "/images/studio3.jpe",
+              alt: "Einblick in das Körpergfüh-Studio in Lambach",
+              sizes: "(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 90vw",
+            }}
+          />
+          <ImagePlaceholder
+            label="Studio-Foto"
+            aspect="aspect-[4/5]"
+            image={{
+              src: "/images/studio4.jpe",
+              alt: "Einblick in das Körpergfüh-Studio in Lambach",
+              sizes: "(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 90vw",
+            }}
+          />
         </div>
       </div>
     </section>
