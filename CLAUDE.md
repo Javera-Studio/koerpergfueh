@@ -94,6 +94,7 @@ Einsätze pro Seite:
   groß, extrem subtil, unten links im Hintergrund – bewusst weit entfernt
   vom kleinen animierten Linien-Zweig oben rechts, damit sich beide nicht
   überlagern)
+- Global (alle Seiten): `Footer.tsx` – groß, unten rechts, angeschnitten
 - `/fusspflege`: `fusspflege/Painpoints.tsx` (groß, unten links) +
   `fusspflege/Faq.tsx` (größerer Zweig, ragt rechts heraus)
 - `/haarentfernung`: `haarentfernung/Painpoints.tsx` (mittel, gespiegelt,

@@ -141,9 +141,10 @@ export const navigation = [
   { label: "Kontakt", href: "/#kontakt" },
 ] as const;
 
-export const footerLinks = [
-  { label: "Fußpflege", href: "/fusspflege" },
-  { label: "Dauerhafte Haarentfernung", href: "/haarentfernung" },
+// Rein rechtliche Links für die untere Footerzeile. Die Seitennavigation im
+// Footer verwendet bewusst dieselbe `navigation`-Liste wie der Header, damit
+// beide konsistent bleiben und Impressum/Datenschutz nicht doppelt auftauchen.
+export const legalLinks = [
   { label: "Impressum", href: "/impressum" },
   { label: "Datenschutz", href: "/datenschutz" },
 ] as const;
