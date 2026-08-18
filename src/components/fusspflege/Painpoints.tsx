@@ -25,8 +25,8 @@ export function FusspflegePainpoints() {
       {/* Botanisches Wasserzeichen (pflanze.png) – groß, am Rand angeschnitten,
           links statt rechts (Gegenstück zur Startseite), nur Desktop. */}
       <BotanicalWatermark
-        className="-bottom-16 -left-16 hidden h-[330px] w-[220px] lg:block lg:h-[480px] lg:w-[320px]"
-        opacity={0.05}
+        className="-bottom-20 -left-20 hidden h-[390px] w-[260px] lg:block lg:h-[570px] lg:w-[380px]"
+        opacity={0.14}
         rotate={4}
       />
 

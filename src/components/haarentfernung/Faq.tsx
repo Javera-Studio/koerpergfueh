@@ -2,13 +2,23 @@
 
 import { useState } from "react";
 import { haarentfernungFaqs } from "@/lib/data/haarentfernung";
+import { BotanicalWatermark } from "@/components/ui/BotanicalWatermark";
 
 export function HaarentfernungFaq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="bg-mist py-24 lg:py-32">
-      <div className="mx-auto max-w-3xl px-6 lg:px-10">
+    <section className="relative overflow-hidden bg-mist py-24 lg:py-32">
+      {/* Botanisches Wasserzeichen (pflanze.png) – größerer Zweig, ragt
+          rechts aus dem Bereich heraus, gespiegelt zum Fußpflege-Pendant. */}
+      <BotanicalWatermark
+        className="-right-16 -top-10 hidden h-[480px] w-[320px] lg:block"
+        opacity={0.15}
+        flip
+        rotate={-8}
+      />
+
+      <div className="relative mx-auto max-w-3xl px-6 lg:px-10">
         <p className="font-sans text-xs font-medium tracking-[0.2em] text-mint-deep">
           GUT ZU WISSEN
         </p>
@@ -31,7 +41,7 @@ export function HaarentfernungFaq() {
                     {faq.question}
                   </span>
                   <span
-                    className="shrink-0 font-sans text-2xl text-mint-deep"
+                    className="shrink-0 font-sans text-2xl text-gold"
                     aria-hidden="true"
                   >
                     {isOpen ? "−" : "+"}

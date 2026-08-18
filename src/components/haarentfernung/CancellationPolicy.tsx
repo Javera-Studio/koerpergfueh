@@ -3,7 +3,7 @@ import { cancellationPolicy } from "@/lib/data/haarentfernung";
 export function HaarentfernungCancellationPolicy() {
   return (
     <section className="mx-auto max-w-3xl px-6 pb-16 lg:px-10">
-      <div className="rounded-sm border border-mint-pale p-8">
+      <div className="rounded-sm border border-mint-pale border-l-2 border-l-gold p-8">
         <h3 className="font-display text-xl text-petrol">
           Falls einmal etwas dazwischenkommt
         </h3>

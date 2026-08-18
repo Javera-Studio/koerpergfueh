@@ -11,7 +11,7 @@
   --color-mint: #7fb8a0; /* Körpergfüh-Mint, primäre Marken-/Akzentfarbe */
   --color-mint-deep: #5c9c82; /* etwas kräftigeres Mint für Hover/Kontrast */
   --color-petrol: #1f3a34; /* dunkles Petrol/Grün für Headlines & Navigation */
-  --color-gold: #c8a86b; /* warmer Beige-/Goldton, nur sehr sparsam als Akzent */
+  --color-gold: #b79b72; /* gedecktes warmes Champagner-/Beigegold, angelehnt an den Empfangstresen im Studio – nur sehr sparsam als Akzent, nie als Fläche */
   --color-mist: #eaeaea; /* sekundäre neutrale Fläche aus der bisherigen Website, bewusst erhalten */
   --color-hero-overlay: #eae4e3; /* warmes Rosé-Greige für das Hero-Bild-Overlay, zentraler Bestandteil der visuellen Identität zusammen mit Mint & Petrol */
   --color-cream-foreground: var(--color-petrol);

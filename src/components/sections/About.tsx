@@ -5,6 +5,7 @@ import {
 } from "@/lib/data/business";
 import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 import { Signature } from "@/components/ui/Signature";
+import { BotanicalWatermark } from "@/components/ui/BotanicalWatermark";
 
 export function About() {
   return (
@@ -30,6 +31,16 @@ export function About() {
         <path d="M28 100 C 36 96, 44 98, 48 106" stroke="currentColor" strokeWidth="1.25" />
         <path d="M28 126 C 20 122, 13 124, 9 131" stroke="currentColor" strokeWidth="1.25" />
       </svg>
+
+      {/* Botanisches Wasserzeichen (pflanze.png) – groß und extrem
+          zurückhaltend im Hintergrund, unten links, bleedet über den Rand.
+          Bewusst weit entfernt vom kleinen animierten Linien-Zweig oben
+          rechts, damit sich beide Elemente nicht überlagern. */}
+      <BotanicalWatermark
+        className="-bottom-24 -left-24 hidden h-[620px] w-[413px] lg:block"
+        opacity={0.1}
+        rotate={-3}
+      />
 
       <div className="relative mx-auto max-w-6xl px-6 lg:px-10">
         {/* Viktoria – zentraler Vertrauensbereich */}
@@ -75,7 +86,7 @@ export function About() {
               {index > 0 && (
                 <span
                   aria-hidden
-                  className="hidden h-1 w-1 rounded-full bg-mint-deep/50 sm:block"
+                  className="hidden h-1 w-1 rounded-full bg-gold sm:block"
                 />
               )}
               <span className="font-sans text-sm text-petrol/80">{item}</span>

@@ -25,8 +25,8 @@ export function HaarentfernungPainpoints() {
       {/* Botanisches Wasserzeichen (pflanze.png) – kleiner als bei den
           anderen Seiten, gespiegelt, rechts, nur Desktop. */}
       <BotanicalWatermark
-        className="-bottom-10 -right-10 hidden h-[240px] w-[160px] lg:block lg:h-[330px] lg:w-[220px]"
-        opacity={0.08}
+        className="-bottom-14 -right-14 hidden h-[300px] w-[200px] lg:block lg:h-[420px] lg:w-[280px]"
+        opacity={0.16}
         flip
         rotate={-5}
       />

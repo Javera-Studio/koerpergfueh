@@ -43,7 +43,9 @@ in die dritte Person gerutscht wird.
   - `--color-mint` (#7fb8a0) – Körpergfüh-Mint, primäre Akzentfarbe
   - `--color-mint-deep` (#5c9c82) – kräftigeres Mint für Hover-Zustände
   - `--color-petrol` (#1f3a34) – dunkles Petrol/Grün für Headlines & Nav
-  - `--color-gold` (#c8a86b) – warmer Goldton, nur sehr sparsam als Akzent
+  - `--color-gold` (#b79b72) – gedecktes warmes Champagner-/Beigegold,
+    angelehnt an den Empfangstresen im Studio (nicht kräftiges Gelbgold),
+    nur sehr sparsam als Akzent
   - `--color-hero-overlay` (#eae4e3, aktuell nicht mehr im Code referenziert)
     – ursprünglich als vertikales Rosé-Greige-Overlay über dem Homepage-Hero
     gedacht. Der Homepage-Hero (`src/components/sections/Hero.tsx`) nutzt
@@ -85,20 +87,26 @@ Implementiert in `src/components/ui/ImagePlaceholder.tsx` über die Prop
 Wiederkehrendes dekoratives Markenelement: `public/images/pflanze.png`
 (echtes Bild, keine CSS/SVG-Nachbildung), eingebunden über
 `src/components/ui/BotanicalWatermark.tsx` (next/image, `object-contain`,
-Opacity/Flip/Rotate als Props). Sehr niedrige Opacity (0.05–0.08), am Rand
-angeschnitten, nur ab `lg` sichtbar. Aktuell an drei bewusst gewählten
-Stellen eingesetzt – jeweils in der Painpoints-Section, da dort verlässlich
-Weißraum am Section-Rand ohne Text-Überlappung vorhanden ist:
-- Startseite (`Painpoints.tsx`): groß, unten rechts
-- `/fusspflege` (`fusspflege/Painpoints.tsx`): groß, unten links (Gegenstück)
-- `/haarentfernung` (`haarentfernung/Painpoints.tsx`): kleiner, gespiegelt, unten rechts
+Opacity/Flip/Rotate als Props). Sichtbare Opacity 0.10–0.16 (Richtwert
+0.10–0.18), am Rand angeschnitten, nur ab `lg` sichtbar. Max. 2–3 bewusste
+Einsätze pro Seite:
+- Startseite: `Painpoints.tsx` (groß, unten rechts) + `About.tsx` (sehr
+  groß, extrem subtil, unten links im Hintergrund – bewusst weit entfernt
+  vom kleinen animierten Linien-Zweig oben rechts, damit sich beide nicht
+  überlagern)
+- `/fusspflege`: `fusspflege/Painpoints.tsx` (groß, unten links) +
+  `fusspflege/Faq.tsx` (größerer Zweig, ragt rechts heraus)
+- `/haarentfernung`: `haarentfernung/Painpoints.tsx` (mittel, gespiegelt,
+  unten rechts) + `haarentfernung/Faq.tsx` (größerer Zweig, ragt rechts
+  heraus, gespiegelt zum Fußpflege-Pendant)
 
-Bewusst NICHT in `Studio.tsx` oder `About.tsx` eingesetzt, da dort bereits
-das andere botanische Signature-Element (Linien-SVG, angelehnt an den
-Logo-Schriftzug) sitzt – zwei unterschiedliche botanische Bildsprachen in
-derselben Section würden unruhig wirken. Vor weiteren Platzierungen: prüfen,
-ob genug Abstand zu Text besteht (siehe bestehende Stellen als Vorbild),
-lieber wenige bewusste Stellen als viele.
+In `About.tsx` bewusst als zusätzliche, nicht animierte Hintergrundebene
+neben dem bestehenden animierten Linien-Zweig eingesetzt (unterschiedliche
+Position/Größe, keine Überlagerung) – die Motion-Regel „nur eine animierte
+botanische Stelle" bezieht sich auf die Animation, nicht auf die Anzahl
+botanischer Elemente. Vor weiteren Platzierungen: genug Abstand zu Text
+sicherstellen (siehe bestehende Stellen als Vorbild), lieber wenige
+bewusste Stellen als viele.
 
 ## Motion-Konzept
 
