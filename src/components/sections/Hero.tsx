@@ -11,7 +11,7 @@ export function Hero() {
           fill
           preload
           sizes="100vw"
-          className="object-cover"
+          className="object-cover object-[center_60%]"
         />
         {/* Hero-Overlay: warmes Off-White/Creme, ausschließlich horizontal von
             links (hinter dem Text, stark deckend) nach rechts (nahezu
