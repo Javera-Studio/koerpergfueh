@@ -44,12 +44,15 @@ in die dritte Person gerutscht wird.
   - `--color-mint-deep` (#5c9c82) – kräftigeres Mint für Hover-Zustände
   - `--color-petrol` (#1f3a34) – dunkles Petrol/Grün für Headlines & Nav
   - `--color-gold` (#c8a86b) – warmer Goldton, nur sehr sparsam als Akzent
-  - `--color-hero-overlay` (#eae4e3) – warmes Rosé-Greige, ausschließlich als
-    Overlay über dem großen bilddominanten Hero-Bild (Startseite). Ca.
-    65–78 % Deckkraft, nach unten zur Textzone hin stärker deckend für
-    Lesbarkeit (siehe `src/components/sections/Hero.tsx`). Zusammen mit
-    Körpergfüh-Mint und dunklem Petrol zentraler Bestandteil der visuellen
-    Identität – kein reines Weiß/Grau/Grün als Hero-Overlay verwenden.
+  - `--color-hero-overlay` (#eae4e3, aktuell nicht mehr im Code referenziert)
+    – ursprünglich als vertikales Rosé-Greige-Overlay über dem Homepage-Hero
+    gedacht. Der Homepage-Hero (`src/components/sections/Hero.tsx`) nutzt
+    inzwischen stattdessen einen **horizontalen** Verlauf in
+    `--color-cream` (links ~88% Deckkraft hinter dem Text, nach rechts auf
+    ~7% auslaufend), damit das Studiofoto (goldener Empfangstresen, Pflanze,
+    Einrichtung) rechts deutlich sichtbar bleibt statt gleichmäßig
+    überdeckt zu werden. Kein hartes Überblenden – weicher Verlauf ohne
+    sichtbare Kante.
   - `--color-mist` (#eaeaea) – sekundäre neutrale Fläche aus der bisherigen
     Körpergfüh-Website, bewusst erhalten. Einsatz für ruhige Sections, FAQs,
     Preisbereiche oder Hintergrundelemente (z.B. Onkologie-Bereich und FAQ

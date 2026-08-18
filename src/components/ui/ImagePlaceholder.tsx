@@ -27,6 +27,7 @@ export function ImagePlaceholder({
   className = "",
   aspect = "aspect-[4/5]",
   parallax = false,
+  hoverZoom = false,
   image,
 }: {
   label: string;
@@ -39,6 +40,10 @@ export function ImagePlaceholder({
    * Stellen einsetzen (Viktoria-Portrait, einzelne Studiofotos), nicht
    * bei jedem Bild. */
   parallax?: boolean;
+  /** Sehr dezenter Hover-Zoom (scale ~1.03) auf Desktop, z.B. bei
+   * klickbaren Leistungsbildern. Erfordert `group` auf einem Vorfahren
+   * (z.B. dem umschließenden Link). Respektiert prefers-reduced-motion. */
+  hoverZoom?: boolean;
   /** Echtes Foto statt Platzhaltertext. */
   image?: RealImage;
 }) {
@@ -51,7 +56,11 @@ export function ImagePlaceholder({
       fill
       preload={image.preload}
       sizes={image.sizes ?? "(min-width: 1024px) 480px, 90vw"}
-      className={`object-cover ${image.objectPosition ?? ""}`}
+      className={`object-cover ${image.objectPosition ?? ""} ${
+        hoverZoom
+          ? "motion-safe:transition-transform motion-safe:duration-700 motion-safe:ease-out motion-safe:group-hover:scale-[1.03]"
+          : ""
+      }`}
     />
   ) : (
     <span className="px-4 text-center font-sans text-xs uppercase tracking-wide text-petrol/50">

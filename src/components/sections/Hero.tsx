@@ -13,10 +13,12 @@ export function Hero() {
           sizes="100vw"
           className="object-cover"
         />
-        {/* Hero-Overlay: warmes Rosé-Greige (#EAE4E3), nach unten zur Textzone hin
-            stärker deckend für Lesbarkeit – zentrales Element der visuellen Identität
-            zusammen mit Körpergfüh-Mint und dunklem Petrol. */}
-        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(234,228,227,0.65)_0%,rgba(234,228,227,0.68)_45%,rgba(234,228,227,0.78)_100%)]" />
+        {/* Hero-Overlay: warmes Off-White/Creme, ausschließlich horizontal von
+            links (hinter dem Text, stark deckend) nach rechts (nahezu
+            transparent) – damit der goldene Empfangstresen, die Pflanze und
+            die Studioeinrichtung rechts deutlich sichtbar bleiben. Kein
+            gleichmäßiges Overlay mehr über dem gesamten Bild. */}
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(248,246,240,0.88)_0%,rgba(248,246,240,0.55)_35%,rgba(248,246,240,0.18)_60%,rgba(248,246,240,0.07)_100%)]" />
 
         <div className="relative w-full px-6 pb-12 sm:px-10 sm:pb-16 lg:px-16 lg:pb-20">
           <p className="hero-intro-1 font-sans text-xs font-medium tracking-[0.2em] text-petrol/80">
@@ -28,6 +30,9 @@ export function Hero() {
           <p className="hero-intro-3 mt-5 max-w-lg font-sans text-lg text-petrol/90">
             Professionelle Fußpflege &amp; dauerhafte Haarentfernung in Lambach.
           </p>
+          <p className="hero-intro-3 mt-2 max-w-lg font-sans text-sm text-petrol/60">
+            Persönlich. Fachkundig. Mit Gefühl.
+          </p>
           <div className="hero-intro-3 mt-8 flex flex-wrap items-center gap-6">
             <Link
               href="#leistungen"
@@ -35,9 +40,6 @@ export function Hero() {
             >
               Behandlungen entdecken
             </Link>
-            <span className="font-sans text-sm text-petrol/70">
-              Persönlich. Fachkundig. Mit Gefühl.
-            </span>
           </div>
         </div>
       </div>
