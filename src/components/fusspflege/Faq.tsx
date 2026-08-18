@@ -29,7 +29,10 @@ export function FusspflegeFaq() {
           {fusspflegeFaqs.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
-              <div key={faq.question} className="border-b border-petrol/15">
+              <div
+                key={faq.question}
+                className={`reveal reveal-d${(index % 4) + 1} border-b border-petrol/15`}
+              >
                 <button
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? null : index)}

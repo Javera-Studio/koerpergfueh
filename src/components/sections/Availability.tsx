@@ -27,10 +27,10 @@ export function Availability() {
             <div className="mt-4 h-px w-12 bg-gold" />
 
             <ul className="mt-8 flex flex-col">
-              {openingHours.map((entry) => (
+              {openingHours.map((entry, index) => (
                 <li
                   key={entry.day}
-                  className="flex items-baseline justify-between gap-4 border-b border-mint-pale py-3 font-sans text-base text-petrol first:border-t"
+                  className={`reveal reveal-d${(index % 4) + 1} flex items-baseline justify-between gap-4 border-b border-mint-pale py-3 font-sans text-base text-petrol first:border-t`}
                 >
                   <span>{entry.day}</span>
                   <span className="text-petrol/70">{entry.hours || "–"}</span>

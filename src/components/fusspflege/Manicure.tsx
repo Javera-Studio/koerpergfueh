@@ -16,10 +16,10 @@ export function FusspflegeManicure() {
         </p>
 
         <ul className="mt-8 flex flex-col gap-3">
-          {manicureServices.map((service) => (
+          {manicureServices.map((service, index) => (
             <li
               key={service.label}
-              className="flex items-baseline justify-between gap-4 border-b border-mint-pale pb-3 font-sans text-base text-petrol"
+              className={`reveal reveal-d${(index % 4) + 1} flex items-baseline justify-between gap-4 border-b border-mint-pale pb-3 font-sans text-base text-petrol`}
             >
               <span>{service.label}</span>
               <span className="whitespace-nowrap text-petrol/70">

@@ -82,7 +82,10 @@ export function About() {
         {/* Reduzierte Expertise-Leiste – bewusst keine großen Marketing-Cards */}
         <ul className="mt-16 flex flex-wrap items-center justify-center gap-x-3 gap-y-4 border-y border-mint-pale py-8 lg:mt-20 lg:gap-x-4">
           {expertiseHighlights.map((item, index) => (
-            <li key={item} className="flex items-center gap-3 lg:gap-4">
+            <li
+              key={item}
+              className={`reveal reveal-d${(index % 4) + 1} flex items-center gap-3 lg:gap-4`}
+            >
               {index > 0 && (
                 <span
                   aria-hidden

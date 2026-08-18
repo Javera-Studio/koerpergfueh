@@ -54,8 +54,11 @@ export function FusspflegeTrust() {
             </p>
 
             <ul className="mt-10 flex flex-col gap-4">
-              {qualifications.map((qualification) => (
-                <li key={qualification} className="flex items-start gap-3">
+              {qualifications.map((qualification, index) => (
+                <li
+                  key={qualification}
+                  className={`reveal reveal-d${(index % 4) + 1} flex items-start gap-3`}
+                >
                   <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-mint-deep" />
                   <span className="font-sans text-base text-petrol">
                     {qualification}

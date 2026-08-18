@@ -16,10 +16,10 @@ export function HaarentfernungPackages() {
       </p>
 
       <ul className="mt-10 flex flex-col gap-3">
-        {packages.map((pkg) => (
+        {packages.map((pkg, index) => (
           <li
             key={pkg.label}
-            className="flex items-baseline justify-between gap-4 border-b border-mint-pale pb-3 font-sans text-base text-petrol"
+            className={`reveal reveal-d${(index % 4) + 1} flex items-baseline justify-between gap-4 border-b border-mint-pale pb-3 font-sans text-base text-petrol`}
           >
             <span>{pkg.label}</span>
             <span className="whitespace-nowrap text-petrol/70">

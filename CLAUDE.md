@@ -111,9 +111,15 @@ bewusste Stellen als viele.
 
 ## Motion-Konzept
 
-Bewusst wenige, gezielte Momente statt durchgängiger Bewegung – Ziel sind
-ca. 3–4 wahrnehmbare interaktive Momente auf der gesamten Website, nicht pro
-Section. Ausschließlich CSS, keine Animationsbibliothek hinzugefügt.
+Ursprünglich bewusst wenige, gezielte Momente statt durchgängiger Bewegung.
+Auf expliziten Wunsch später erweitert: **alle Bilder** (`ImagePlaceholder`,
+Prop `reveal`, Standard `true`) und **alle Aufzählungen/Listen** auf
+Startseite, `/fusspflege` und `/haarentfernung` blenden beim Scrollen von
+unten sanft ein (`.reveal` + gestaffelt `.reveal-d1`–`.reveal-d4` je nach
+Index). Das ist bewusst pervasiver als die ursprüngliche „3–4 Momente"-Regel
+für die Signature-Elemente (Parallax, Onkologie-Reveal, botanisches
+Wasserzeichen, Hero-Intro) – diese bleiben weiterhin sparsam eingesetzt,
+siehe unten. Ausschließlich CSS, keine Animationsbibliothek hinzugefügt.
 Scroll-gebundene Effekte laufen über die native CSS-Scroll-Driven-Animations-
 API (`animation-timeline: view()`), gated über `@supports` – Browser ohne
 Unterstützung zeigen Inhalte sofort vollständig sichtbar (kein Layout Shift,

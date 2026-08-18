@@ -28,6 +28,7 @@ export function ImagePlaceholder({
   aspect = "aspect-[4/5]",
   parallax = false,
   hoverZoom = false,
+  reveal = true,
   image,
 }: {
   label: string;
@@ -44,10 +45,13 @@ export function ImagePlaceholder({
    * klickbaren Leistungsbildern. Erfordert `group` auf einem Vorfahren
    * (z.B. dem umschließenden Link). Respektiert prefers-reduced-motion. */
   hoverZoom?: boolean;
+  /** Bild blendet beim Scrollen von unten sanft ein (Standard: an). */
+  reveal?: boolean;
   /** Echtes Foto statt Platzhaltertext. */
   image?: RealImage;
 }) {
   const rectColor = rectTone === "mint" ? "bg-mint" : "bg-mint-pale";
+  const revealClass = reveal ? "reveal" : "";
 
   const content = image ? (
     <Image
@@ -71,7 +75,7 @@ export function ImagePlaceholder({
   if (offset === "none") {
     return (
       <div
-        className={`relative ${aspect} ${rectColor} flex items-center justify-center overflow-hidden rounded-sm ${className}`}
+        className={`relative ${aspect} ${rectColor} ${revealClass} flex items-center justify-center overflow-hidden rounded-sm ${className}`}
       >
         {content}
       </div>
@@ -84,7 +88,7 @@ export function ImagePlaceholder({
       : "-left-4 -top-4 lg:-left-6 lg:-top-6";
 
   return (
-    <div className={`relative ${className}`}>
+    <div className={`relative ${revealClass} ${className}`}>
       <div className={`absolute ${rectPos} h-full w-full ${rectColor} rounded-sm`} />
       <div
         className={`relative ${aspect} flex items-center justify-center overflow-hidden rounded-sm bg-cream ring-1 ring-mint-pale ${

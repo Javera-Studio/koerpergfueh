@@ -20,10 +20,10 @@ export function HaarentfernungBodyAreas() {
           <div key={group.title}>
             <h3 className="font-display text-2xl text-petrol">{group.title}</h3>
             <ul className="mt-4 flex flex-col gap-2">
-              {group.zones.map((zone) => (
+              {group.zones.map((zone, index) => (
                 <li
                   key={zone}
-                  className="flex items-start gap-3 font-sans text-base text-petrol/80"
+                  className={`reveal reveal-d${(index % 4) + 1} flex items-start gap-3 font-sans text-base text-petrol/80`}
                 >
                   <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-mint-deep" />
                   {zone}

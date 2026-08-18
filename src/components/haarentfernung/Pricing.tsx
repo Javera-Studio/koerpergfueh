@@ -16,8 +16,8 @@ export function HaarentfernungPricing() {
       </p>
 
       <div className="mt-14 flex flex-col gap-14">
-        {pricingGroups.map((group) => (
-          <div key={group.title}>
+        {pricingGroups.map((group, index) => (
+          <div key={group.title} className={`reveal reveal-d${(index % 4) + 1}`}>
             <h3 className="font-display text-2xl text-petrol">{group.title}</h3>
             <div className="mt-4 overflow-x-auto">
               <table className="w-full min-w-[420px] border-collapse font-sans text-base">

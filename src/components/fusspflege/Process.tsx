@@ -11,8 +11,8 @@ export function FusspflegeProcess() {
       </h2>
 
       <div className="mt-16 grid gap-12 sm:grid-cols-3 sm:gap-8">
-        {treatmentSteps.map((step) => (
-          <div key={step.number}>
+        {treatmentSteps.map((step, index) => (
+          <div key={step.number} className={`reveal reveal-d${(index % 4) + 1}`}>
             <p className="font-display text-4xl text-mint-deep">
               {step.number}
             </p>

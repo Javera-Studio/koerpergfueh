@@ -41,10 +41,10 @@ export function FusspflegeOncology() {
             Was zu dieser besonderen Betreuung gehört
           </h3>
           <ul className="mt-5 flex flex-col gap-2">
-            {oncologyTreatment.includes.map((item) => (
+            {oncologyTreatment.includes.map((item, index) => (
               <li
                 key={item}
-                className="flex items-start gap-3 font-sans text-base text-petrol/80"
+                className={`reveal reveal-d${(index % 4) + 1} flex items-start gap-3 font-sans text-base text-petrol/80`}
               >
                 <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-mint-deep" />
                 {item}
