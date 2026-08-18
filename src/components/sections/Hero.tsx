@@ -1,10 +1,18 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export function Hero() {
   return (
     <section className="relative mx-4 mt-4 overflow-hidden rounded-sm bg-mint-pale lg:mx-10 lg:mt-6">
-      {/* Bild-Platzhalter: später durch echtes Atmosphäre-Bild von Viktoria/Studio ersetzen */}
-      <div className="relative flex h-[78vh] min-h-[520px] items-end">
+      <div className="relative flex min-h-[max(78vh,520px)] items-end">
+        <Image
+          src="/images/herostart.png"
+          alt="Empfangsbereich des Körpergfüh-Studios in Lambach"
+          fill
+          preload
+          sizes="100vw"
+          className="object-cover"
+        />
         {/* Hero-Overlay: warmes Rosé-Greige (#EAE4E3), nach unten zur Textzone hin
             stärker deckend für Lesbarkeit – zentrales Element der visuellen Identität
             zusammen mit Körpergfüh-Mint und dunklem Petrol. */}

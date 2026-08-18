@@ -74,6 +74,26 @@ versetzt hinter ausgewählten Fotos (Viktoria-Portrait, Studio-Bilder).
 Implementiert in `src/components/ui/ImagePlaceholder.tsx` über die Prop
 `offset` (`top-left` / `top-right` / `none`). Nicht bei jedem Bild einsetzen.
 
+## Botanisches Wasserzeichen (pflanze.png)
+
+Wiederkehrendes dekoratives Markenelement: `public/images/pflanze.png`
+(echtes Bild, keine CSS/SVG-Nachbildung), eingebunden über
+`src/components/ui/BotanicalWatermark.tsx` (next/image, `object-contain`,
+Opacity/Flip/Rotate als Props). Sehr niedrige Opacity (0.05–0.08), am Rand
+angeschnitten, nur ab `lg` sichtbar. Aktuell an drei bewusst gewählten
+Stellen eingesetzt – jeweils in der Painpoints-Section, da dort verlässlich
+Weißraum am Section-Rand ohne Text-Überlappung vorhanden ist:
+- Startseite (`Painpoints.tsx`): groß, unten rechts
+- `/fusspflege` (`fusspflege/Painpoints.tsx`): groß, unten links (Gegenstück)
+- `/haarentfernung` (`haarentfernung/Painpoints.tsx`): kleiner, gespiegelt, unten rechts
+
+Bewusst NICHT in `Studio.tsx` oder `About.tsx` eingesetzt, da dort bereits
+das andere botanische Signature-Element (Linien-SVG, angelehnt an den
+Logo-Schriftzug) sitzt – zwei unterschiedliche botanische Bildsprachen in
+derselben Section würden unruhig wirken. Vor weiteren Platzierungen: prüfen,
+ob genug Abstand zu Text besteht (siehe bestehende Stellen als Vorbild),
+lieber wenige bewusste Stellen als viele.
+
 ## Motion-Konzept
 
 Bewusst wenige, gezielte Momente statt durchgängiger Bewegung – Ziel sind
@@ -213,8 +233,10 @@ Ersatz einer medizinischen Behandlung).
 
 ## Vor Übergabe an die Kundin (projektspezifisch, zusätzlich zur globalen Checkliste)
 
-- [x] Echte Bilder von Viktoria, Carina & Studio eingesetzt (victoria1.jpg,
-  carina.jpg, studio1–5.jpe) – nur einzelne `ImagePlaceholder`-Stellen
+- [x] Echte Bilder eingesetzt: Startseiten-Hero (herostart.png), Viktoria
+  (victoria1.jpg), Carina (carina.jpg), Studio (studio1–5.jpe),
+  Fußpflege-Hero (fusspflege-hero.jpg), Haarentfernung-Hero
+  (haarentfernung-hero.jpg) – nur einzelne `ImagePlaceholder`-Stellen
   (z.B. weitere Studiofotos, Fußpflege/Haarentfernung-Trust-Bilder) noch offen
 - [x] Logodatei aktualisiert (`public/images/logo.png`, transparent)
 - [x] E-Mail-Adresse bestätigt und eingetragen (ollingerv@gmail.com)

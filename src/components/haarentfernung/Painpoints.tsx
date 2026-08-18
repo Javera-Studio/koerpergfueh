@@ -1,3 +1,5 @@
+import { BotanicalWatermark } from "@/components/ui/BotanicalWatermark";
+
 const painpoints = [
   {
     title: "Stoppeln, die schneller zurück sind, als dir lieb ist.",
@@ -19,7 +21,17 @@ const painpoints = [
 
 export function HaarentfernungPainpoints() {
   return (
-    <section id="painpoints" className="mx-auto max-w-5xl px-6 py-24 lg:px-10 lg:py-32">
+    <section id="painpoints" className="relative overflow-hidden">
+      {/* Botanisches Wasserzeichen (pflanze.png) – kleiner als bei den
+          anderen Seiten, gespiegelt, rechts, nur Desktop. */}
+      <BotanicalWatermark
+        className="-bottom-10 -right-10 hidden h-[240px] w-[160px] lg:block lg:h-[330px] lg:w-[220px]"
+        opacity={0.08}
+        flip
+        rotate={-5}
+      />
+
+      <div className="relative mx-auto max-w-5xl px-6 py-24 lg:px-10 lg:py-32">
       <p className="font-sans text-xs font-medium tracking-[0.2em] text-mint-deep">
         KENNST DU DAS?
       </p>
@@ -50,6 +62,7 @@ export function HaarentfernungPainpoints() {
         Vielleicht wünschst du dir deshalb nicht einfach nur weniger Haare.
         Sondern weniger Aufwand damit.
       </p>
+      </div>
     </section>
   );
 }

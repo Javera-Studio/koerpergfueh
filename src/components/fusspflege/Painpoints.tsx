@@ -1,3 +1,5 @@
+import { BotanicalWatermark } from "@/components/ui/BotanicalWatermark";
+
 const painpoints = [
   {
     title: "Hornhaut, die immer wiederkommt.",
@@ -19,7 +21,16 @@ const painpoints = [
 
 export function FusspflegePainpoints() {
   return (
-    <section className="mx-auto max-w-5xl px-6 py-24 lg:px-10 lg:py-32">
+    <section className="relative overflow-hidden">
+      {/* Botanisches Wasserzeichen (pflanze.png) – groß, am Rand angeschnitten,
+          links statt rechts (Gegenstück zur Startseite), nur Desktop. */}
+      <BotanicalWatermark
+        className="-bottom-16 -left-16 hidden h-[330px] w-[220px] lg:block lg:h-[480px] lg:w-[320px]"
+        opacity={0.05}
+        rotate={4}
+      />
+
+      <div className="relative mx-auto max-w-5xl px-6 py-24 lg:px-10 lg:py-32">
       <h2 className="max-w-xl font-display text-4xl leading-snug text-petrol sm:text-5xl">
         Wenn jeder Schritt daran erinnert, dass etwas nicht stimmt.
       </h2>
@@ -50,6 +61,7 @@ export function FusspflegePainpoints() {
           Vielleicht möchtest du einfach wieder das Gefühl haben, dass deine
           Füße gepflegt, leicht und gut versorgt sind.
         </p>
+      </div>
       </div>
     </section>
   );
