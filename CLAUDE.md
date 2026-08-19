@@ -255,10 +255,19 @@ Bestätigte Qualifikationen von Viktoria (ausschließlich diese verwenden):
 - Onkologisch-kosmetische Zusatzausbildung
 - Medizinischer & pflegerischer Hintergrund
 
-Testimonials: `src/lib/data/business.ts` → `testimonials` ist bewusst leer.
-Die Komponente `Testimonials.tsx` rendert `null`, solange das Array leer ist.
-Keine Bewertungen, Namen oder Sterne erfinden – erst nach echter Freigabe
-befüllen.
+Testimonials: `src/lib/data/business.ts` → `testimonials` enthält 6 echte,
+wortgetreu übernommene Google-Bewertungen (Leonie Hofstätter als
+`featured: true` in der großen Karte, plus Sarah K., Nadine, Sandra
+Samhaber, Olivia M., Carina). `Testimonials.tsx` auf der Startseite zeigt sie
+als editoriales, asymmetrisches Grid (große Featured-Karte in Petrol + 5
+kleinere Karten in Mint/Greige/Cream, Gold nur als Akzent). `googleRating`
+zeigt nur den bestätigten Schnitt (5,0) – `count` ist bewusst `null`, bis die
+tatsächliche Anzahl bestätigt ist. `googleReviewsUrl` ist bewusst `null`
+(TODO: echte URL zum Google-Unternehmensprofil eintragen, keine erfinden) –
+der CTA "Alle Bewertungen auf Google ansehen" erscheint bis dahin als
+klar erkennbarer, nicht-klickbarer Platzhalter (gestrichelte Linie).
+Keine weiteren Bewertungen, Namen oder Sterne erfinden – nur nach echter
+Freigabe ergänzen.
 
 ## `/fusspflege` – Datenstruktur & Inhalte
 

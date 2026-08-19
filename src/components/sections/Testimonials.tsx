@@ -1,65 +1,178 @@
-import { testimonials, googleRating } from "@/lib/data/business";
+import {
+  testimonials,
+  googleRating,
+  googleReviewsUrl,
+} from "@/lib/data/business";
 import { Signature } from "@/components/ui/Signature";
 
+const cardTones = {
+  petrol: "bg-petrol text-cream",
+  mint: "bg-mint-pale text-petrol",
+  greige: "bg-greige text-petrol",
+  cream: "bg-cream text-petrol ring-1 ring-petrol/10",
+} as const;
+
+function Stars({ rating, dark }: { rating: number; dark?: boolean }) {
+  return (
+    <p className={dark ? "text-gold/90" : "text-gold"} aria-hidden>
+      {"★".repeat(rating)}
+      {"☆".repeat(5 - rating)}
+    </p>
+  );
+}
+
+function QuoteMark({ dark }: { dark?: boolean }) {
+  return (
+    <span
+      aria-hidden
+      className={`font-display text-6xl leading-none ${dark ? "text-gold/40" : "text-gold/30"}`}
+    >
+      “
+    </span>
+  );
+}
+
 /**
- * Solange keine echten, freigegebenen Google-Bewertungen vorliegen, bleibt
- * diese Section vollständig ausgeblendet (return null) – keine leeren
- * Platzhalter-Boxen auf der Live-Website. Struktur ist vollständig
- * vorbereitet: sobald `testimonials` in src/lib/data/business.ts befüllt
- * wird (max. 3 echte Bewertungen), erscheint die Section automatisch.
- * TODO: echte Bewertungstexte/Namen mit Viktoria bestätigen und eintragen –
- * niemals selbst erfinden.
+ * Echte Google-Bewertungen (siehe business.ts – Inhalte nicht erfinden oder
+ * sinnverändern). Editoriales, asymmetrisches Grid statt gleichförmiger
+ * Karten: eine große Featured-Karte + wechselnde kleinere Karten, Gold
+ * ausschließlich als Akzent (Sterne, Anführungszeichen, feine Linien).
  */
 export function Testimonials() {
   if (testimonials.length === 0) return null;
 
+  const featured = testimonials.find((t) => t.featured) ?? testimonials[0];
+  const rest = testimonials.filter((t) => t !== featured);
+  const [secondaryA, secondaryB, ...others] = rest;
+
   return (
-    <section className="mx-auto max-w-5xl px-6 py-24 lg:px-10 lg:py-32">
+    <section className="mx-auto max-w-6xl px-6 py-24 lg:px-10 lg:py-32">
       <div className="text-center">
         <Signature className="block" color="gold">
-          Stimmen aus dem Studio
+          Was Kundinnen sagen
         </Signature>
         <h2 className="mt-4 font-display text-4xl leading-snug text-petrol sm:text-5xl">
-          Was Kundinnen und Kunden über Körpergfüh sagen.
+          5 Sterne für Körpergfüh.
         </h2>
+        <div className="mt-6 flex flex-col items-center gap-1">
+          <Stars rating={Math.round(googleRating.average)} />
+          <span className="font-sans text-sm text-petrol/70">
+            {googleRating.average.toLocaleString("de-AT", {
+              minimumFractionDigits: 1,
+            })}{" "}
+            von 5 Sternen auf Google
+          </span>
+          <span className="mt-1 font-sans text-xs uppercase tracking-[0.2em] text-petrol/40">
+            Google Bewertungen
+          </span>
+        </div>
+      </div>
 
-        {/* Nur anzeigen, sobald googleRating tatsächlich bestätigt/eingetragen ist */}
-        {googleRating && (
-          <div className="mt-6 flex flex-col items-center gap-1">
-            <span className="text-gold" aria-hidden>
-              {"★".repeat(Math.round(googleRating.average))}
-              {"☆".repeat(5 - Math.round(googleRating.average))}
-            </span>
-            <span className="font-sans text-sm text-petrol/70">
-              {googleRating.average.toLocaleString("de-AT", {
-                minimumFractionDigits: 1,
-              })}{" "}
-              bei Google ({googleRating.count} Bewertungen)
-            </span>
+      <div className="mt-16 grid gap-6 lg:grid-cols-6 lg:grid-rows-2">
+        {/* Featured: große Karte links, dunkles Petrol als bewusster Anker */}
+        <blockquote
+          className={`reveal reveal-d1 relative flex flex-col justify-between rounded-2xl p-8 sm:p-10 lg:col-span-3 lg:row-span-2 ${cardTones.petrol}`}
+        >
+          <div>
+            <QuoteMark dark />
+            <Stars rating={featured.rating ?? 5} dark />
+            <p className="mt-4 whitespace-pre-line font-display text-xl leading-relaxed text-cream sm:text-2xl">
+              {featured.text}
+            </p>
           </div>
+          <footer className="mt-8 border-t border-cream/20 pt-4 font-sans text-sm font-medium text-cream/90">
+            {featured.name}
+          </footer>
+        </blockquote>
+
+        {secondaryA && (
+          <blockquote
+            className={`reveal reveal-d2 relative flex flex-col justify-between rounded-2xl p-7 lg:col-span-3 ${cardTones.mint}`}
+          >
+            <div>
+              <QuoteMark />
+              <Stars rating={secondaryA.rating ?? 5} />
+              <p className="mt-3 font-sans text-base leading-relaxed text-petrol/85">
+                {secondaryA.text}
+              </p>
+            </div>
+            <footer className="mt-5 font-sans text-sm font-medium text-petrol">
+              {secondaryA.name}
+            </footer>
+          </blockquote>
+        )}
+
+        {secondaryB && (
+          <blockquote
+            className={`reveal reveal-d3 relative flex flex-col justify-between rounded-2xl p-7 lg:col-span-3 ${cardTones.cream}`}
+          >
+            <div>
+              <QuoteMark />
+              <Stars rating={secondaryB.rating ?? 5} />
+              <p className="mt-3 font-sans text-base leading-relaxed text-petrol/85">
+                {secondaryB.text}
+              </p>
+            </div>
+            <footer className="mt-5 font-sans text-sm font-medium text-petrol">
+              {secondaryB.name}
+            </footer>
+          </blockquote>
         )}
       </div>
 
-      <div className="mt-16 grid gap-10 sm:grid-cols-3">
-        {testimonials.slice(0, 3).map((testimonial, index) => (
-          <blockquote
-            key={testimonial.name}
-            className={`reveal reveal-d${(index % 4) + 1} border-t border-gold/30 pt-6`}
+      {others.length > 0 && (
+        <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {others.map((testimonial, index) => {
+            const tone =
+              index % 2 === 0 ? cardTones.greige : cardTones.mint;
+            return (
+              <blockquote
+                key={testimonial.name}
+                className={`reveal reveal-d${((index + 3) % 4) + 1} relative flex flex-col justify-between rounded-2xl p-7 ${tone}`}
+              >
+                <div>
+                  <QuoteMark />
+                  <Stars rating={testimonial.rating ?? 5} />
+                  <p className="mt-3 font-sans text-base leading-relaxed text-petrol/85">
+                    {testimonial.text}
+                  </p>
+                </div>
+                <footer className="mt-5 font-sans text-sm font-medium text-petrol">
+                  {testimonial.name}
+                </footer>
+              </blockquote>
+            );
+          })}
+        </div>
+      )}
+
+      <div className="mt-14 text-center">
+        {googleReviewsUrl ? (
+          <a
+            href={googleReviewsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-1.5 border-b border-gold pb-0.5 font-sans text-sm font-medium text-petrol transition-colors hover:text-mint-deep"
           >
-            {testimonial.rating && (
-              <p className="text-gold" aria-hidden>
-                {"★".repeat(testimonial.rating)}
-                {"☆".repeat(5 - testimonial.rating)}
-              </p>
-            )}
-            <p className="mt-3 font-sans text-base leading-relaxed text-petrol/80">
-              „{testimonial.text}“
-            </p>
-            <footer className="mt-4 font-sans text-sm font-medium text-petrol">
-              {testimonial.name}
-            </footer>
-          </blockquote>
-        ))}
+            Alle Bewertungen auf Google ansehen
+            <span
+              aria-hidden
+              className="motion-safe:transition-transform motion-safe:duration-300 motion-safe:ease-out motion-safe:group-hover:translate-x-1"
+            >
+              →
+            </span>
+          </a>
+        ) : (
+          // TODO: googleReviewsUrl in business.ts eintragen, sobald das
+          // korrekte Google-Unternehmensprofil bestätigt ist – keine URL
+          // erfinden. Bis dahin bewusst nicht-klickbarer Platzhalter.
+          <span
+            aria-disabled
+            className="inline-flex cursor-default items-center gap-1.5 border-b border-dashed border-gold/50 pb-0.5 font-sans text-sm font-medium text-petrol/50"
+          >
+            Alle Bewertungen auf Google ansehen →
+          </span>
+        )}
       </div>
     </section>
   );

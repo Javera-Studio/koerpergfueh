@@ -130,20 +130,62 @@ export const carinaTeamNote = {
   text: "Carina absolviert derzeit ihr Praktikum in der Fußpflege bei Körpergfüh und sammelt hier praktische Erfahrung.",
 } as const;
 
-// TODO: Keine echten Google-Bewertungen freigegeben/eingetragen. Struktur
-// vorbereitet (siehe Testimonials.tsx), Frontend blendet die Section
-// vollständig aus, solange dieses Array leer ist. Sobald Viktoria bis zu
-// drei echte, freigegebene Google-Bewertungen bestätigt: hier eintragen
-// (Name, Text, optional rating 1-5) – keine Bewertungen erfinden.
+// Echte Google-Bewertungen, wortgetreu übernommen (keine Inhalte erfinden
+// oder sinnverändernd kürzen). `featured: true` markiert die große
+// Highlight-Karte in der Testimonials-Section.
 export const testimonials: {
   name: string;
   text: string;
   rating?: number;
-}[] = [];
+  featured?: boolean;
+}[] = [
+  {
+    name: "Leonie Hofstätter",
+    rating: 5,
+    featured: true,
+    text: "Ich kann Vicky wirklich von Herzen weiterempfehlen. Sie arbeitet extrem sauber und sehr genau, besonders bei der Fußpflege merkt man sofort, wie professionell sie ist. Man fühlt sich bestens aufgehoben und weiß, dass sie ihre Arbeit mit viel Sorgfalt macht.\n\nAuch bei den Laserbehandlungen bin ich total begeistert. Schon nach den ersten Behandlungen habe ich deutlich einen Unterschied gemerkt und genau das wünscht man sich ja. Es ist einfach toll, wenn nicht nur die Atmosphäre passt, sondern auch das Ergebnis überzeugt.\n\nDazu ist sie ein unglaublich herzlicher und lustiger Mensch. Man kann mit ihr super quatschen und verbringt die Zeit dort wirklich gerne. Ich freue mich jedes Mal auf meinen Termin und komme immer wieder gerne. Absolute Empfehlung.",
+  },
+  {
+    name: "Sarah K.",
+    rating: 5,
+    text: "Immer wieder gerne!!! Sowohl bei der professionellen medizinischen Fußpflege als auch bei der dauerhaften Haarentfernung bin ich nach jeder Behandlung sehr zufrieden. Schnell, sympathisch und kompetent. Das neue Studio in Lambach ist hell und einladend. Ich freue mich immer schon auf die nächste Behandlung – weiter so!",
+  },
+  {
+    name: "Nadine",
+    rating: 5,
+    text: "Ich war zur Fußpflege hier und bin absolut begeistert! Schon beim Betreten habe ich mich wohlgefühlt – alles ist sauber und angenehm gestaltet. Die Behandlung selbst war sehr professionell und gleichzeitig total entspannend. Meine Füße fühlen sich wie neu an – gepflegt, glatt und schmerzfrei. Viktoria war freundlich, aufmerksam und hat mir auch hilfreiche Tipps zur Fußpflege für zuhause gegeben. Ich komme definitiv wieder und kann diesen Ort jedem empfehlen, der seinen Füßen etwas Gutes tun will!",
+  },
+  {
+    name: "Sandra Samhaber",
+    rating: 5,
+    text: "TOP!! Ich kann sie nur jedem weiter empfehlen. Ich bin begeistert && es wird so sehr auf die Wünsche und Bedürfnisse eingegangen! [...] Ein Mensch mit Liebe zum Beruf und die weiß was sie tut!!",
+  },
+  {
+    name: "Olivia M.",
+    rating: 5,
+    text: "Schönes, gepflegtes Studio in harmonischer Atmosphäre zum Wohlfühlen! Viktoria bietet als sehr freundliche und hilfsbereite Mensch kompetente Beratung und top Behandlungen zu einem fairen Angebot! 5/5",
+  },
+  {
+    name: "Carina",
+    rating: 5,
+    text: "Danke für deine tolle Arbeit liebe Viktoria 🥰 man fühlt sich sehr wohl bei euch im Salon und die Betreuung sowie das Ergebnis einfach top! Dankeschön",
+  },
+];
 
-// TODO: Erst befüllen/anzeigen, wenn die tatsächliche Google-Bewertung
-// (Sternezahl + Anzahl) von Viktoria bestätigt ist. Keine Zahl erfinden.
-export const googleRating: { average: number; count: number } | null = null;
+// Nur der Durchschnitt (5,0) ist über alle sechs Bewertungen hinweg
+// bestätigt. TODO: Gesamtanzahl der Google-Bewertungen von Viktoria
+// bestätigen lassen, bevor `count` hier eingetragen wird – keine Zahl
+// erfinden. Die Section zeigt bis dahin bewusst keine Bewertungsanzahl an.
+export const googleRating: { average: number; count: number | null } = {
+  average: 5.0,
+  count: null,
+};
+
+// TODO: Korrekte URL zum Google-Unternehmensprofil von Viktoria bestätigen
+// lassen und hier eintragen. Bis dahin bewusst kein Link/keine erfundene
+// URL – die Testimonials-Section zeigt den CTA erst, sobald dieser Wert
+// gesetzt ist.
+export const googleReviewsUrl: string | null = null;
 
 export const navigation = [
   { label: "Fußpflege", href: "/fusspflege" },
