@@ -7,12 +7,6 @@ export const metadata: Metadata = {
   robots: { index: false, follow: true },
 };
 
-// TODO vor Go-Live: E-Mail-Adresse mit Viktoria final bestätigen. Aktuell
-// zentral in src/lib/data/business.ts hinterlegt (ollingerv@gmail.com).
-// Alternativ im Raum steht koerpergfueh.23@gmail.com – auf der Website darf
-// nur EINE Adresse verwendet werden, sobald final geklärt hier + in
-// business.ts konsistent anpassen.
-
 function Section({
   title,
   children,

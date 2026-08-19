@@ -13,10 +13,12 @@ gilt: projektspezifische Angaben hier überschreiben die globalen Defaults.
   widersprach der Google-Maps-Karte, jetzt in `business.ts` korrigiert)
 - **Domain:** koerpergfuel.at
 - **Telefon:** 0676 388 46 71 (`tel:+436763884671`)
-- **E-Mail:** ollingerv@gmail.com (`mailto:ollingerv@gmail.com`), von Viktoria
-  bestätigt, in `src/lib/data/business.ts` hinterlegt und in Kontakt-Section
-  + Impressum sichtbar. Tatsächlicher Formular-Versand an diese Adresse ist
-  technisch noch nicht angebunden (siehe TODO in `src/app/actions/contact.ts`).
+- **E-Mail:** koerpergfueh.23@gmail.com (`mailto:koerpergfueh.23@gmail.com`),
+  von Viktoria final bestätigt (ursprünglich testweise ollingerv@gmail.com
+  hinterlegt, jetzt korrigiert), in `src/lib/data/business.ts` hinterlegt
+  und in Kontakt-Section + Impressum + Datenschutz sichtbar. Tatsächlicher
+  Formular-Versand an diese Adresse ist technisch noch nicht angebunden
+  (siehe TODO in `src/app/actions/contact.ts`).
 - **Telefonische Erreichbarkeit:** von Viktoria bestätigt, in
   `src/lib/data/business.ts` → `openingHours` hinterlegt (Di–Fr 08:00–18:00,
   Sa nach Vereinbarung). Montag bewusst ohne Uhrzeit – nicht erfinden, bis
@@ -285,8 +287,8 @@ Ersatz einer medizinischen Behandlung).
    indexierbare Seiten (Impressum/Datenschutz bewusst nicht, da `noindex`).
 8. [x] Kontaktformular: Server Action (`src/app/actions/contact.ts`) + Honeypot.
    **Offen:** tatsächlicher E-Mail-Versand an `business.email`
-   (ollingerv@gmail.com, z.B. via Resend) noch nicht angebunden – TODO im
-   Code markiert, aktuell wird nur validiert.
+   (koerpergfueh.23@gmail.com, z.B. via Resend) noch nicht angebunden –
+   TODO im Code markiert, aktuell wird nur validiert.
 9. [ ] Cookie-Consent-Banner – noch nicht eingebunden, da aktuell kein
    Tracking/Analytics im Projekt vorgesehen. Vor Einbindung von GA4/Meta-Pixel
    zwingend nachrüsten (harte DSGVO-Vorgabe).
@@ -300,12 +302,11 @@ Ersatz einer medizinischen Behandlung).
   (haarentfernung-hero.jpg) – nur einzelne `ImagePlaceholder`-Stellen
   (z.B. weitere Studiofotos, Fußpflege/Haarentfernung-Trust-Bilder) noch offen
 - [x] Logodatei aktualisiert (`public/images/logo.png`, transparent)
-- [x] E-Mail-Adresse bestätigt und eingetragen (ollingerv@gmail.com)
+- [x] E-Mail-Adresse final bestätigt und eingetragen (koerpergfueh.23@gmail.com)
 - [x] Telefonische Erreichbarkeit mit Kundin bestätigt und eingetragen
 - [x] `/fusspflege` und `/haarentfernung` zu vollständigen Leistungsseiten ausgebaut
 - [x] Pflichtangaben Impressum final geklärt und eingetragen
-- [x] Datenschutzerklärung final ausgearbeitet (E-Mail-Adresse dort noch
-  final zu bestätigen, siehe TODO in `src/app/datenschutz/page.tsx`)
+- [x] Datenschutzerklärung final ausgearbeitet (E-Mail-Adresse final bestätigt)
 - [ ] E-Mail-Versand für Kontaktformular anbinden
 
 ---

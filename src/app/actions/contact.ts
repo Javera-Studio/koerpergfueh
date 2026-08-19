@@ -30,8 +30,8 @@ export async function submitContactForm(
     return { status: "error", message: "Bitte fülle alle Felder aus." };
   }
 
-  // TODO: E-Mail-Versand an business.email (ollingerv@gmail.com) technisch
-  // einrichten (z.B. via Resend/Nodemailer) – aktuell wird nur validiert.
+  // TODO: E-Mail-Versand an business.email (koerpergfueh.23@gmail.com)
+  // technisch einrichten (z.B. via Resend/Nodemailer) – aktuell wird nur validiert.
 
   return { status: "success" };
 }

@@ -14,8 +14,8 @@ export const business = {
   },
   phone: "0676 388 46 71",
   phoneHref: "tel:+436763884671",
-  email: "ollingerv@gmail.com",
-  emailHref: "mailto:ollingerv@gmail.com",
+  email: "koerpergfueh.23@gmail.com",
+  emailHref: "mailto:koerpergfueh.23@gmail.com",
   domain: "koerpergfuel.at",
   socials: [] as { label: string; href: string }[], // Keine bestätigten Profile bekannt – bewusst leer
 } as const;
