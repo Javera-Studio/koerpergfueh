@@ -73,8 +73,8 @@ in die dritte Person gerutscht wird.
 - **Greige** (`bg-greige/30`–`/40`) – alternative Section-Hintergründe
   (Studio, Contact) und Bild-Rechtecke, für Wärme/Abwechslung
 - **Champagnergold** – ausschließlich kleine Premium-Akzente: feine Linien/
-  Divider, Fine-Line-Icons (`PainpointIcon.tsx`), einzelne Eyebrows,
-  Bulletpoints, Hover-Zustände. Niemals großflächig, kein Metallic-Look.
+  Divider, einzelne Eyebrows, Bulletpoints, Hover-Zustände. Niemals
+  großflächig, kein Metallic-Look.
   - `--color-mist` (#eaeaea) – sekundäre neutrale Fläche aus der bisherigen
     Körpergfüh-Website, bewusst erhalten. Einsatz für ruhige Sections, FAQs,
     Preisbereiche oder Hintergrundelemente (z.B. Onkologie-Bereich und FAQ
@@ -254,6 +254,15 @@ Bestätigte Qualifikationen von Viktoria (ausschließlich diese verwenden):
 - Ausgebildete Fußpflegerin
 - Onkologisch-kosmetische Zusatzausbildung
 - Medizinischer & pflegerischer Hintergrund
+
+Painpoints (Startseite): `src/lib/data/business.ts` → `painpoints` nutzt
+echte Fotos (`bullet1–4.png` in `public/images`, von Viktoria geliefert)
+statt der früheren `PainpointIcon.tsx`-Fine-Line-Icons (Datei entfernt,
+nicht mehr referenziert). Die PNGs enthalten ihre dekorative Rahmung/Form
+bereits selbst – kein zusätzlicher CSS-/SVG-Blob im Code nötig. Jede
+Überschrift ist in `titleStart` + kursiv gesetztes `titleEmphasis`
+aufgeteilt, angelehnt an die von Viktoria vorgegebene Referenz
+(`public/images/bulletpoints.png`).
 
 Testimonials: `src/lib/data/business.ts` → `testimonials` enthält 6 echte,
 wortgetreu übernommene Google-Bewertungen (Leonie Hofstätter als

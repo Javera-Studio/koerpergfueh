@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { painpoints } from "@/lib/data/business";
 import { BotanicalWatermark } from "@/components/ui/BotanicalWatermark";
-import { PainpointIcon } from "@/components/ui/PainpointIcon";
 
 export function Painpoints() {
   return (
@@ -18,19 +18,39 @@ export function Painpoints() {
           Kommt dir das bekannt vor?
         </h2>
 
-        <div className="mt-16 grid gap-x-12 gap-y-14 sm:grid-cols-2">
+        <div className="mt-16 grid gap-x-12 gap-y-16 sm:grid-cols-2">
           {painpoints.map((point, index) => (
             <div
-              key={point.title}
-              className={`reveal reveal-d${(index % 4) + 1} border-t border-mint-pale pt-6`}
+              key={point.titleEmphasis}
+              className={`reveal reveal-d${(index % 4) + 1} flex flex-col items-center gap-6 text-center sm:flex-row sm:items-start sm:gap-7 sm:text-left`}
             >
-              <PainpointIcon name={point.icon} className="h-8 w-8 text-gold" />
-              <h3 className="mt-4 font-display text-2xl text-petrol">
-                {point.title}
-              </h3>
-              <p className="mt-3 font-sans text-base leading-relaxed text-petrol/75">
-                {point.text}
-              </p>
+              <div className="relative h-40 w-40 shrink-0 sm:h-44 sm:w-44">
+                <Image
+                  src={point.image.src}
+                  alt={point.image.alt}
+                  fill
+                  sizes="176px"
+                  className="object-contain"
+                />
+              </div>
+
+              <div>
+                <h3 className="font-display text-2xl leading-snug text-petrol">
+                  {point.titleStart}{" "}
+                  <em className="italic text-mint-deep">
+                    {point.titleEmphasis}
+                  </em>
+                </h3>
+                <div className="relative mx-auto mt-4 h-px w-16 bg-gold/50 sm:mx-0">
+                  <span
+                    aria-hidden
+                    className="absolute right-0 top-1/2 h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-gold"
+                  />
+                </div>
+                <p className="mt-4 font-sans text-base leading-relaxed text-petrol/75">
+                  {point.text}
+                </p>
+              </div>
             </div>
           ))}
         </div>

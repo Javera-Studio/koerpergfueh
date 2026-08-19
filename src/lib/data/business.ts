@@ -52,26 +52,34 @@ export const services = [
   },
 ] as const;
 
+// `titleEmphasis` ist der letzte Teil der Überschrift, der kursiv gesetzt
+// wird (siehe Bulletpoints-Vorlage). `image` referenziert die von Viktoria
+// bereitgestellten Bilder (bullet1–4.png), die bereits eine eigene
+// dekorative Rahmung/Form enthalten – keine zusätzliche Maske im Code nötig.
 export const painpoints = [
   {
-    title: "Rasieren gehört ständig zu deiner Routine?",
+    titleStart: "Rasieren gehört ständig zu deiner",
+    titleEmphasis: "Routine?",
     text: "Du wünschst dir glatte Haut, ohne immer wieder zum Rasierer greifen zu müssen.",
-    icon: "razor",
+    image: { src: "/images/bullet1.png", alt: "Weiche Feder" },
   },
   {
-    title: "Druckstellen, Hornhaut oder Nägel machen Probleme?",
+    titleStart: "Druckstellen, Hornhaut oder Nägel machen",
+    titleEmphasis: "Probleme?",
     text: "Manchmal erinnern dich deine Füße bei jedem Schritt daran, dass sie Aufmerksamkeit brauchen.",
-    icon: "foot",
+    image: { src: "/images/bullet2.png", alt: "Spiegel und Vase mit Trockenblumen" },
   },
   {
-    title: "Du willst deinen Füßen einfach etwas Gutes tun?",
+    titleStart: "Du willst deinen Füßen einfach etwas",
+    titleEmphasis: "Gutes tun?",
     text: "Nicht immer braucht es ein Problem. Manchmal möchtest du dich einfach wieder gepflegt fühlen.",
-    icon: "sparkle",
+    image: { src: "/images/bullet3.png", alt: "Schale mit Wasser und Eukalyptuszweig" },
   },
   {
-    title: "Deine Füße brauchen besondere Aufmerksamkeit?",
+    titleStart: "Deine Füße brauchen besondere",
+    titleEmphasis: "Aufmerksamkeit?",
     text: "Gerade bei sensiblen Situationen sind Fachwissen, Sorgfalt und ein einfühlsamer Umgang besonders wichtig.",
-    icon: "shield",
+    image: { src: "/images/bullet4.png", alt: "Handgezeichnete Blattranke" },
   },
 ] as const;
 
