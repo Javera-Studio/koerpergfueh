@@ -2,10 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 // Hero-Foto: vollflächiger Hintergrund, Beine rechts sichtbar, links freie
-// Fläche für den Text. Warmes Creme-Overlay neutralisiert den Orange-/
-// Peach-Ton des Fotos, ohne es milchig wirken zu lassen – links stärker
-// (Textlesbarkeit), nach rechts transparenter (Beine bleiben kontrastreich
-// sichtbar). Austausch: einfach src unten ersetzen.
+// Fläche für den Text. Kräftiges warmes Creme-/Beige-Overlay (#F5F0E8)
+// neutralisiert den Orange-/Peach-Ton des Fotos zugunsten der Off-White/
+// Beige-Markenwelt – links ~82% Deckkraft (Textlesbarkeit), nach rechts
+// weich auf ~40% reduziert (Beine bleiben natürlich & kontrastreich
+// sichtbar, kein milchiger Look). Austausch: einfach src unten ersetzen.
 export function Hero() {
   return (
     <section className="relative overflow-hidden">
@@ -18,7 +19,7 @@ export function Hero() {
           sizes="100vw"
           className="object-cover object-right"
         />
-        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(248,246,240,0.62)_0%,rgba(248,246,240,0.45)_35%,rgba(248,246,240,0.22)_60%,rgba(248,246,240,0.1)_100%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(245,240,232,0.82)_0%,rgba(245,240,232,0.65)_35%,rgba(245,240,232,0.5)_60%,rgba(245,240,232,0.4)_100%)]" />
 
         <div className="relative w-full px-6 py-14 sm:px-10 lg:w-[56%] lg:px-16 lg:py-0">
           <p className="hero-intro-1 font-sans text-xs font-medium tracking-[0.2em] text-gold">
