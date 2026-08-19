@@ -1,5 +1,27 @@
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
+import Image from "next/image";
 import { Signature } from "@/components/ui/Signature";
+
+// Vier vorhandene Studiofotos, unverändert. Bewusst hier statt in
+// business.ts gepflegt, da rein layoutbezogen (Reihenfolge/Alt-Texte an
+// diese eine Galerie gebunden).
+const studioPhotos = [
+  {
+    src: "/images/studio1.jpe",
+    alt: "Empfangsbereich des Körpergfüh-Studios in Lambach",
+  },
+  {
+    src: "/images/studio2.jpe",
+    alt: "Blick in den Behandlungsbereich bei Körpergfüh in Lambach",
+  },
+  {
+    src: "/images/studio3.jpe",
+    alt: "Persönliche Atmosphäre im Körpergfüh-Studio in Lambach",
+  },
+  {
+    src: "/images/studio4.jpe",
+    alt: "Detailansicht des Körpergfüh-Studios in Lambach",
+  },
+] as const;
 
 export function Studio() {
   return (
@@ -19,54 +41,30 @@ export function Studio() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          <ImagePlaceholder
-            label="Studio-Foto"
-            offset="top-left"
-            rectTone="greige"
-            aspect="aspect-[4/5]"
-            className="lg:mt-6"
-            parallax
-            image={{
-              src: "/images/studio1.jpe",
-              alt: "Empfangsbereich des Körpergfüh-Studios in Lambach",
-              sizes: "(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 90vw",
-            }}
-          />
-          <ImagePlaceholder
-            label="Studio-Foto"
-            offset="top-right"
-            rectTone="mint-pale"
-            aspect="aspect-[4/5]"
-            image={{
-              src: "/images/studio2.jpe",
-              alt: "Blick in den Behandlungsbereich bei Körpergfüh in Lambach",
-              sizes: "(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 90vw",
-            }}
-          />
-          <ImagePlaceholder
-            label="Studio-Foto"
-            offset="top-left"
-            rectTone="mint"
-            aspect="aspect-[4/5]"
-            className="lg:mt-6"
-            image={{
-              src: "/images/studio3.jpe",
-              alt: "Persönliche Atmosphäre im Körpergfüh-Studio in Lambach",
-              sizes: "(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 90vw",
-            }}
-          />
-          <ImagePlaceholder
-            label="Studio-Foto"
-            offset="top-right"
-            rectTone="greige"
-            aspect="aspect-[4/5]"
-            image={{
-              src: "/images/studio4.jpe",
-              alt: "Detailansicht des Körpergfüh-Studios in Lambach",
-              sizes: "(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 90vw",
-            }}
-          />
+        {/* Einheitliche Galerie: gleiche Größe, gleiche Grundlinie, gleicher
+            Radius, gleicher Abstand. Wechselndes, aber konsistentes
+            Hintergrundrechteck (Mint-hell / Beige) statt vier
+            unterschiedlicher Flächen. Einzige Interaktion: sehr sanfter
+            Hover-Zoom aufs Foto, Rechteck wandert dabei minimal gegenläufig. */}
+        <div className="mt-16 grid grid-cols-2 gap-8 sm:gap-10 lg:grid-cols-4">
+          {studioPhotos.map((photo, index) => (
+            <div key={photo.src} className="reveal group relative">
+              <div
+                className={`absolute -left-5 -top-5 h-full w-full rounded-sm motion-safe:transition-transform motion-safe:duration-700 motion-safe:ease-out motion-safe:group-hover:translate-x-1.5 motion-safe:group-hover:translate-y-1.5 lg:-left-6 lg:-top-6 ${
+                  index % 2 === 0 ? "bg-mint-pale" : "bg-greige"
+                }`}
+              />
+              <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-cream ring-1 ring-mint-pale/50">
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  sizes="(min-width: 1024px) 25vw, 50vw"
+                  className="object-cover motion-safe:transition-transform motion-safe:duration-700 motion-safe:ease-out motion-safe:group-hover:scale-[1.02]"
+                />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
