@@ -50,12 +50,12 @@ export function About() {
             offset="top-right"
             rectTone="mint"
             aspect="aspect-[4/5]"
-            className="mx-auto max-w-sm lg:mx-0"
+            className="mx-auto max-w-[500px] lg:mx-0"
             parallax
             image={{
               src: "/images/victoria1.jpg",
               alt: "Viktoria Ollinger, Inhaberin von Körpergfüh, in ihrem Studio in Lambach",
-              sizes: "(min-width: 1024px) 480px, 90vw",
+              sizes: "(min-width: 1024px) 500px, 90vw",
             }}
           />
 

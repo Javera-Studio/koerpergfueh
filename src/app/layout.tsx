@@ -3,6 +3,7 @@ import { Cormorant_Garamond, DM_Sans, Mrs_Saint_Delafield } from "next/font/goog
 import "./globals.css";
 import { Header } from "@/components/sections/Header";
 import { Footer } from "@/components/sections/Footer";
+import { RevealObserver } from "@/components/ui/RevealObserver";
 import { business } from "@/lib/data/business";
 
 const cormorant = Cormorant_Garamond({
@@ -53,6 +54,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${cormorant.variable} ${dmSans.variable} ${signature.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-cream text-petrol">
+        <RevealObserver />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

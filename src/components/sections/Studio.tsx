@@ -49,6 +49,8 @@ export function Studio() {
           />
           <ImagePlaceholder
             label="Studio-Foto"
+            offset="top-right"
+            rectTone="mint"
             aspect="aspect-[4/5]"
             image={{
               src: "/images/studio2.jpe",
@@ -58,6 +60,8 @@ export function Studio() {
           />
           <ImagePlaceholder
             label="Studio-Foto"
+            offset="top-left"
+            rectTone="mint"
             aspect="aspect-[4/5]"
             image={{
               src: "/images/studio3.jpe",
@@ -67,6 +71,8 @@ export function Studio() {
           />
           <ImagePlaceholder
             label="Studio-Foto"
+            offset="top-right"
+            rectTone="mint"
             aspect="aspect-[4/5]"
             image={{
               src: "/images/studio4.jpe",

@@ -119,15 +119,27 @@ unten sanft ein (`.reveal` + gestaffelt `.reveal-d1`–`.reveal-d4` je nach
 Index). Das ist bewusst pervasiver als die ursprüngliche „3–4 Momente"-Regel
 für die Signature-Elemente (Parallax, Onkologie-Reveal, botanisches
 Wasserzeichen, Hero-Intro) – diese bleiben weiterhin sparsam eingesetzt,
-siehe unten. Ausschließlich CSS, keine Animationsbibliothek hinzugefügt.
-Scroll-gebundene Effekte laufen über die native CSS-Scroll-Driven-Animations-
-API (`animation-timeline: view()`), gated über `@supports` – Browser ohne
-Unterstützung zeigen Inhalte sofort vollständig sichtbar (kein Layout Shift,
-kein Risiko dauerhaft unsichtbarer Inhalte). Alle Effekte sind zusätzlich in
-`@media (prefers-reduced-motion: no-preference)` gekapselt. Definiert in
-`src/app/globals.css`, Klassen `.reveal` / `.reveal-d1`–`.reveal-d4` /
-`.parallax-photo` / `.oncology-bg-reveal` / `.botanical-draw` /
-`.hero-intro-1`–`.hero-intro-3`.
+siehe unten. Ausschließlich CSS/eine winzige eigene Komponente, keine
+Animationsbibliothek hinzugefügt.
+
+`.reveal`/`.reveal-d1`–`.reveal-d4` laufen über `src/components/ui/RevealObserver.tsx`
+(einmal in `layout.tsx` gemountet): ein IntersectionObserver schaltet
+`.reveal-visible`, sobald ein Element in den Viewport scrollt, eine reine
+CSS-`transition` (kein `animation-timeline`) blendet es dann ein. Grund für
+den Wechsel weg von reinem `animation-timeline: view()`: nicht in allen
+Browsern zuverlässig unterstützt, wodurch die Animation dort schlicht nicht
+sichtbar war. Vor dem Mounten/ohne JavaScript bleiben Elemente über
+`.js-reveal-ready` (wird per Observer auf `<html>` gesetzt) regulär sichtbar
+– kein FOUC-Risiko.
+
+Die übrigen Signature-Effekte (Parallax, Onkologie-Reveal, botanisches
+Draw-on-Scroll) laufen weiterhin über die native CSS-Scroll-Driven-
+Animations-API (`animation-timeline: view()`), gated über `@supports` –
+Browser ohne Unterstützung zeigen sie einfach statisch/vollständig sichtbar.
+Alle Effekte zusätzlich in `@media (prefers-reduced-motion: no-preference)`
+gekapselt. Definiert in `src/app/globals.css`, Klassen `.reveal` /
+`.reveal-d1`–`.reveal-d4` / `.parallax-photo` / `.oncology-bg-reveal` /
+`.botanical-draw` / `.hero-intro-1`–`.hero-intro-3`.
 
 Die vier bewussten Momente:
 
