@@ -4,23 +4,6 @@ import { Signature } from "@/components/ui/Signature";
 export function Studio() {
   return (
     <section className="relative overflow-hidden bg-greige/40 py-24 lg:py-32">
-      {/* dezentes botanisches Element, angelehnt an das Logo – rein dekorativ */}
-      <svg
-        aria-hidden
-        className="pointer-events-none absolute -right-16 -top-16 h-72 w-72 text-mint opacity-25"
-        viewBox="0 0 200 200"
-        fill="none"
-      >
-        <path
-          d="M100 10 C 120 60, 120 140, 100 190"
-          stroke="currentColor"
-          strokeWidth="1.5"
-        />
-        <path d="M100 40 C 130 55, 150 70, 160 60" stroke="currentColor" strokeWidth="1.5" />
-        <path d="M100 80 C 70 95, 50 110, 40 100" stroke="currentColor" strokeWidth="1.5" />
-        <path d="M100 120 C 130 135, 150 150, 160 140" stroke="currentColor" strokeWidth="1.5" />
-      </svg>
-
       <div className="relative mx-auto max-w-6xl px-6 lg:px-10">
         <div className="max-w-xl">
           <Signature className="reveal block" color="gold">

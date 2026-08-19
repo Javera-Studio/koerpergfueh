@@ -9,6 +9,8 @@ import { BotanicalWatermark } from "@/components/ui/BotanicalWatermark";
 
 export function About() {
   const [firstParagraph, ...restParagraphs] = viktoriaIntro.paragraphs;
+  const closingParagraph = restParagraphs[restParagraphs.length - 1];
+  const middleParagraphs = restParagraphs.slice(0, -1);
 
   return (
     <section
@@ -45,20 +47,42 @@ export function About() {
 
       <div className="relative mx-auto max-w-6xl px-6 lg:px-10">
         {/* Viktoria – zentraler Vertrauensbereich */}
-        <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-24">
-          <ImagePlaceholder
-            label="Portrait: Viktoria"
-            offset="top-right"
-            rectTone="greige"
-            aspect="aspect-[4/5]"
-            className="mx-auto max-w-[500px] lg:mx-0"
-            parallax
-            image={{
-              src: "/images/victoria1.jpg",
-              alt: "Viktoria Ollinger, Inhaberin von Körpergfüh, in ihrem Studio in Lambach",
-              sizes: "(min-width: 1024px) 500px, 90vw",
-            }}
-          />
+        <div className="grid items-start gap-16 lg:grid-cols-2 lg:gap-24">
+          <div>
+            <ImagePlaceholder
+              label="Portrait: Viktoria"
+              offset="top-right"
+              rectTone="greige"
+              aspect="aspect-[4/5]"
+              className="mx-auto max-w-[580px] lg:mx-0"
+              parallax
+              image={{
+                src: "/images/victoria1.jpg",
+                alt: "Viktoria Ollinger, Inhaberin von Körpergfüh, in ihrem Studio in Lambach",
+                sizes: "(min-width: 1024px) 580px, 90vw",
+              }}
+            />
+
+            {/* Zitat direkt unter dem Bild inszeniert: viel Weißraum, größere
+                Serifenschrift, dezentes goldenes Anführungszeichen statt
+                Bewertungs-Optik. */}
+            <div className="mx-auto mt-10 max-w-[580px] lg:mx-0">
+              <p className="font-sans text-lg leading-relaxed text-petrol/80">
+                {closingParagraph}
+              </p>
+              <div className="relative mt-8 max-w-md">
+                <span
+                  aria-hidden
+                  className="absolute -left-2 -top-6 font-display text-6xl leading-none text-gold/50"
+                >
+                  &rdquo;
+                </span>
+                <p className="relative font-display text-3xl leading-snug text-mint-deep sm:text-4xl">
+                  {viktoriaIntro.highlight}
+                </p>
+              </div>
+            </div>
+          </div>
 
           <div>
             <Signature className="block">
@@ -85,23 +109,9 @@ export function About() {
             </ul>
 
             <div className="mt-8 flex flex-col gap-5 font-sans text-lg leading-relaxed text-petrol/80">
-              {restParagraphs.map((paragraph) => (
+              {middleParagraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
-            </div>
-
-            {/* Zitat stärker inszeniert: viel Weißraum, größere Serifenschrift,
-                dezentes goldenes Anführungszeichen statt Bewertungs-Optik. */}
-            <div className="relative mt-14 max-w-md">
-              <span
-                aria-hidden
-                className="absolute -left-2 -top-6 font-display text-6xl leading-none text-gold/50"
-              >
-                &rdquo;
-              </span>
-              <p className="relative font-display text-3xl leading-snug text-mint-deep sm:text-4xl">
-                {viktoriaIntro.highlight}
-              </p>
             </div>
           </div>
         </div>
