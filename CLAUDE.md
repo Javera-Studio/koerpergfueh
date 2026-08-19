@@ -275,7 +275,12 @@ Ersatz einer medizinischen Behandlung).
 5. [x] `app/layout.tsx` mit Basis-Metadata (Title-Template, Description, OG)
 6. [x] `app/sitemap.ts` + `app/robots.ts` angelegt
 7. [x] JSON-LD `BeautySalon`-Komponente (`src/components/seo/LocalBusinessJsonLd.tsx`)
-   mit echten Kundendaten befüllt
+   mit echten Kundendaten befüllt, inkl. `openingHoursSpecification`
+   (nur Di–Fr, da Montag/Samstag keine feste Uhrzeit haben) und `email`.
+   Eingebunden auf `/`, `/fusspflege` und `/haarentfernung`. Homepage +
+   beide Leistungsseiten haben `alternates.canonical`; Root-Layout hat ein
+   Standard-OG-Bild (`herobild.png`) + Twitter-Card. `sitemap.ts` listet nur
+   indexierbare Seiten (Impressum/Datenschutz bewusst nicht, da `noindex`).
 8. [x] Kontaktformular: Server Action (`src/app/actions/contact.ts`) + Honeypot.
    **Offen:** tatsächlicher E-Mail-Versand an `business.email`
    (ollingerv@gmail.com, z.B. via Resend) noch nicht angebunden – TODO im

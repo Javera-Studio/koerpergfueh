@@ -46,7 +46,7 @@ export function Studio() {
             parallax
             image={{
               src: "/images/studio1.jpe",
-              alt: "Einblick in das Körpergfüh-Studio in Lambach",
+              alt: "Empfangsbereich des Körpergfüh-Studios in Lambach",
               sizes: "(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 90vw",
             }}
           />
@@ -57,7 +57,7 @@ export function Studio() {
             aspect="aspect-[4/5]"
             image={{
               src: "/images/studio2.jpe",
-              alt: "Einblick in das Körpergfüh-Studio in Lambach",
+              alt: "Blick in den Behandlungsbereich bei Körpergfüh in Lambach",
               sizes: "(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 90vw",
             }}
           />
@@ -69,7 +69,7 @@ export function Studio() {
             className="lg:mt-6"
             image={{
               src: "/images/studio3.jpe",
-              alt: "Einblick in das Körpergfüh-Studio in Lambach",
+              alt: "Persönliche Atmosphäre im Körpergfüh-Studio in Lambach",
               sizes: "(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 90vw",
             }}
           />
@@ -80,7 +80,7 @@ export function Studio() {
             aspect="aspect-[4/5]"
             image={{
               src: "/images/studio4.jpe",
-              alt: "Einblick in das Körpergfüh-Studio in Lambach",
+              alt: "Detailansicht des Körpergfüh-Studios in Lambach",
               sizes: "(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 90vw",
             }}
           />
