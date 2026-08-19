@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { business, navigation, legalLinks } from "@/lib/data/business";
 import { BotanicalWatermark } from "@/components/ui/BotanicalWatermark";
@@ -20,13 +19,6 @@ export function Footer() {
         <div className="grid gap-10 lg:grid-cols-3 lg:gap-10">
           {/* Marke */}
           <div className="flex flex-col gap-3">
-            <Image
-              src="/images/logo.png"
-              alt="Körpergfüh by Viki Logo"
-              width={200}
-              height={200}
-              className="h-[91px] w-auto object-contain"
-            />
             <p className="font-display text-xl text-petrol">
               Körpergfüh by Viki
             </p>
