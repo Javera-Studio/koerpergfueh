@@ -10,14 +10,14 @@ import Link from "next/link";
 export function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <div className="relative flex min-h-[560px] items-center lg:min-h-[640px]">
+      <div className="relative flex min-h-[640px] items-center lg:min-h-[760px]">
         <Image
           src="/images/herobild.png"
           alt="Gepflegte Beine und Füße – dauerhafte Haarentfernung und Fußpflege bei Körpergfüh in Lambach"
           fill
           preload
           sizes="100vw"
-          className="object-cover object-right"
+          className="object-cover object-[right_bottom]"
         />
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(245,240,232,0.82)_0%,rgba(245,240,232,0.65)_35%,rgba(245,240,232,0.5)_60%,rgba(245,240,232,0.4)_100%)]" />
 
