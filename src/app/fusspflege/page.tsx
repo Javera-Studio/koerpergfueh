@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { business } from "@/lib/data/business";
 import { fusspflegeFaqs } from "@/lib/data/fusspflege";
 import { FaqJsonLd } from "@/components/seo/FaqJsonLd";
+import { LocalBusinessJsonLd } from "@/components/seo/LocalBusinessJsonLd";
 import { FusspflegeHero } from "@/components/fusspflege/Hero";
 import { FusspflegePainpoints } from "@/components/fusspflege/Painpoints";
 import { FusspflegeTransition } from "@/components/fusspflege/Transition";
@@ -36,6 +37,7 @@ export default function FusspflegePage() {
   return (
     <>
       <FaqJsonLd faqs={fusspflegeFaqs} />
+      <LocalBusinessJsonLd />
       <FusspflegeHero />
       <FusspflegePainpoints />
       <FusspflegeTransition />

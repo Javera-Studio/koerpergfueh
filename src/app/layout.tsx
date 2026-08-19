@@ -44,6 +44,21 @@ export const metadata: Metadata = {
     siteName: "Körpergfüh by Viki",
     locale: "de_AT",
     type: "website",
+    images: [
+      {
+        url: "/images/herobild.png",
+        width: 1920,
+        height: 1080,
+        alt: "Körpergfüh by Viki – Fußpflege & dauerhafte Haarentfernung in Lambach",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Körpergfüh by Viki – Fußpflege & dauerhafte Haarentfernung in Lambach",
+    description:
+      "Professionelle Fußpflege und dauerhafte Haarentfernung in Lambach. Persönlich, fachkundig und mit Gefühl.",
+    images: ["/images/herobild.png"],
   },
 };
 

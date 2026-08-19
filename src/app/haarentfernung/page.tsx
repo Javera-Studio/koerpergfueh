@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { business } from "@/lib/data/business";
 import { haarentfernungFaqs } from "@/lib/data/haarentfernung";
 import { FaqJsonLd } from "@/components/seo/FaqJsonLd";
+import { LocalBusinessJsonLd } from "@/components/seo/LocalBusinessJsonLd";
 import { HaarentfernungHero } from "@/components/haarentfernung/Hero";
 import { HaarentfernungPainpoints } from "@/components/haarentfernung/Painpoints";
 import { HaarentfernungSolution } from "@/components/haarentfernung/Solution";
@@ -37,6 +38,7 @@ export default function HaarentfernungPage() {
   return (
     <>
       <FaqJsonLd faqs={haarentfernungFaqs} />
+      <LocalBusinessJsonLd />
       <HaarentfernungHero />
       <HaarentfernungPainpoints />
       <HaarentfernungSolution />
