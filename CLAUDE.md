@@ -8,7 +8,9 @@ gilt: projektspezifische Angaben hier überschreiben die globalen Defaults.
 
 - **Kunde:** Viktoria Ollinger – Körpergfüh by Viki
 - **Branche/Spezialisierung:** Fußpflege & dauerhafte Haarentfernung
-- **Adresse (Schema.org):** Bahnhofstraße 9, 4650 Lambach, Österreich
+- **Adresse (Schema.org):** Marktplatz 2, 4650 Lambach, Österreich (von
+  Viktoria bestätigt; ursprünglich fälschlich "Bahnhofstraße 9" hinterlegt –
+  widersprach der Google-Maps-Karte, jetzt in `business.ts` korrigiert)
 - **Domain:** koerpergfuel.at
 - **Telefon:** 0676 388 46 71 (`tel:+436763884671`)
 - **E-Mail:** ollingerv@gmail.com (`mailto:ollingerv@gmail.com`), von Viktoria

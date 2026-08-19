@@ -7,7 +7,7 @@ export const business = {
   legalForm: "Einzelunternehmen", // TO_CONFIRM: Rechtsform für Impressum
   tagline: "Fußpflege & dauerhafte Haarentfernung in Lambach",
   address: {
-    street: "Bahnhofstraße 9",
+    street: "Marktplatz 2",
     zip: "4650",
     city: "Lambach",
     country: "AT",

@@ -2,12 +2,6 @@ import { business, openingHours } from "@/lib/data/business";
 import { Signature } from "@/components/ui/Signature";
 import { BotanicalWatermark } from "@/components/ui/BotanicalWatermark";
 
-// TODO: Die eingebettete Google-Maps-Karte zeigt aktuell offenbar
-// "Marktpl. 2, 4650 Lambach" statt der auf der Website hinterlegten Adresse
-// "Bahnhofstraße 9, 4650 Lambach" (business.address in business.ts). Bitte
-// mit Viktoria die korrekte, von Google bestätigte Adresse/den korrekten
-// Maps-Eintrag klären und diese mapQuery-Konstante bzw. business.address
-// entsprechend anpassen. Keine Adresse selbst erfinden oder ändern.
 const mapQuery = encodeURIComponent(
   `${business.name}, ${business.address.street}, ${business.address.zip} ${business.address.city}`
 );
