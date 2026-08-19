@@ -4,7 +4,7 @@ import { PainpointIcon } from "@/components/ui/PainpointIcon";
 
 export function Painpoints() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden bg-[#faf8f2]">
       {/* Botanisches Wasserzeichen (pflanze.png) – groß, am Rand angeschnitten,
           nur Desktop, sehr niedrige Opacity. */}
       <BotanicalWatermark
