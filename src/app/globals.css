@@ -14,6 +14,7 @@
   --color-gold: #b79b72; /* gedecktes warmes Champagner-/Beigegold, angelehnt an den Empfangstresen im Studio – nur sehr sparsam als Akzent, nie als Fläche */
   --color-mist: #eaeaea; /* sekundäre neutrale Fläche aus der bisherigen Website, bewusst erhalten */
   --color-hero-overlay: #eae4e3; /* warmes Rosé-Greige für das Hero-Bild-Overlay, zentraler Bestandteil der visuellen Identität zusammen mit Mint & Petrol */
+  --color-greige: #eae4e3; /* warmes Rosé-Greige/Champagner-Beige – alternative Section-/Bildhintergründe, schafft Wärme & Balance zu Mint (identisch mit --color-hero-overlay, aber als eigenständiges, breiter einsetzbares Token benannt) */
   --color-cream-foreground: var(--color-petrol);
 }
 
@@ -26,6 +27,7 @@
   --color-gold: var(--color-gold);
   --color-mist: var(--color-mist);
   --color-hero-overlay: var(--color-hero-overlay);
+  --color-greige: var(--color-greige);
 
   --font-display: var(--font-cormorant);
   --font-sans: var(--font-dm-sans);
@@ -79,6 +81,15 @@ html {
 @keyframes botanical-draw {
   to {
     stroke-dashoffset: 0;
+  }
+}
+
+@keyframes gold-line-in {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
   }
 }
 
@@ -147,6 +158,16 @@ html {
       animation: botanical-draw 1.8s ease-out both;
       animation-timeline: view();
       animation-range: entry 10% entry 75%;
+    }
+
+    /* Feine Gold-Akzentlinien: zeichnen sich beim Scrollen von links nach
+       rechts. Ohne Unterstützung bleiben sie regulär sichtbar (scaleX(1)
+       ist der Basiszustand außerhalb dieses @supports-Blocks). */
+    .gold-line-reveal {
+      transform-origin: left center;
+      animation: gold-line-in 0.8s ease-out both;
+      animation-timeline: view();
+      animation-range: entry 10% entry 60%;
     }
   }
 }

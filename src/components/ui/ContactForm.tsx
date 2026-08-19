@@ -77,9 +77,9 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={pending}
-        className="mt-2 rounded-full bg-mint px-7 py-3 font-sans text-sm font-medium text-petrol transition-colors hover:bg-mint-deep hover:text-cream disabled:opacity-60"
+        className="mt-2 rounded-full bg-mint px-7 py-3 font-sans text-sm font-medium text-petrol transition-colors hover:bg-petrol hover:text-cream disabled:opacity-60"
       >
-        {pending ? "Wird gesendet …" : "Nachricht senden"}
+        {pending ? "Wird gesendet …" : "Nachricht senden →"}
       </button>
     </form>
   );

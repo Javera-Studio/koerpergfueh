@@ -24,8 +24,9 @@ export function Services() {
         <h2 className="reveal max-w-xl font-display text-4xl leading-snug text-petrol sm:text-5xl">
           Zwei Wege zu deinem Körpergfüh.
         </h2>
+        <div className="gold-line-reveal mt-4 h-px w-12 bg-gold" />
 
-        <div className="mt-16 grid gap-14 lg:grid-cols-2 lg:gap-10">
+        <div className="mt-10 grid gap-14 lg:grid-cols-2 lg:gap-10">
           {services.map((service, index) => (
             <Link
               key={service.slug}
@@ -48,7 +49,7 @@ export function Services() {
               <p className="mt-3 max-w-md font-sans text-base leading-relaxed text-petrol/75">
                 {service.description}
               </p>
-              <span className="mt-4 inline-flex items-center gap-1 font-sans text-sm font-medium text-mint-deep group-hover:underline">
+              <span className="mt-4 inline-flex items-center gap-1 font-sans text-sm font-medium text-mint-deep transition-colors group-hover:text-gold group-hover:underline">
                 {service.cta}
                 <span
                   aria-hidden

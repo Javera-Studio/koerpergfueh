@@ -46,15 +46,31 @@ in die dritte Person gerutscht wird.
   - `--color-gold` (#b79b72) – gedecktes warmes Champagner-/Beigegold,
     angelehnt an den Empfangstresen im Studio (nicht kräftiges Gelbgold),
     nur sehr sparsam als Akzent
-  - `--color-hero-overlay` (#eae4e3, aktuell nicht mehr im Code referenziert)
-    – ursprünglich als vertikales Rosé-Greige-Overlay über dem Homepage-Hero
-    gedacht. Der Homepage-Hero (`src/components/sections/Hero.tsx`) nutzt
-    inzwischen stattdessen einen **horizontalen** Verlauf in
-    `--color-cream` (links ~88% Deckkraft hinter dem Text, nach rechts auf
-    ~7% auslaufend), damit das Studiofoto (goldener Empfangstresen, Pflanze,
-    Einrichtung) rechts deutlich sichtbar bleibt statt gleichmäßig
-    überdeckt zu werden. Kein hartes Überblenden – weicher Verlauf ohne
-    sichtbare Kante.
+  - `--color-hero-overlay` (#eae4e3, aktuell nicht im Code referenziert) –
+    aus einer früheren Hero-Version. Der aktuelle Homepage-Hero
+    (`herobild.png`: freie beige Fläche links, Beine/Füße rechts) verwendet
+    bewusst **kein Overlay** – das Foto bleibt in Originalfarben sichtbar,
+    der Text steht direkt auf der freien Bildfläche (Desktop) bzw. auf
+    Off-White unterhalb des Bildes (Mobile, gestapeltes Layout). Token
+    bewusst nicht gelöscht, falls ein künftiges Hero-Foto wieder ein
+    Overlay braucht.
+  - `--color-greige` (#eae4e3) – warmes
+    Rosé-Greige/Champagner-Beige. Alternative Section-Hintergründe
+    (`bg-greige/30`–`/40`) und Bildhintergrund-Rechtecke
+    (`ImagePlaceholder`-Prop `rectTone="greige"`), schafft Wärme/Kontrast zu
+    Mint. Bewusst eingeführt, um Mint auf der Startseite nicht in jeder
+    Section dominant wirken zu lassen (Farbrollen siehe unten).
+
+**Farbrollen (Startseite, Stand nach Redesign):**
+- **Petrol** – Hauptheadlines, wichtige Texte, Seriosität
+- **Mint** – Primary-CTAs, einzelne Markenakzente, ausgewählte Flächen
+  (Services-Section) – bewusst *nicht* in jeder Section als Hintergrund
+- **Off-White/Creme** – Hauptgrundfläche
+- **Greige** (`bg-greige/30`–`/40`) – alternative Section-Hintergründe
+  (Studio, Contact) und Bild-Rechtecke, für Wärme/Abwechslung
+- **Champagnergold** – ausschließlich kleine Premium-Akzente: feine Linien/
+  Divider, Fine-Line-Icons (`PainpointIcon.tsx`), einzelne Eyebrows,
+  Bulletpoints, Hover-Zustände. Niemals großflächig, kein Metallic-Look.
   - `--color-mist` (#eaeaea) – sekundäre neutrale Fläche aus der bisherigen
     Körpergfüh-Website, bewusst erhalten. Einsatz für ruhige Sections, FAQs,
     Preisbereiche oder Hintergrundelemente (z.B. Onkologie-Bereich und FAQ

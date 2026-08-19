@@ -11,13 +11,18 @@
 export function Signature({
   children,
   className = "",
+  color = "mint-deep",
 }: {
   children: React.ReactNode;
   className?: string;
+  /** Textfarbe des Akzents. Gold sparsam für einzelne Premium-Momente einsetzen. */
+  color?: "mint-deep" | "gold";
 }) {
+  const colorClass = color === "gold" ? "text-gold" : "text-mint-deep";
+
   return (
     <span
-      className={`font-signature text-3xl leading-none text-mint-deep sm:text-4xl ${className}`}
+      className={`font-signature text-3xl leading-none sm:text-4xl ${colorClass} ${className}`}
     >
       {children}
     </span>

@@ -3,11 +3,11 @@ import { Signature } from "@/components/ui/Signature";
 
 export function Studio() {
   return (
-    <section className="relative overflow-hidden bg-mint-pale py-24 lg:py-32">
+    <section className="relative overflow-hidden bg-greige/40 py-24 lg:py-32">
       {/* dezentes botanisches Element, angelehnt an das Logo – rein dekorativ */}
       <svg
         aria-hidden
-        className="pointer-events-none absolute -right-16 -top-16 h-72 w-72 text-mint opacity-30"
+        className="pointer-events-none absolute -right-16 -top-16 h-72 w-72 text-mint opacity-25"
         viewBox="0 0 200 200"
         fill="none"
       >
@@ -23,8 +23,10 @@ export function Studio() {
 
       <div className="relative mx-auto max-w-6xl px-6 lg:px-10">
         <div className="max-w-xl">
-          <Signature className="block">Mit viel Gefühl</Signature>
-          <h2 className="mt-3 font-display text-4xl leading-snug text-petrol sm:text-5xl">
+          <Signature className="reveal block" color="gold">
+            Mit viel Gefühl
+          </Signature>
+          <h2 className="reveal reveal-d1 mt-3 font-display text-4xl leading-snug text-petrol sm:text-5xl">
             Ein Ort, an dem du dich gut aufgehoben fühlen darfst.
           </h2>
           <p className="mt-6 font-sans text-lg leading-relaxed text-petrol/80">
@@ -38,8 +40,9 @@ export function Studio() {
           <ImagePlaceholder
             label="Studio-Foto"
             offset="top-left"
-            rectTone="mint"
+            rectTone="greige"
             aspect="aspect-[4/5]"
+            className="lg:mt-6"
             parallax
             image={{
               src: "/images/studio1.jpe",
@@ -50,7 +53,7 @@ export function Studio() {
           <ImagePlaceholder
             label="Studio-Foto"
             offset="top-right"
-            rectTone="mint"
+            rectTone="mint-pale"
             aspect="aspect-[4/5]"
             image={{
               src: "/images/studio2.jpe",
@@ -63,6 +66,7 @@ export function Studio() {
             offset="top-left"
             rectTone="mint"
             aspect="aspect-[4/5]"
+            className="lg:mt-6"
             image={{
               src: "/images/studio3.jpe",
               alt: "Einblick in das Körpergfüh-Studio in Lambach",
@@ -72,7 +76,7 @@ export function Studio() {
           <ImagePlaceholder
             label="Studio-Foto"
             offset="top-right"
-            rectTone="mint"
+            rectTone="greige"
             aspect="aspect-[4/5]"
             image={{
               src: "/images/studio4.jpe",

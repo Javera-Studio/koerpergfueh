@@ -8,6 +8,8 @@ import { Signature } from "@/components/ui/Signature";
 import { BotanicalWatermark } from "@/components/ui/BotanicalWatermark";
 
 export function About() {
+  const [firstParagraph, ...restParagraphs] = viktoriaIntro.paragraphs;
+
   return (
     <section
       id="ueber-mich"
@@ -32,13 +34,12 @@ export function About() {
         <path d="M28 126 C 20 122, 13 124, 9 131" stroke="currentColor" strokeWidth="1.25" />
       </svg>
 
-      {/* Botanisches Wasserzeichen (pflanze.png) – groß und extrem
-          zurückhaltend im Hintergrund, unten links, bleedet über den Rand.
-          Bewusst weit entfernt vom kleinen animierten Linien-Zweig oben
-          rechts, damit sich beide Elemente nicht überlagern. */}
+      {/* Botanisches Wasserzeichen (pflanze.png) – groß und zurückhaltend im
+          Hintergrund, unten links, bleedet über den Rand. Bewusst weit
+          entfernt vom kleinen animierten Linien-Zweig oben rechts. */}
       <BotanicalWatermark
         className="-bottom-24 -left-24 hidden h-[620px] w-[413px] lg:block"
-        opacity={0.1}
+        opacity={0.12}
         rotate={-3}
       />
 
@@ -48,7 +49,7 @@ export function About() {
           <ImagePlaceholder
             label="Portrait: Viktoria"
             offset="top-right"
-            rectTone="mint"
+            rectTone="greige"
             aspect="aspect-[4/5]"
             className="mx-auto max-w-[500px] lg:mx-0"
             parallax
@@ -67,39 +68,48 @@ export function About() {
               {viktoriaIntro.heading}
             </h2>
 
-            <div className="mt-6 flex flex-col gap-5 font-sans text-lg leading-relaxed text-petrol/80">
-              {viktoriaIntro.paragraphs.map((paragraph) => (
+            <p className="mt-6 font-sans text-lg leading-relaxed text-petrol/80">
+              {firstParagraph}
+            </p>
+
+            {/* Expertise früh sichtbar, mit Gold-Dividern statt großer Cards */}
+            <ul className="mt-8 flex flex-col divide-y divide-gold/25 border-y border-gold/25">
+              {expertiseHighlights.map((item, index) => (
+                <li
+                  key={item}
+                  className={`reveal reveal-d${(index % 4) + 1} py-3 font-sans text-base text-petrol`}
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-8 flex flex-col gap-5 font-sans text-lg leading-relaxed text-petrol/80">
+              {restParagraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
 
-            <p className="mt-8 max-w-md font-display text-2xl leading-snug text-mint-deep sm:text-3xl">
-              {viktoriaIntro.highlight}
-            </p>
+            {/* Zitat stärker inszeniert: viel Weißraum, größere Serifenschrift,
+                dezentes goldenes Anführungszeichen statt Bewertungs-Optik. */}
+            <div className="relative mt-14 max-w-md">
+              <span
+                aria-hidden
+                className="absolute -left-2 -top-6 font-display text-6xl leading-none text-gold/50"
+              >
+                &rdquo;
+              </span>
+              <p className="relative font-display text-3xl leading-snug text-mint-deep sm:text-4xl">
+                {viktoriaIntro.highlight}
+              </p>
+            </div>
           </div>
         </div>
 
-        {/* Reduzierte Expertise-Leiste – bewusst keine großen Marketing-Cards */}
-        <ul className="mt-16 flex flex-wrap items-center justify-center gap-x-3 gap-y-4 border-y border-mint-pale py-8 lg:mt-20 lg:gap-x-4">
-          {expertiseHighlights.map((item, index) => (
-            <li
-              key={item}
-              className={`reveal reveal-d${(index % 4) + 1} flex items-center gap-3 lg:gap-4`}
-            >
-              {index > 0 && (
-                <span
-                  aria-hidden
-                  className="hidden h-1 w-1 rounded-full bg-gold sm:block"
-                />
-              )}
-              <span className="font-sans text-sm text-petrol/80">{item}</span>
-            </li>
-          ))}
-        </ul>
-
-        {/* Carina – kleinerer, sympathischer Team-Bereich, klar untergeordnet */}
-        <div className="mt-16 lg:mt-20">
-          <div className="grid items-center gap-8 lg:grid-cols-[10rem_1fr] lg:gap-12">
+        {/* Carina – kompakter, sympathischer Team-Bereich, klar untergeordnet */}
+        <div className="mt-20 lg:mt-24">
+          <div className="mx-auto h-px w-16 bg-gold/40 lg:mx-0" />
+          <div className="mt-10 grid items-center gap-8 lg:grid-cols-[10rem_1fr] lg:gap-12">
             <ImagePlaceholder
               label="Portrait: Carina"
               aspect="aspect-[4/5]"
@@ -118,11 +128,9 @@ export function About() {
               <h3 className="mt-2 font-display text-2xl text-petrol sm:text-3xl">
                 {carinaIntro.heading}
               </h3>
-              <div className="mx-auto mt-4 flex max-w-xl flex-col gap-3 font-sans text-base leading-relaxed text-petrol/75 lg:mx-0">
-                {carinaIntro.paragraphs.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
-              </div>
+              <p className="mx-auto mt-3 max-w-xl font-sans text-base leading-relaxed text-petrol/75 lg:mx-0">
+                {carinaIntro.paragraphs[0]}
+              </p>
             </div>
           </div>
         </div>

@@ -2,6 +2,12 @@ import { business, openingHours } from "@/lib/data/business";
 import { Signature } from "@/components/ui/Signature";
 import { BotanicalWatermark } from "@/components/ui/BotanicalWatermark";
 
+// TODO: Die eingebettete Google-Maps-Karte zeigt aktuell offenbar
+// "Marktpl. 2, 4650 Lambach" statt der auf der Website hinterlegten Adresse
+// "Bahnhofstraße 9, 4650 Lambach" (business.address in business.ts). Bitte
+// mit Viktoria die korrekte, von Google bestätigte Adresse/den korrekten
+// Maps-Eintrag klären und diese mapQuery-Konstante bzw. business.address
+// entsprechend anpassen. Keine Adresse selbst erfinden oder ändern.
 const mapQuery = encodeURIComponent(
   `${business.name}, ${business.address.street}, ${business.address.zip} ${business.address.city}`
 );
@@ -13,7 +19,7 @@ export function Availability() {
           stört weder Öffnungszeiten noch Karte. */}
       <BotanicalWatermark
         className="-top-10 -left-10 hidden h-[240px] w-[160px] lg:block lg:h-[330px] lg:w-[220px]"
-        opacity={0.06}
+        opacity={0.11}
         rotate={6}
       />
 
@@ -22,9 +28,9 @@ export function Availability() {
           <div>
             <Signature className="block">Körpergfüh</Signature>
             <h2 className="mt-3 font-display text-3xl leading-snug text-petrol sm:text-4xl">
-              Telefonische Erreichbarkeit
+              Wann du mich telefonisch erreichst
             </h2>
-            <div className="mt-4 h-px w-12 bg-gold" />
+            <div className="gold-line-reveal mt-4 h-px w-12 bg-gold" />
 
             <ul className="mt-8 flex flex-col">
               {openingHours.map((entry, index) => (

@@ -33,7 +33,7 @@ export function ImagePlaceholder({
 }: {
   label: string;
   offset?: Offset;
-  rectTone?: "mint" | "mint-pale";
+  rectTone?: "mint" | "mint-pale" | "greige";
   className?: string;
   aspect?: string;
   /** Signature-Element: minimale Eigenbewegung des Fotos relativ zum
@@ -50,7 +50,12 @@ export function ImagePlaceholder({
   /** Echtes Foto statt Platzhaltertext. */
   image?: RealImage;
 }) {
-  const rectColor = rectTone === "mint" ? "bg-mint" : "bg-mint-pale";
+  const rectColor =
+    rectTone === "mint"
+      ? "bg-mint"
+      : rectTone === "greige"
+        ? "bg-greige"
+        : "bg-mint-pale";
   const revealClass = reveal ? "reveal" : "";
 
   const content = image ? (
