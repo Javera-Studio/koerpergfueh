@@ -68,56 +68,58 @@ export function Testimonials() {
         </div>
       </div>
 
-      <div className="mt-16 grid gap-6 lg:grid-cols-6 lg:grid-rows-2">
+      <div className="mt-16 grid gap-6 lg:grid-cols-6 lg:items-start">
         {/* Featured: große Karte links, dunkles Petrol als bewusster Anker */}
         <blockquote
-          className={`reveal reveal-d1 relative flex flex-col justify-between rounded-2xl p-8 sm:p-10 lg:col-span-3 lg:row-span-2 ${cardTones.petrol}`}
+          className={`reveal reveal-d1 relative flex flex-col justify-between rounded-2xl p-7 sm:p-8 lg:col-span-3 ${cardTones.petrol}`}
         >
           <div>
             <QuoteMark dark />
             <Stars rating={featured.rating ?? 5} dark />
-            <p className="mt-4 whitespace-pre-line font-display text-xl leading-relaxed text-cream sm:text-2xl">
+            <p className="mt-4 whitespace-pre-line font-display text-lg leading-relaxed text-cream sm:text-xl">
               {featured.text}
             </p>
           </div>
-          <footer className="mt-8 border-t border-cream/20 pt-4 font-sans text-sm font-medium text-cream/90">
+          <footer className="mt-6 border-t border-cream/20 pt-4 font-sans text-sm font-medium text-cream/90">
             {featured.name}
           </footer>
         </blockquote>
 
-        {secondaryA && (
-          <blockquote
-            className={`reveal reveal-d2 relative flex flex-col justify-between rounded-2xl p-7 lg:col-span-3 ${cardTones.mint}`}
-          >
-            <div>
-              <QuoteMark />
-              <Stars rating={secondaryA.rating ?? 5} />
-              <p className="mt-3 font-sans text-base leading-relaxed text-petrol/85">
-                {secondaryA.text}
-              </p>
-            </div>
-            <footer className="mt-5 font-sans text-sm font-medium text-petrol">
-              {secondaryA.name}
-            </footer>
-          </blockquote>
-        )}
+        <div className="flex flex-col gap-6 lg:col-span-3">
+          {secondaryA && (
+            <blockquote
+              className={`reveal reveal-d2 relative flex flex-col justify-between rounded-2xl p-7 ${cardTones.mint}`}
+            >
+              <div>
+                <QuoteMark />
+                <Stars rating={secondaryA.rating ?? 5} />
+                <p className="mt-3 font-sans text-base leading-relaxed text-petrol/85">
+                  {secondaryA.text}
+                </p>
+              </div>
+              <footer className="mt-5 font-sans text-sm font-medium text-petrol">
+                {secondaryA.name}
+              </footer>
+            </blockquote>
+          )}
 
-        {secondaryB && (
-          <blockquote
-            className={`reveal reveal-d3 relative flex flex-col justify-between rounded-2xl p-7 lg:col-span-3 ${cardTones.cream}`}
-          >
-            <div>
-              <QuoteMark />
-              <Stars rating={secondaryB.rating ?? 5} />
-              <p className="mt-3 font-sans text-base leading-relaxed text-petrol/85">
-                {secondaryB.text}
-              </p>
-            </div>
-            <footer className="mt-5 font-sans text-sm font-medium text-petrol">
-              {secondaryB.name}
-            </footer>
-          </blockquote>
-        )}
+          {secondaryB && (
+            <blockquote
+              className={`reveal reveal-d3 relative flex flex-col justify-between rounded-2xl p-7 ${cardTones.cream}`}
+            >
+              <div>
+                <QuoteMark />
+                <Stars rating={secondaryB.rating ?? 5} />
+                <p className="mt-3 font-sans text-base leading-relaxed text-petrol/85">
+                  {secondaryB.text}
+                </p>
+              </div>
+              <footer className="mt-5 font-sans text-sm font-medium text-petrol">
+                {secondaryB.name}
+              </footer>
+            </blockquote>
+          )}
+        </div>
       </div>
 
       {others.length > 0 && (
