@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { business, navigation, legalLinks } from "@/lib/data/business";
 import { BotanicalWatermark } from "@/components/ui/BotanicalWatermark";
+import { InstagramIcon, FacebookIcon } from "@/components/ui/SocialIcons";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -26,6 +27,26 @@ export function Footer() {
             <p className="max-w-xs font-sans text-sm text-petrol/70">
               {business.tagline}
             </p>
+            {business.socials.length > 0 && (
+              <div className="mt-1 flex items-center gap-4">
+                {business.socials.map((social) => (
+                  <a
+                    key={social.href}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.label}
+                    className="text-petrol/50 transition-colors duration-300 hover:text-gold"
+                  >
+                    {social.label === "Instagram" ? (
+                      <InstagramIcon className="h-4 w-4" />
+                    ) : (
+                      <FacebookIcon className="h-4 w-4" />
+                    )}
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Kontakt */}
