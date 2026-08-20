@@ -70,9 +70,13 @@ export function About() {
       />
 
       <div className="relative mx-auto max-w-6xl px-6 lg:px-10">
-        {/* Viktoria – zentraler Vertrauensbereich */}
-        <div className="grid items-start gap-16 lg:grid-cols-2 lg:gap-24">
-          <div>
+        {/* Viktoria – zentraler Vertrauensbereich. Drei unabhängig
+            anordenbare Grid-Items statt zwei Spalten-Wrapper: auf Mobile
+            per order-* umsortiert (Text → Zitat → Foto), auf Desktop per
+            expliziter Zeilen-/Spaltenplatzierung wie zuvor (Foto + Zitat
+            links untereinander, Text rechts über beide Zeilen). */}
+        <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-x-24 lg:gap-y-10">
+          <div className="order-3 lg:order-none lg:col-start-1 lg:row-start-1">
             <ImagePlaceholder
               label="Portrait: Viktoria"
               offset="top-right"
@@ -86,29 +90,29 @@ export function About() {
                 sizes: "(min-width: 1024px) 580px, 90vw",
               }}
             />
+          </div>
 
-            {/* Zitat direkt unter dem Bild inszeniert: viel Weißraum, größere
-                Serifenschrift, dezentes goldenes Anführungszeichen statt
-                Bewertungs-Optik. */}
-            <div className="mx-auto mt-10 max-w-[580px] lg:mx-0">
-              <p className="font-sans text-lg leading-relaxed text-petrol/80">
-                {closingParagraph}
+          {/* Zitat direkt unter dem Bild inszeniert: viel Weißraum, größere
+              Serifenschrift, dezentes goldenes Anführungszeichen statt
+              Bewertungs-Optik. */}
+          <div className="order-2 mx-auto max-w-[580px] lg:order-none lg:col-start-1 lg:row-start-2 lg:mx-0">
+            <p className="font-sans text-lg leading-relaxed text-petrol/80">
+              {closingParagraph}
+            </p>
+            <div className="relative mt-16 max-w-md">
+              <span
+                aria-hidden
+                className="absolute -left-2 -top-6 font-display text-6xl leading-none text-gold/50"
+              >
+                &rdquo;
+              </span>
+              <p className="relative font-display text-3xl leading-snug text-mint-deep sm:text-4xl">
+                {viktoriaIntro.highlight}
               </p>
-              <div className="relative mt-16 max-w-md">
-                <span
-                  aria-hidden
-                  className="absolute -left-2 -top-6 font-display text-6xl leading-none text-gold/50"
-                >
-                  &rdquo;
-                </span>
-                <p className="relative font-display text-3xl leading-snug text-mint-deep sm:text-4xl">
-                  {viktoriaIntro.highlight}
-                </p>
-              </div>
             </div>
           </div>
 
-          <div>
+          <div className="order-1 lg:order-none lg:col-start-2 lg:row-start-1 lg:row-span-2">
             <Signature className="block">
               {viktoriaIntro.eyebrowSignature}
             </Signature>
