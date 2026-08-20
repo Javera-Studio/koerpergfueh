@@ -9,7 +9,9 @@ export function HaarentfernungSolution() {
             MEHR LEICHTIGKEIT IM ALLTAG
           </p>
           <h2 className="mt-4 font-display text-4xl leading-snug text-petrol sm:text-5xl">
-            Weniger Haarentfernung. Mehr Zeit für anderes.
+            Weniger Haarentfernung.
+            <br />
+            Mehr Zeit für anderes.
           </h2>
           <div className="mt-8 flex flex-col gap-5 font-sans text-lg leading-relaxed text-petrol/80">
             <p>
