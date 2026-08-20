@@ -4,7 +4,7 @@ export function HaarentfernungNinePlusOne() {
   return (
     <section className="bg-mist py-20 lg:py-28">
       <div className="mx-auto max-w-6xl px-6 lg:px-10">
-        <div className="rounded-sm bg-mint-pale/60 p-10 lg:p-14">
+        <div className="flex flex-col items-center rounded-sm bg-mint-pale/60 p-10 text-center lg:p-14">
           <p className="font-sans text-xs font-medium tracking-[0.2em] text-gold">
             9 + 1 ANGEBOT
           </p>
