@@ -23,14 +23,13 @@ export const mainTreatments = [
     title: "Medizinische Fußpflege",
     subtitle: "Wenn deine Füße mehr Aufmerksamkeit brauchen.",
     description:
-      "Manchmal reicht klassische Pflege nicht aus. Bei stärkeren Verhornungen, Problemnägeln oder anderen besonderen Anforderungen nehme ich mir gezielt Zeit für deine Füße. Die Behandlung wird individuell an den aktuellen Zustand und die Bedürfnisse deiner Füße angepasst.",
+      "Für Füße, die besondere Aufmerksamkeit brauchen. Bei stärkeren Verhornungen, Problemnägeln oder anderen Beschwerden wird die Behandlung individuell an deine Bedürfnisse angepasst.",
     includes: [
       "Fußbad",
-      "Entfernen der Hornhaut",
-      "Rhagaden",
-      "Holznägel",
-      "Pilznägel behandeln",
-      "feilen",
+      "Hornhaut & Rhagaden behandeln",
+      "Problem- & Holznägel behandeln",
+      "Pilznägel fachgerecht versorgen",
+      "Nägel feilen",
     ],
     price: "61 €",
     cta: "Termin anfragen",
@@ -40,7 +39,7 @@ export const mainTreatments = [
     subtitle: "Pflege darf sich auch einfach gut anfühlen.",
     description:
       "Professionelle Fußpflege kombiniert mit einer kleinen Auszeit für dich und deine Füße.",
-    includes: ["Fußpflege", "Peeling", "Fußmassage"],
+    includes: ["Professionelle Fußpflege", "Peeling", "Fußmassage"],
     price: "85 €",
     cta: "Termin anfragen",
   },

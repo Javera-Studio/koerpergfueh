@@ -4,24 +4,27 @@ import { mainTreatments } from "@/lib/data/fusspflege";
 export function FusspflegeMainTreatments() {
   return (
     <section id="leistungen" className="mx-auto max-w-6xl px-6 py-24 lg:px-10 lg:py-32">
-      <div className="grid gap-10 lg:grid-cols-3 lg:gap-8">
+      {/* items-start statt Grid-Default (stretch): Karten sollen sich nach
+          ihrem eigenen Inhalt richten, nicht auf die Höhe der längsten
+          Karte gezogen werden. */}
+      <div className="grid items-start gap-10 lg:grid-cols-3 lg:gap-8">
         {mainTreatments.map((treatment) => (
           <div
             key={treatment.title}
-            className="flex flex-col rounded-sm border border-mint-pale bg-cream p-8"
+            className="rounded-sm border border-mint-pale bg-cream p-8"
           >
             <h3 className="font-display text-3xl text-petrol">
               {treatment.title}
             </h3>
-            <p className="mt-2 font-sans text-base font-medium text-mint-deep">
+            <p className="mt-1.5 font-sans text-sm font-medium text-mint-deep">
               {treatment.subtitle}
             </p>
-            <p className="mt-4 font-sans text-base leading-relaxed text-petrol/75">
+            <p className="mt-4 font-sans text-sm leading-relaxed text-petrol/75">
               {treatment.description}
             </p>
 
             {treatment.includes.length > 0 && (
-              <ul className="mt-6 flex flex-col gap-2">
+              <ul className="mt-5 flex flex-col gap-2">
                 {treatment.includes.map((item, index) => (
                   <li
                     key={item}
@@ -34,17 +37,19 @@ export function FusspflegeMainTreatments() {
               </ul>
             )}
 
-            <div className="mt-8 flex flex-1 flex-col justify-end gap-6">
-              <p className="font-display text-3xl text-petrol">
-                {treatment.price}
-              </p>
-              <Link
-                href="/#kontakt"
-                className="rounded-full bg-mint px-6 py-3 text-center font-sans text-sm font-medium text-petrol transition-colors hover:bg-mint-deep hover:text-cream"
-              >
-                {treatment.cta}
-              </Link>
-            </div>
+            {/* Preis folgt mit natürlichem Abstand nach der Leistungsliste
+                statt an den unteren Kartenrand gezogen zu werden. Feine
+                Gold-Linie als dezenter Premium-Akzent direkt darüber. */}
+            <div className="mt-6 h-px w-10 bg-gold/50" />
+            <p className="mt-3 font-display text-4xl text-petrol">
+              {treatment.price}
+            </p>
+            <Link
+              href="/#kontakt"
+              className="mt-5 block rounded-full bg-mint px-6 py-3 text-center font-sans text-sm font-medium text-petrol transition-colors hover:bg-mint-deep hover:text-cream"
+            >
+              {treatment.cta}
+            </Link>
           </div>
         ))}
       </div>
