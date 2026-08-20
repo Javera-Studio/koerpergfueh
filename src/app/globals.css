@@ -130,6 +130,19 @@ html {
     opacity: 0;
     transform: translateY(16px);
   }
+
+  /* Termin-Hinweis-Card (/fusspflege Faq.tsx): dünne Gold-Linie zeichnet
+   * sich statt hoch-/runterzufahren von oben nach unten auf. Überschreibt
+   * die generische .reveal-transform gezielt (gleiche Spezifität, spätere
+   * Deklaration gewinnt). */
+  .terminline-gold {
+    transform-origin: top;
+    transition: transform 0.9s ease-out, opacity 0.9s ease-out;
+  }
+  .js-reveal-ready .terminline-gold:not(.reveal-visible) {
+    opacity: 1;
+    transform: scaleY(0);
+  }
 }
 
 /* Vertikale Painpoint-Timeline (/fusspflege, /haarentfernung) – siehe

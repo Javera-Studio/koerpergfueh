@@ -13,7 +13,6 @@ import { FusspflegeManicure } from "@/components/fusspflege/Manicure";
 import { FusspflegeProcess } from "@/components/fusspflege/Process";
 import { FusspflegeTrust } from "@/components/fusspflege/Trust";
 import { FusspflegeFaq } from "@/components/fusspflege/Faq";
-import { FusspflegeCancellationPolicy } from "@/components/fusspflege/CancellationPolicy";
 import { FusspflegeFinalCta } from "@/components/fusspflege/FinalCta";
 
 export const metadata: Metadata = {
@@ -48,7 +47,6 @@ export default function FusspflegePage() {
       <FusspflegeProcess />
       <FusspflegeTrust />
       <FusspflegeFaq />
-      <FusspflegeCancellationPolicy />
       <FusspflegeFinalCta />
     </>
   );
