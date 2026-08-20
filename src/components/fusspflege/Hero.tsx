@@ -37,8 +37,8 @@ export function FusspflegeHero() {
           label="Bild: Fußpflege-Behandlung im Studio"
           offset="top-right"
           rectTone="mint"
-          aspect="aspect-[4/5]"
-          className="mx-auto max-w-sm lg:mx-0"
+          aspect="aspect-[4/3]"
+          className="mx-auto max-w-[480px] lg:mx-0"
           image={{
             src: "/images/fusspflege-hero.jpg",
             alt: "Fußpflege-Behandlung bei Körpergfüh by Viki in Lambach",
