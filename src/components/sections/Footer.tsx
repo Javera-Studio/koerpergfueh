@@ -39,7 +39,7 @@ export function Footer() {
               alt="Körpergfüh by Viki Logo"
               width={200}
               height={200}
-              className="h-10 w-auto object-contain"
+              className="h-[52px] w-auto object-contain"
             />
             <p className="max-w-xs font-sans text-sm text-petrol/70">
               {business.tagline}
