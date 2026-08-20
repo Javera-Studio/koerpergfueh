@@ -28,7 +28,7 @@ export function Hero() {
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(245,240,232,0.82)_0%,rgba(245,240,232,0.65)_35%,rgba(245,240,232,0.5)_60%,rgba(245,240,232,0.4)_100%)]" />
 
         <div className="relative mx-auto w-full max-w-6xl px-6 lg:px-10">
-          <div className="w-full px-6 pt-14 sm:px-10 lg:w-[56%] lg:px-16 lg:py-0">
+          <div className="w-full pt-14 lg:w-[56%] lg:py-0">
             <p className="hero-intro-1 font-sans text-xs font-medium tracking-[0.2em] text-gold">
               KÖRPERGFÜH · LAMBACH
             </p>
@@ -54,7 +54,7 @@ export function Hero() {
             unter dem Fließtext. */}
         <div className="absolute inset-x-0 bottom-10 lg:bottom-14">
           <div className="mx-auto max-w-6xl px-6 lg:px-10">
-            <div className="w-full lg:w-[56%] lg:px-16">
+            <div className="w-full lg:w-[56%]">
               <div className="hero-intro-3 flex flex-wrap items-center gap-x-8 gap-y-4">
                 <Link
                   href="#leistungen"
