@@ -139,17 +139,17 @@ html {
 @media (prefers-reduced-motion: no-preference) {
   .js-reveal-ready .timeline-line {
     transform: scaleY(0);
-    transition: transform 1.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: transform 2.8s cubic-bezier(0.16, 1, 0.3, 1);
   }
   .js-reveal-ready .timeline-marker {
     opacity: 0;
     transform: scale(0.4);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   }
   .js-reveal-ready .timeline-text {
     opacity: 0;
     transform: translateY(14px);
-    transition: opacity 0.55s ease-out, transform 0.55s ease-out;
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
   }
 
   .js-reveal-ready .timeline-visible .timeline-line {
@@ -165,28 +165,28 @@ html {
   }
 
   .timeline-marker-0 {
-    transition-delay: 150ms;
+    transition-delay: 250ms;
   }
   .timeline-marker-1 {
-    transition-delay: 550ms;
-  }
-  .timeline-marker-2 {
     transition-delay: 950ms;
   }
+  .timeline-marker-2 {
+    transition-delay: 1650ms;
+  }
   .timeline-marker-3 {
-    transition-delay: 1350ms;
+    transition-delay: 2350ms;
   }
   .timeline-text-0 {
-    transition-delay: 300ms;
+    transition-delay: 500ms;
   }
   .timeline-text-1 {
-    transition-delay: 700ms;
+    transition-delay: 1200ms;
   }
   .timeline-text-2 {
-    transition-delay: 1100ms;
+    transition-delay: 1900ms;
   }
   .timeline-text-3 {
-    transition-delay: 1500ms;
+    transition-delay: 2600ms;
   }
 }
 
