@@ -5,8 +5,9 @@ import Image from "next/image";
  * der Painpoint-Timeline und den textlastigeren/preisintensiven Sections.
  * Technisch/gestalterisch bewusst identisch zu
  * fusspflege/AtmospherePhoto.tsx aufgebaut, damit beide Leistungsseiten
- * visuell zusammengehören. Bewusst ohne Card/Rahmen/Schatten, ohne Text
- * und ohne Button auf dem Bild.
+ * visuell zusammengehören. Bewusst ohne Card/Rahmen/Schatten und ohne
+ * Button auf dem Bild – nur ein dezentes Script-Zitat unten links, im
+ * gleichen Stil wie "Zeit für deine Füße." auf /fusspflege.
  */
 export function HaarentfernungAtmospherePhoto() {
   return (
@@ -22,6 +23,15 @@ export function HaarentfernungAtmospherePhoto() {
           gegen die Körpergfüh-Farbwelt wirkt – verfälscht die Hauttöne
           nicht. */}
       <div className="pointer-events-none absolute inset-0 bg-[#F5F0E8]/15" />
+
+      <div className="pointer-events-none absolute inset-x-0 bottom-6 sm:bottom-8 lg:bottom-10">
+        <div className="mx-auto max-w-6xl px-6 lg:px-10">
+          <span className="font-signature text-2xl text-petrol sm:text-3xl">
+            Ein bisschen weniger Routine. Ein bisschen mehr Freiheit.
+          </span>
+          <div className="mt-2 h-px w-10 bg-gold/70" />
+        </div>
+      </div>
     </section>
   );
 }
