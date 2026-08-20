@@ -26,10 +26,9 @@ export const business = {
   ] as { label: string; href: string }[],
 } as const;
 
-// Telefonische Erreichbarkeit, von Viktoria bestätigt. Montag bewusst ohne
-// Uhrzeit ("keine Zeit eintragen") – keine Zeit erfinden, bis bestätigt.
+// Telefonische Erreichbarkeit, von Viktoria bestätigt. Montag bewusst nicht
+// gelistet (keine Erreichbarkeit) – keine Zeit erfinden.
 export const openingHours: { day: string; hours: string }[] = [
-  { day: "Montag", hours: "" },
   { day: "Dienstag", hours: "08:00 – 18:00 Uhr" },
   { day: "Mittwoch", hours: "08:00 – 18:00 Uhr" },
   { day: "Donnerstag", hours: "08:00 – 18:00 Uhr" },
