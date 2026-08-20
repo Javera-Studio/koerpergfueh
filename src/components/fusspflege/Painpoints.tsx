@@ -1,4 +1,5 @@
 import { BotanicalWatermark } from "@/components/ui/BotanicalWatermark";
+import { PainpointTimeline } from "@/components/ui/PainpointTimeline";
 
 const painpoints = [
   {
@@ -39,19 +40,7 @@ export function FusspflegePainpoints() {
         ihnen oft erst dann Aufmerksamkeit, wenn etwas unangenehm wird.
       </p>
 
-      <div className="mt-14 grid gap-x-12 gap-y-14 sm:grid-cols-2">
-        {painpoints.map((point, index) => (
-          <div
-            key={point.title}
-            className={`reveal reveal-d${(index % 4) + 1} border-t border-mint-pale pt-6`}
-          >
-            <h3 className="font-display text-2xl text-petrol">{point.title}</h3>
-            <p className="mt-3 font-sans text-base leading-relaxed text-petrol/75">
-              {point.text}
-            </p>
-          </div>
-        ))}
-      </div>
+      <PainpointTimeline points={painpoints} />
 
       <div className="mt-16 border-t border-mint-pale pt-10">
         <h3 className="font-display text-2xl text-petrol">
