@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { business } from "@/lib/data/business";
 
 export function HaarentfernungFinalCta() {
   return (
@@ -20,39 +19,29 @@ export function HaarentfernungFinalCta() {
           Fragen und wir schauen gemeinsam, womit du starten möchtest.
         </p>
 
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-6">
+        <div className="mt-10 flex justify-center">
           <Link
             href="/#kontakt"
             className="rounded-full bg-mint px-7 py-3 font-sans text-sm font-medium text-petrol transition-colors hover:bg-mint-deep hover:text-cream"
           >
             Termin anfragen
           </Link>
-          <a
-            href={business.phoneHref}
-            className="font-sans text-sm font-medium text-mint-deep hover:underline"
-          >
-            {business.phone}
-          </a>
         </div>
 
-        <p className="mt-10 font-sans text-sm text-petrol/60">
-          Interessierst du dich auch für{" "}
-          <Link
-            href="/fusspflege"
-            className="font-medium text-mint-deep hover:underline"
+        <Link
+          href="/fusspflege"
+          className="group mt-10 inline-flex items-center gap-1.5 font-sans text-sm font-medium text-mint-deep transition-colors hover:text-petrol"
+        >
+          <span className="border-b border-transparent transition-colors group-hover:border-current">
+            Auch professionelle Fußpflege entdecken
+          </span>
+          <span
+            aria-hidden
+            className="motion-safe:transition-transform motion-safe:duration-300 motion-safe:ease-out motion-safe:group-hover:translate-x-1"
           >
-            professionelle Fußpflege
-          </Link>
-          ?
-        </p>
-
-        <div className="mt-6 font-sans text-sm text-petrol/70">
-          <p className="font-medium text-petrol">{business.name}</p>
-          <p>{business.address.street}</p>
-          <p>
-            {business.address.zip} {business.address.city}
-          </p>
-        </div>
+            →
+          </span>
+        </Link>
       </div>
     </section>
   );

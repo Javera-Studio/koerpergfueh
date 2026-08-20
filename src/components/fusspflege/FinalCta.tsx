@@ -33,16 +33,20 @@ export function FusspflegeFinalCta() {
           </a>
         </div>
 
-        <p className="mt-10 font-sans text-sm text-petrol/60">
-          Interessierst du dich auch für{" "}
-          <Link
-            href="/haarentfernung"
-            className="font-medium text-mint-deep hover:underline"
+        <Link
+          href="/haarentfernung"
+          className="group mt-10 inline-flex items-center gap-1.5 font-sans text-sm font-medium text-mint-deep transition-colors hover:text-petrol"
+        >
+          <span className="border-b border-transparent transition-colors group-hover:border-current">
+            Auch dauerhafte Haarentfernung entdecken
+          </span>
+          <span
+            aria-hidden
+            className="motion-safe:transition-transform motion-safe:duration-300 motion-safe:ease-out motion-safe:group-hover:translate-x-1"
           >
-            dauerhafte Haarentfernung
-          </Link>
-          ?
-        </p>
+            →
+          </span>
+        </Link>
 
         <div className="mt-6 font-sans text-sm text-petrol/70">
           <p className="font-medium text-petrol">{business.name}</p>
