@@ -7,6 +7,30 @@ import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 import { Signature } from "@/components/ui/Signature";
 import { BotanicalWatermark } from "@/components/ui/BotanicalWatermark";
 
+// Sehr feines, minimalistisches Blüten-Icon (handgezeichnet, kein
+// Icon-Set), für alle vier Expertise-Highlights identisch verwendet.
+function FlowerIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.1}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+      className={className}
+    >
+      <path d="M12 12c0-2.4 1.4-4 3-4.6-.6 1.6-.6 3.2 0 4.6" />
+      <path d="M12 12c0-2.4-1.4-4-3-4.6.6 1.6.6 3.2 0 4.6" />
+      <path d="M12 12c2.4 0 4 1.4 4.6 3-1.6.6-3.2.6-4.6 0" />
+      <path d="M12 12c-2.4 0-4 1.4-4.6 3 1.6.6 3.2.6 4.6 0" />
+      <circle cx="12" cy="12" r="1.1" />
+      <path d="M12 13.2v6" />
+    </svg>
+  );
+}
+
 export function About() {
   const [firstParagraph, ...restParagraphs] = viktoriaIntro.paragraphs;
   const closingParagraph = restParagraphs[restParagraphs.length - 1];
@@ -96,14 +120,18 @@ export function About() {
               {firstParagraph}
             </p>
 
-            {/* Expertise früh sichtbar, mit Gold-Dividern statt großer Cards */}
-            <ul className="mt-8 flex flex-col divide-y divide-gold/25 border-y border-gold/25">
+            {/* Expertise als ruhiges 2x2-Grid: Fineline-Blüte + Text statt
+                Checkliste mit Trennlinien. */}
+            <ul className="mt-8 grid grid-cols-1 gap-x-10 gap-y-5 min-[700px]:grid-cols-2">
               {expertiseHighlights.map((item, index) => (
                 <li
                   key={item}
-                  className={`reveal reveal-d${(index % 4) + 1} py-3 font-sans text-base text-petrol`}
+                  className={`reveal reveal-d${(index % 4) + 1} flex items-center gap-3`}
                 >
-                  {item}
+                  <FlowerIcon className="h-[19px] w-[19px] shrink-0 text-gold" />
+                  <span className="font-sans text-base text-petrol">
+                    {item}
+                  </span>
                 </li>
               ))}
             </ul>
