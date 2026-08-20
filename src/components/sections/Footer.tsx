@@ -18,9 +18,9 @@ export function Footer() {
       />
 
       <div className="relative mx-auto max-w-6xl px-6 py-16 lg:px-10">
-        <div className="grid gap-10 lg:grid-cols-3 lg:gap-10">
+        <div className="grid gap-10 text-center lg:grid-cols-3 lg:gap-10">
           {/* Marke */}
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col items-center gap-3">
             <p className="font-display text-xl text-petrol">
               Körpergfüh by Viki
             </p>
@@ -28,7 +28,7 @@ export function Footer() {
               {business.tagline}
             </p>
             {business.socials.length > 0 && (
-              <div className="mt-1 flex items-center gap-4">
+              <div className="mt-1 flex items-center justify-center gap-4">
                 {business.socials.map((social) => (
                   <a
                     key={social.href}
@@ -50,11 +50,11 @@ export function Footer() {
           </div>
 
           {/* Kontakt */}
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col items-center gap-2">
             <p className="font-sans text-xs font-medium tracking-[0.2em] text-gold">
               KONTAKT
             </p>
-            <div className="mt-1 flex flex-col gap-1 font-sans text-sm text-petrol/80">
+            <div className="mt-1 flex flex-col items-center gap-1 font-sans text-sm text-petrol/80">
               <p>{business.address.street}</p>
               <p>
                 {business.address.zip} {business.address.city}
@@ -75,11 +75,11 @@ export function Footer() {
           </div>
 
           {/* Navigation */}
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col items-center gap-2">
             <p className="font-sans text-xs font-medium tracking-[0.2em] text-gold">
               ENTDECKEN
             </p>
-            <nav className="mt-1 flex flex-col gap-2 font-sans text-sm text-petrol/80">
+            <nav className="mt-1 flex flex-col items-center gap-2 font-sans text-sm text-petrol/80">
               {navigation.map((item) => (
                 <Link
                   key={item.href}
