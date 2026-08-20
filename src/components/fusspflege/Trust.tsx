@@ -24,7 +24,7 @@ export function FusspflegeTrust() {
                 sizes: "(min-width: 1024px) 400px, 90vw",
               }}
             />
-            <div className="absolute inset-x-4 -bottom-6 z-10 flex items-center gap-3 rounded-sm bg-cream px-4 py-3 ring-1 ring-mint-pale">
+            <div className="absolute inset-x-4 -bottom-9 z-10 flex items-center gap-3 rounded-sm bg-cream px-4 py-3 ring-1 ring-mint-pale">
               <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full">
                 <Image
                   src="/images/carina.jpg"
