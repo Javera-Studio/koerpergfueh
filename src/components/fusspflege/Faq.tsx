@@ -17,7 +17,8 @@ export function FusspflegeFaq() {
         rotate={8}
       />
 
-      <div className="relative mx-auto max-w-3xl px-6 lg:px-10">
+      <div className="relative mx-auto max-w-6xl px-6 lg:px-10">
+        <div className="max-w-2xl">
         <p className="font-sans text-xs font-medium tracking-[0.2em] text-mint-deep">
           GUT ZU WISSEN
         </p>
@@ -63,6 +64,7 @@ export function FusspflegeFaq() {
               </div>
             );
           })}
+        </div>
         </div>
       </div>
     </section>

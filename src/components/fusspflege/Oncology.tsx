@@ -4,7 +4,8 @@ import { oncologyTreatment } from "@/lib/data/fusspflege";
 export function FusspflegeOncology() {
   return (
     <section className="oncology-bg-reveal bg-mist py-24 lg:py-32">
-      <div className="mx-auto max-w-4xl px-6 lg:px-10">
+      <div className="mx-auto max-w-6xl px-6 lg:px-10">
+        <div className="max-w-2xl">
         <p className="reveal font-sans text-xs font-medium tracking-[0.2em] text-mint-deep">
           BESONDERE ACHTSAMKEIT · BESONDERE BEDÜRFNISSE
         </p>
@@ -77,6 +78,7 @@ export function FusspflegeOncology() {
           >
             Frage vorab stellen
           </Link>
+        </div>
         </div>
       </div>
     </section>

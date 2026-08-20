@@ -2,8 +2,8 @@ import { punctualityPolicy } from "@/lib/data/haarentfernung";
 
 export function HaarentfernungPunctuality() {
   return (
-    <section className="mx-auto max-w-3xl px-6 py-16 lg:px-10">
-      <div className="rounded-sm border border-mint-pale border-l-2 border-l-gold p-8">
+    <section className="mx-auto max-w-6xl px-6 py-16 lg:px-10">
+      <div className="max-w-2xl rounded-sm border border-mint-pale border-l-2 border-l-gold p-8">
         <p className="font-sans text-xs font-medium tracking-[0.2em] text-mint-deep">
           GUT ZU WISSEN
         </p>

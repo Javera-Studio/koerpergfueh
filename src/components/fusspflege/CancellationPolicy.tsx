@@ -2,8 +2,8 @@ import { cancellationPolicy } from "@/lib/data/fusspflege";
 
 export function FusspflegeCancellationPolicy() {
   return (
-    <section className="mx-auto max-w-3xl px-6 py-16 lg:px-10">
-      <div className="rounded-sm border border-mint-pale border-l-2 border-l-gold p-8">
+    <section className="mx-auto max-w-6xl px-6 py-16 lg:px-10">
+      <div className="max-w-2xl rounded-sm border border-mint-pale border-l-2 border-l-gold p-8">
         <h3 className="font-display text-xl text-petrol">
           Damit genug Zeit für jede Kundin und jeden Kunden bleibt
         </h3>
