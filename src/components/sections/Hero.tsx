@@ -1,36 +1,38 @@
 import Image from "next/image";
 import Link from "next/link";
 
-// Hero-Foto: vollflächiger Hintergrund, Beine rechts sichtbar, links freie
-// Fläche für den Text. Kräftiges warmes Creme-/Beige-Overlay (#F5F0E8)
-// neutralisiert den Orange-/Peach-Ton des Fotos zugunsten der Off-White/
-// Beige-Markenwelt – links ~82% Deckkraft (Textlesbarkeit), nach rechts
-// weich auf ~40% reduziert (Beine bleiben natürlich & kontrastreich
-// sichtbar, kein milchiger Look). Austausch: einfach src unten ersetzen.
-// Container-Breite an die restlichen Sections angeglichen (max-w-6xl),
-// kein Full-Bleed mehr.
+// Hero-Foto: vollflächiger Hintergrund (bis zum Browserrand), Beine rechts
+// sichtbar, links freie Fläche für den Text. Kräftiges warmes Creme-/
+// Beige-Overlay (#F5F0E8) neutralisiert den Orange-/Peach-Ton des Fotos
+// zugunsten der Off-White/Beige-Markenwelt – links ~82% Deckkraft
+// (Textlesbarkeit), nach rechts weich auf ~40% reduziert (Beine bleiben
+// natürlich & kontrastreich sichtbar, kein milchiger Look). Austausch:
+// einfach src unten ersetzen.
+// Der Hintergrund ist bewusst full-bleed (kein weißer Rand seitlich), der
+// Content-Block darüber bleibt aber auf dieselbe max-w-6xl-Breite/
+// Ausrichtung wie die übrigen Sections begrenzt.
 export function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <div className="mx-auto max-w-6xl px-6 lg:px-10">
-        <div className="relative flex min-h-[640px] items-center overflow-hidden lg:min-h-[760px]">
-          <Image
-            src="/images/herobild.png"
-            alt="Gepflegte Beine und Füße – dauerhafte Haarentfernung und Fußpflege bei Körpergfüh in Lambach"
-            fill
-            preload
-            sizes="(min-width: 1024px) 1152px, 100vw"
-            className="object-cover object-[right_bottom]"
-          />
-          <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(245,240,232,0.82)_0%,rgba(245,240,232,0.65)_35%,rgba(245,240,232,0.5)_60%,rgba(245,240,232,0.4)_100%)]" />
+      <div className="relative flex min-h-[640px] items-center lg:min-h-[760px]">
+        <Image
+          src="/images/herobild.png"
+          alt="Gepflegte Beine und Füße – dauerhafte Haarentfernung und Fußpflege bei Körpergfüh in Lambach"
+          fill
+          preload
+          sizes="100vw"
+          className="object-cover object-[right_bottom]"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(245,240,232,0.82)_0%,rgba(245,240,232,0.65)_35%,rgba(245,240,232,0.5)_60%,rgba(245,240,232,0.4)_100%)]" />
 
-          <div className="relative w-full px-6 py-14 sm:px-10 lg:w-[56%] lg:px-16 lg:py-0">
+        <div className="relative mx-auto w-full max-w-6xl px-6 lg:px-10">
+          <div className="w-full px-6 py-14 sm:px-10 lg:w-[56%] lg:px-16 lg:py-0">
             <p className="hero-intro-1 font-sans text-xs font-medium tracking-[0.2em] text-gold">
               KÖRPERGFÜH · LAMBACH
             </p>
             <div className="hero-intro-1 mt-3 h-px w-10 bg-gold" />
 
-            <h1 className="hero-intro-2 mt-5 max-w-md font-display text-4xl leading-tight text-petrol sm:text-5xl lg:text-6xl">
+            <h1 className="hero-intro-2 mt-5 max-w-md font-display text-4xl leading-tight text-petrol sm:text-5xl lg:text-[3.25rem]">
               Gepflegte Füße.
               <br />
               Glatte Haut.
