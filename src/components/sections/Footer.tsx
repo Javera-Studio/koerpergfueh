@@ -2,33 +2,50 @@ import Image from "next/image";
 import Link from "next/link";
 import { business, navigation, legalLinks } from "@/lib/data/business";
 import { BotanicalWatermark } from "@/components/ui/BotanicalWatermark";
+import { Signature } from "@/components/ui/Signature";
 import { InstagramIcon, FacebookIcon } from "@/components/ui/SocialIcons";
 
 export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative overflow-hidden border-t border-gold/40 bg-mint-pale/30">
-      {/* Botanisches Wasserzeichen (pflanze.png) – groß, unten rechts,
-          angeschnitten, hinter dem Inhalt, überdeckt keinen Text. */}
+    <footer className="relative overflow-hidden border-t border-gold/30 bg-cream">
+      {/* Botanisches Wasserzeichen (pflanze.png) – bewusst groß und am Rand
+          angeschnitten, wirkt wie ein Hintergrund-Wasserzeichen statt eines
+          angeklebten Elements. Sehr geringe Deckkraft, überlagert keinen
+          Text (liegt im DOM vor dem Content, Content zeichnet darüber). */}
       <BotanicalWatermark
-        className="-bottom-16 -right-12 hidden h-[420px] w-[280px] lg:block"
-        opacity={0.14}
+        className="-bottom-28 -right-24 hidden h-[560px] w-[380px] lg:block"
+        opacity={0.09}
         rotate={-4}
       />
+      <BotanicalWatermark
+        className="-left-16 -top-10 hidden h-[220px] w-[150px] lg:block"
+        opacity={0.05}
+        flip
+        rotate={6}
+      />
 
-      <div className="relative mx-auto max-w-6xl px-6 py-16 lg:px-10">
-        <div className="grid gap-10 text-center lg:grid-cols-3 lg:gap-10">
+      <div className="relative mx-auto max-w-6xl px-6 py-12 lg:px-10 lg:py-14">
+        <Signature className="block text-center !text-xl sm:!text-2xl" color="gold">
+          Schön, dass du da bist.
+        </Signature>
+
+        <div className="mt-8 grid gap-8 text-center lg:mt-10 lg:grid-cols-3">
           {/* Marke */}
           <div className="flex flex-col items-center gap-3">
-            <p className="font-display text-xl text-petrol">
-              Körpergfüh by Viki
-            </p>
+            <Image
+              src="/images/logo.png"
+              alt="Körpergfüh by Viki Logo"
+              width={200}
+              height={200}
+              className="h-10 w-auto object-contain"
+            />
             <p className="max-w-xs font-sans text-sm text-petrol/70">
               {business.tagline}
             </p>
             {business.socials.length > 0 && (
-              <div className="mt-1 flex items-center justify-center gap-4">
+              <div className="mt-1 flex items-center justify-center gap-5">
                 {business.socials.map((social) => (
                   <a
                     key={social.href}
@@ -36,12 +53,12 @@ export function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.label}
-                    className="text-petrol/50 transition-colors duration-300 hover:text-gold"
+                    className="text-gold/70 transition-colors duration-300 hover:text-gold"
                   >
                     {social.label === "Instagram" ? (
-                      <InstagramIcon className="h-4 w-4" />
+                      <InstagramIcon className="h-5 w-5" />
                     ) : (
-                      <FacebookIcon className="h-4 w-4" />
+                      <FacebookIcon className="h-5 w-5" />
                     )}
                   </a>
                 ))}
@@ -84,7 +101,7 @@ export function Footer() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="w-fit hover:text-mint-deep hover:underline hover:decoration-gold hover:underline-offset-4"
+                  className="w-fit transition-colors duration-300 hover:text-mint-deep hover:underline hover:decoration-gold hover:underline-offset-4"
                 >
                   {item.label}
                 </Link>
@@ -93,7 +110,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 items-center gap-4 border-t border-mint-pale pt-6 font-sans text-xs text-petrol/60 sm:grid-cols-3">
+        <div className="mt-8 grid grid-cols-1 items-center gap-4 border-t border-gold/25 pt-6 font-sans text-xs text-petrol/60 sm:grid-cols-3">
           <p className="text-center sm:justify-self-start sm:text-left">
             © {year} {business.name}
           </p>
