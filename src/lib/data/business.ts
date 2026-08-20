@@ -79,7 +79,7 @@ export const painpoints = [
     titleStart: "Deine Füße brauchen besondere",
     titleEmphasis: "Aufmerksamkeit?",
     text: "Gerade bei sensiblen Situationen sind Fachwissen, Sorgfalt und ein einfühlsamer Umgang besonders wichtig.",
-    image: { src: "/images/bullet4.png", alt: "Handgezeichnete Blattranke" },
+    image: { src: "/images/bullet4.png", alt: "Fußpflege-Instrumente auf einem Handtuch" },
   },
 ] as const;
 
