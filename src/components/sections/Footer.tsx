@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { business, navigation, legalLinks } from "@/lib/data/business";
 import { BotanicalWatermark } from "@/components/ui/BotanicalWatermark";
@@ -85,6 +86,29 @@ export function Footer() {
               </span>
             ))}
           </nav>
+        </div>
+
+        {/* Sehr dezente Designer-Signatur, keine Werbung – geringes Gewicht,
+            gedämpfte Farbe, minimaler Hover-Effekt. */}
+        <div className="mt-8 flex justify-center">
+          <p className="flex items-center gap-1.5 font-sans text-[11px] text-petrol/40">
+            Webdesign by
+            <a
+              href="https://javera-studio.at"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-1.5 text-petrol/50 transition-colors duration-300 hover:text-petrol/80"
+            >
+              <Image
+                src="/images/javera-logo.png"
+                alt="JAVERA STUDIO"
+                width={16}
+                height={16}
+                className="rounded-full opacity-70 transition-opacity duration-300 group-hover:opacity-100"
+              />
+              <span className="tracking-[0.08em]">JAVERA STUDIO</span>
+            </a>
+          </p>
         </div>
       </div>
     </footer>
