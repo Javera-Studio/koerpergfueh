@@ -15,7 +15,7 @@ export function FusspflegeAtmospherePhoto() {
         alt="Gepflegte Füße und Hände mit Rosenblättern bei einer Fußpflege-Behandlung"
         fill
         sizes="100vw"
-        className="object-cover object-[50%_42%] saturate-[85%]"
+        className="object-cover object-[50%_72%] saturate-[85%]"
       />
       {/* Sehr dezentes warmes Creme-Overlay – kein starkes Weiß, Rosa bleibt
           sichtbar, wirkt nur weniger dominant. */}
