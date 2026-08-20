@@ -6,7 +6,11 @@ export function Contact() {
   return (
     <section id="kontakt" className="bg-greige/30 py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-6 lg:px-10">
-        <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
+        <p className="reveal block text-center font-signature text-xl text-gold sm:text-2xl">
+          Schön, dass du da bist.
+        </p>
+
+        <div className="mt-10 grid gap-16 lg:mt-12 lg:grid-cols-2 lg:gap-24">
           <div>
             <Signature className="reveal block" color="gold">
               Ich bin gerne für dich da.
