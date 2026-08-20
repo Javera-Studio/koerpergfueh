@@ -6,7 +6,6 @@ import { LocalBusinessJsonLd } from "@/components/seo/LocalBusinessJsonLd";
 import { HaarentfernungHero } from "@/components/haarentfernung/Hero";
 import { HaarentfernungPainpoints } from "@/components/haarentfernung/Painpoints";
 import { HaarentfernungSolution } from "@/components/haarentfernung/Solution";
-import { HaarentfernungBodyAreas } from "@/components/haarentfernung/BodyAreas";
 import { HaarentfernungPricing } from "@/components/haarentfernung/Pricing";
 import { HaarentfernungNinePlusOne } from "@/components/haarentfernung/NinePlusOne";
 import { HaarentfernungPackages } from "@/components/haarentfernung/Packages";
@@ -42,7 +41,6 @@ export default function HaarentfernungPage() {
       <HaarentfernungHero />
       <HaarentfernungPainpoints />
       <HaarentfernungSolution />
-      <HaarentfernungBodyAreas />
       <HaarentfernungPricing />
       <HaarentfernungNinePlusOne />
       <HaarentfernungPackages />

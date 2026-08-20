@@ -31,7 +31,7 @@ export function HaarentfernungSolution() {
           </div>
 
           <Link
-            href="#bereiche"
+            href="#preise"
             className="mt-8 inline-block rounded-full bg-mint px-7 py-3 font-sans text-sm font-medium text-petrol transition-colors hover:bg-mint-deep hover:text-cream"
           >
             Preise &amp; Bereiche ansehen
