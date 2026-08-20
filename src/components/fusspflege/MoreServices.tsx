@@ -7,7 +7,7 @@ import {
 
 export function FusspflegeMoreServices() {
   return (
-    <section className="mx-auto max-w-5xl px-6 py-24 lg:px-10 lg:py-32">
+    <section className="mx-auto max-w-6xl px-6 py-24 lg:px-10 lg:py-32">
       <h2 className="font-display text-4xl leading-snug text-petrol sm:text-5xl">
         Manchmal braucht es etwas mehr.
       </h2>

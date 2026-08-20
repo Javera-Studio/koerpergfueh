@@ -2,7 +2,7 @@ import { bodyAreaGroups } from "@/lib/data/haarentfernung";
 
 export function HaarentfernungBodyAreas() {
   return (
-    <section id="bereiche" className="mx-auto max-w-5xl px-6 py-24 lg:px-10 lg:py-32">
+    <section id="bereiche" className="mx-auto max-w-6xl px-6 py-24 lg:px-10 lg:py-32">
       <p className="font-sans text-xs font-medium tracking-[0.2em] text-mint-deep">
         VON KOPF BIS FUSS
       </p>

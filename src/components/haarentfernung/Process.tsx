@@ -18,7 +18,7 @@ const steps = [
 
 export function HaarentfernungProcess() {
   return (
-    <section className="mx-auto max-w-5xl px-6 py-24 lg:px-10 lg:py-32">
+    <section className="mx-auto max-w-6xl px-6 py-24 lg:px-10 lg:py-32">
       <p className="font-sans text-xs font-medium tracking-[0.2em] text-mint-deep">
         DEIN TERMIN
       </p>

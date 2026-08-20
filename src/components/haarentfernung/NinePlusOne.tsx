@@ -3,7 +3,7 @@ import { ninePlusOneOffer } from "@/lib/data/haarentfernung";
 export function HaarentfernungNinePlusOne() {
   return (
     <section className="bg-mist py-20 lg:py-28">
-      <div className="mx-auto max-w-4xl px-6 lg:px-10">
+      <div className="mx-auto max-w-6xl px-6 lg:px-10">
         <div className="rounded-sm bg-mint-pale/60 p-10 lg:p-14">
           <p className="font-sans text-xs font-medium tracking-[0.2em] text-gold">
             9 + 1 ANGEBOT

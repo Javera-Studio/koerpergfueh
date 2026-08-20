@@ -13,7 +13,7 @@ export function Painpoints() {
         rotate={-6}
       />
 
-      <div className="relative mx-auto max-w-5xl px-6 py-24 lg:px-10 lg:py-32">
+      <div className="relative mx-auto max-w-6xl px-6 py-24 lg:px-10 lg:py-32">
         <h2 className="reveal max-w-xl font-display text-4xl leading-snug text-petrol sm:text-5xl">
           Kommt dir das bekannt vor?
         </h2>
