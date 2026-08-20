@@ -51,7 +51,9 @@ export function HaarentfernungPunctuality() {
             GUT ZU WISSEN
           </p>
           <h2 className="reveal reveal-d1 mx-auto mt-3 max-w-xl font-display text-3xl leading-snug text-petrol sm:text-4xl">
-            Damit genug Zeit für deine Behandlung bleibt.
+            Damit genug Zeit für
+            <br />
+            deine Behandlung bleibt.
           </h2>
         </div>
 
