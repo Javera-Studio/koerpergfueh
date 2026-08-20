@@ -5,6 +5,7 @@ import { FaqJsonLd } from "@/components/seo/FaqJsonLd";
 import { LocalBusinessJsonLd } from "@/components/seo/LocalBusinessJsonLd";
 import { FusspflegeHero } from "@/components/fusspflege/Hero";
 import { FusspflegePainpoints } from "@/components/fusspflege/Painpoints";
+import { FusspflegeAtmospherePhoto } from "@/components/fusspflege/AtmospherePhoto";
 import { FusspflegeTransition } from "@/components/fusspflege/Transition";
 import { FusspflegeMainTreatments } from "@/components/fusspflege/MainTreatments";
 import { FusspflegeOncology } from "@/components/fusspflege/Oncology";
@@ -39,6 +40,7 @@ export default function FusspflegePage() {
       <LocalBusinessJsonLd />
       <FusspflegeHero />
       <FusspflegePainpoints />
+      <FusspflegeAtmospherePhoto />
       <FusspflegeTransition />
       <FusspflegeMainTreatments />
       <FusspflegeOncology />
