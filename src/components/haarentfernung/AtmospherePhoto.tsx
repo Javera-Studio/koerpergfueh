@@ -17,7 +17,7 @@ export function HaarentfernungAtmospherePhoto() {
         alt="Gepflegte, glatte Beine nach einer dauerhaften Haarentfernung"
         fill
         sizes="100vw"
-        className="object-cover object-[50%_80%]"
+        className="object-cover object-[50%_100%]"
       />
       {/* Sehr dezentes warmes Creme-Overlay, damit das Bild nicht zu kühl
           gegen die Körpergfüh-Farbwelt wirkt – verfälscht die Hauttöne
