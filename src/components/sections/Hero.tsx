@@ -35,9 +35,9 @@ export function Hero() {
               <br />
               Glatte Haut.
               <br />
-              Und Zeit, dich
+              Und Zeit,
               <br />
-              wohlzufühlen.
+              dich wohlzufühlen.
             </h1>
             <p className="hero-intro-3 mt-5 max-w-sm font-sans text-base text-petrol/80 sm:text-lg">
               Professionelle Fußpflege &amp; dauerhafte Haarentfernung in
