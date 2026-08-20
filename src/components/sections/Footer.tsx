@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { business, navigation, legalLinks } from "@/lib/data/business";
 import { BotanicalWatermark } from "@/components/ui/BotanicalWatermark";
-import { Signature } from "@/components/ui/Signature";
 import { InstagramIcon, FacebookIcon } from "@/components/ui/SocialIcons";
 
 export function Footer() {
@@ -27,11 +26,7 @@ export function Footer() {
       />
 
       <div className="relative mx-auto max-w-6xl px-6 py-12 lg:px-10 lg:py-14">
-        <Signature className="block text-center !text-xl sm:!text-2xl" color="gold">
-          Schön, dass du da bist.
-        </Signature>
-
-        <div className="mt-8 grid gap-8 text-center lg:mt-10 lg:grid-cols-3">
+        <div className="grid gap-8 text-center lg:grid-cols-3">
           {/* Marke */}
           <div className="flex flex-col items-center gap-3">
             <Image
