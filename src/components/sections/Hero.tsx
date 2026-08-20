@@ -10,7 +10,9 @@ import Link from "next/link";
 // einfach src unten ersetzen.
 // Der Hintergrund ist bewusst full-bleed (kein weißer Rand seitlich), der
 // Content-Block darüber bleibt aber auf dieselbe max-w-6xl-Breite/
-// Ausrichtung wie die übrigen Sections begrenzt.
+// Ausrichtung wie die übrigen Sections begrenzt. Die Buttons sitzen bewusst
+// als eigener, unten fixierter Block nah am unteren Bildrand statt direkt
+// unter dem Fließtext.
 export function Hero() {
   return (
     <section className="relative overflow-hidden">
@@ -26,7 +28,7 @@ export function Hero() {
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(245,240,232,0.82)_0%,rgba(245,240,232,0.65)_35%,rgba(245,240,232,0.5)_60%,rgba(245,240,232,0.4)_100%)]" />
 
         <div className="relative mx-auto w-full max-w-6xl px-6 lg:px-10">
-          <div className="w-full px-6 py-14 sm:px-10 lg:w-[56%] lg:px-16 lg:py-0">
+          <div className="w-full px-6 pt-14 sm:px-10 lg:w-[56%] lg:px-16 lg:py-0">
             <p className="hero-intro-1 font-sans text-xs font-medium tracking-[0.2em] text-gold">
               KÖRPERGFÜH · LAMBACH
             </p>
@@ -45,25 +47,34 @@ export function Hero() {
               Professionelle Fußpflege &amp; dauerhafte Haarentfernung in
               Lambach.
             </p>
-            <div className="hero-intro-3 mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
-              <Link
-                href="#leistungen"
-                className="rounded-full bg-mint px-7 py-3 font-sans text-sm font-semibold text-petrol shadow-[inset_0_0_0_1px_rgba(31,58,52,0.12)] transition-colors hover:bg-mint-deep hover:text-cream"
-              >
-                Behandlungen entdecken
-              </Link>
-              <Link
-                href="/#kontakt"
-                className="group inline-flex items-center gap-1.5 border-b border-gold pb-0.5 font-sans text-sm font-medium text-petrol transition-colors hover:text-mint-deep"
-              >
-                Termin anfragen
-                <span
-                  aria-hidden
-                  className="motion-safe:transition-transform motion-safe:duration-300 motion-safe:ease-out motion-safe:group-hover:translate-x-1"
+          </div>
+        </div>
+
+        {/* Buttons: eigener Block, nah am unteren Bildrand statt direkt
+            unter dem Fließtext. */}
+        <div className="absolute inset-x-0 bottom-10 lg:bottom-14">
+          <div className="mx-auto max-w-6xl px-6 lg:px-10">
+            <div className="w-full lg:w-[56%] lg:px-16">
+              <div className="hero-intro-3 flex flex-wrap items-center gap-x-8 gap-y-4">
+                <Link
+                  href="#leistungen"
+                  className="rounded-full bg-mint px-7 py-3 font-sans text-sm font-semibold text-petrol shadow-[inset_0_0_0_1px_rgba(31,58,52,0.12)] transition-colors hover:bg-mint-deep hover:text-cream"
                 >
-                  →
-                </span>
-              </Link>
+                  Behandlungen entdecken
+                </Link>
+                <Link
+                  href="/#kontakt"
+                  className="group inline-flex items-center gap-1.5 border-b border-gold pb-0.5 font-sans text-sm font-medium text-petrol transition-colors hover:text-mint-deep"
+                >
+                  Termin anfragen
+                  <span
+                    aria-hidden
+                    className="motion-safe:transition-transform motion-safe:duration-300 motion-safe:ease-out motion-safe:group-hover:translate-x-1"
+                  >
+                    →
+                  </span>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
