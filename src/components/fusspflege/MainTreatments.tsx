@@ -46,8 +46,10 @@ export function FusspflegeMainTreatments() {
             )}
 
             {/* Gold-Linie + Preis gemeinsam als eine Subgrid-Zeile, damit
-                beide über alle Karten hinweg auf derselben Höhe beginnen. */}
-            <div className="mt-9 lg:mt-0 lg:self-start">
+                beide über alle Karten hinweg auf derselben Höhe beginnen.
+                Zusätzliches py schafft spürbar mehr Raum vor und nach dem
+                Preis, bevor der Button folgt. */}
+            <div className="mt-9 py-5 lg:mt-0 lg:self-start lg:py-6">
               <div className="h-px w-10 bg-gold/50" />
               <p className="mt-3 font-display text-4xl text-petrol">
                 {treatment.price}
