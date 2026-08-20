@@ -93,26 +93,14 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-3 border-t border-mint-pale pt-6 font-sans text-xs text-petrol/60 sm:flex-row sm:items-center sm:justify-between">
-          <p>
+        <div className="mt-12 grid grid-cols-1 items-center gap-4 border-t border-mint-pale pt-6 font-sans text-xs text-petrol/60 sm:grid-cols-3">
+          <p className="text-center sm:justify-self-start sm:text-left">
             © {year} {business.name}
           </p>
-          <nav className="flex items-center gap-2">
-            {legalLinks.map((link, index) => (
-              <span key={link.href} className="flex items-center gap-2">
-                {index > 0 && <span aria-hidden>·</span>}
-                <Link href={link.href} className="hover:text-mint-deep">
-                  {link.label}
-                </Link>
-              </span>
-            ))}
-          </nav>
-        </div>
 
-        {/* Sehr dezente Designer-Signatur, keine Werbung – geringes Gewicht,
-            gedämpfte Farbe, minimaler Hover-Effekt. */}
-        <div className="mt-8 flex justify-center">
-          <p className="flex items-center gap-1.5 font-sans text-[11px] text-petrol/40">
+          {/* Sehr dezente Designer-Signatur, keine Werbung – geringes
+              Gewicht, gedämpfte Farbe, minimaler Hover-Effekt. */}
+          <p className="flex items-center justify-center gap-1.5 text-[11px] text-petrol/40 sm:justify-self-center">
             Webdesign by
             <a
               href="https://javera-studio.at"
@@ -123,13 +111,24 @@ export function Footer() {
               <Image
                 src="/images/javera-logo.png"
                 alt="JAVERA STUDIO"
-                width={16}
-                height={16}
+                width={32}
+                height={32}
                 className="rounded-full opacity-70 transition-opacity duration-300 group-hover:opacity-100"
               />
               <span className="tracking-[0.08em]">JAVERA STUDIO</span>
             </a>
           </p>
+
+          <nav className="flex items-center justify-center gap-2 sm:justify-self-end">
+            {legalLinks.map((link, index) => (
+              <span key={link.href} className="flex items-center gap-2">
+                {index > 0 && <span aria-hidden>·</span>}
+                <Link href={link.href} className="hover:text-mint-deep">
+                  {link.label}
+                </Link>
+              </span>
+            ))}
+          </nav>
         </div>
       </div>
     </footer>
