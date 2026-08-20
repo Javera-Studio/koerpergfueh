@@ -17,7 +17,13 @@ export const business = {
   email: "koerpergfueh.23@gmail.com",
   emailHref: "mailto:koerpergfueh.23@gmail.com",
   domain: "koerpergfuel.at",
-  socials: [] as { label: string; href: string }[], // Keine bestätigten Profile bekannt – bewusst leer
+  socials: [
+    { label: "Instagram", href: "https://www.instagram.com/koerpergfueh/" },
+    {
+      label: "Facebook",
+      href: "https://www.facebook.com/p/K%C3%B6rpergf%C3%BCh-61555901346112/?locale=de_DE",
+    },
+  ] as { label: string; href: string }[],
 } as const;
 
 // Telefonische Erreichbarkeit, von Viktoria bestätigt. Montag bewusst ohne
@@ -194,6 +200,13 @@ export const googleRating: { average: number; count: number | null } = {
 // URL – die Testimonials-Section zeigt den CTA erst, sobald dieser Wert
 // gesetzt ist.
 export const googleReviewsUrl: string | null = null;
+
+// Wortgetreu freigegebener Text für die dezente Social-Teaser-Section
+// (Social.tsx) zwischen Studio und Testimonials auf der Startseite.
+export const socialTeaser = {
+  heading: "Bleib ein bisschen länger.",
+  text: "Einblicke aus dem Studio, Aktionen, Neuigkeiten & Wissenswertes rund um Fußpflege und dauerhafte Haarentfernung.",
+} as const;
 
 export const navigation = [
   { label: "Fußpflege", href: "/fusspflege" },

@@ -5,6 +5,7 @@ import { Painpoints } from "@/components/sections/Painpoints";
 import { Services } from "@/components/sections/Services";
 import { About } from "@/components/sections/About";
 import { Studio } from "@/components/sections/Studio";
+import { Social } from "@/components/sections/Social";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Contact } from "@/components/sections/Contact";
 import { Availability } from "@/components/sections/Availability";
@@ -25,6 +26,7 @@ export default function Home() {
       <Services />
       <About />
       <Studio />
+      <Social />
       <Testimonials />
       <Contact />
       <Availability />
