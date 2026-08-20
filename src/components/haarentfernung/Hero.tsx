@@ -28,10 +28,10 @@ export function HaarentfernungHero() {
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Link
-              href="#painpoints"
+              href="/#kontakt"
               className="rounded-full bg-mint px-7 py-3 font-sans text-sm font-medium text-petrol transition-colors hover:bg-mint-deep hover:text-cream"
             >
-              Behandlung entdecken
+              Termin vereinbaren
             </Link>
             <Link
               href="#preise"
