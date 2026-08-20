@@ -13,7 +13,6 @@ import { HaarentfernungPersonalCare } from "@/components/haarentfernung/Personal
 import { HaarentfernungProcess } from "@/components/haarentfernung/Process";
 import { HaarentfernungFaq } from "@/components/haarentfernung/Faq";
 import { HaarentfernungPunctuality } from "@/components/haarentfernung/Punctuality";
-import { HaarentfernungCancellationPolicy } from "@/components/haarentfernung/CancellationPolicy";
 import { HaarentfernungFinalCta } from "@/components/haarentfernung/FinalCta";
 
 export const metadata: Metadata = {
@@ -48,7 +47,6 @@ export default function HaarentfernungPage() {
       <HaarentfernungProcess />
       <HaarentfernungFaq />
       <HaarentfernungPunctuality />
-      <HaarentfernungCancellationPolicy />
       <HaarentfernungFinalCta />
     </>
   );
