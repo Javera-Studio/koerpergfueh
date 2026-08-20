@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { qualifications, carinaTeamNote } from "@/lib/data/business";
 import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 
@@ -17,17 +18,33 @@ export function FusspflegeTrust() {
               aspect="aspect-[4/5]"
               className="w-full"
               parallax
+              image={{
+                src: "/images/victoria1.jpg",
+                alt: "Viktoria Ollinger, Inhaberin von Körpergfüh, in ihrem Studio in Lambach",
+                sizes: "(min-width: 1024px) 400px, 90vw",
+              }}
             />
-            <div className="absolute inset-x-4 -bottom-6 z-10 rounded-sm bg-cream px-4 py-3 ring-1 ring-mint-pale">
-              <p className="font-sans text-sm font-medium text-petrol">
-                {carinaTeamNote.name}
-              </p>
-              <p className="font-sans text-xs text-petrol/60">
-                {carinaTeamNote.role}
-              </p>
-              <p className="mt-2 font-sans text-xs leading-relaxed text-petrol/70">
-                {carinaTeamNote.text}
-              </p>
+            <div className="absolute inset-x-4 -bottom-6 z-10 flex items-center gap-3 rounded-sm bg-cream px-4 py-3 ring-1 ring-mint-pale">
+              <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full">
+                <Image
+                  src="/images/carina.jpg"
+                  alt="Carina, Praktikantin in der Fußpflege bei Körpergfüh"
+                  fill
+                  sizes="40px"
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <p className="font-sans text-sm font-medium text-petrol">
+                  {carinaTeamNote.name}
+                </p>
+                <p className="font-sans text-xs text-petrol/60">
+                  {carinaTeamNote.role}
+                </p>
+                <p className="mt-2 font-sans text-xs leading-relaxed text-petrol/70">
+                  {carinaTeamNote.text}
+                </p>
+              </div>
             </div>
           </div>
 
