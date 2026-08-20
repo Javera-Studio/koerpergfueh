@@ -32,7 +32,7 @@ export function FusspflegeMainTreatments() {
             </p>
 
             {treatment.includes.length > 0 && (
-              <ul className="mt-8 flex flex-col gap-2 lg:mt-0 lg:self-start">
+              <ul className="mt-10 flex flex-col gap-2 lg:mt-0 lg:self-start lg:pt-4">
                 {treatment.includes.map((item, index) => (
                   <li
                     key={item}
