@@ -7,7 +7,9 @@ export function FusspflegeTransition() {
             INDIVIDUELL FÜR DEINE FÜSSE
           </p>
           <h2 className="mt-4 font-display text-4xl leading-snug text-petrol sm:text-5xl">
-            Deine Füße sind individuell. Deine Fußpflege sollte es auch sein.
+            Deine Füße sind individuell.
+            <br />
+            Deine Fußpflege sollte es auch sein.
           </h2>
           <div className="mt-8 flex flex-col gap-5 font-sans text-lg leading-relaxed text-petrol/80">
             <p>
