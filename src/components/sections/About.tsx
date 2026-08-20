@@ -9,8 +9,8 @@ import { BotanicalWatermark } from "@/components/ui/BotanicalWatermark";
 
 export function About() {
   const [firstParagraph, ...restParagraphs] = viktoriaIntro.paragraphs;
-  const closingParagraphs = restParagraphs.slice(-2);
-  const middleParagraphs = restParagraphs.slice(0, -2);
+  const closingParagraph = restParagraphs[restParagraphs.length - 1];
+  const middleParagraphs = restParagraphs.slice(0, -1);
 
   return (
     <section
@@ -67,12 +67,10 @@ export function About() {
                 Serifenschrift, dezentes goldenes Anführungszeichen statt
                 Bewertungs-Optik. */}
             <div className="mx-auto mt-10 max-w-[580px] lg:mx-0">
-              <div className="flex flex-col gap-5 font-sans text-lg leading-relaxed text-petrol/80">
-                {closingParagraphs.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
-              </div>
-              <div className="relative mt-8 max-w-md">
+              <p className="font-sans text-lg leading-relaxed text-petrol/80">
+                {closingParagraph}
+              </p>
+              <div className="relative mt-16 max-w-md">
                 <span
                   aria-hidden
                   className="absolute -left-2 -top-6 font-display text-6xl leading-none text-gold/50"

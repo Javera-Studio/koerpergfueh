@@ -14,7 +14,10 @@ const cardTones = {
 
 function Stars({ rating, dark }: { rating: number; dark?: boolean }) {
   return (
-    <p className={dark ? "text-gold/90" : "text-gold"} aria-hidden>
+    <p
+      className={`text-sm ${dark ? "text-gold/90" : "text-gold"}`}
+      aria-hidden
+    >
       {"★".repeat(rating)}
       {"☆".repeat(5 - rating)}
     </p>
@@ -25,7 +28,7 @@ function QuoteMark({ dark }: { dark?: boolean }) {
   return (
     <span
       aria-hidden
-      className={`font-display text-6xl leading-none ${dark ? "text-gold/40" : "text-gold/30"}`}
+      className={`font-display text-4xl leading-none ${dark ? "text-gold/40" : "text-gold/30"}`}
     >
       “
     </span>
@@ -51,53 +54,53 @@ export function Testimonials() {
         <Signature className="block" color="gold">
           Was Kundinnen sagen
         </Signature>
-        <h2 className="mt-4 font-display text-4xl leading-snug text-petrol sm:text-5xl">
+        <h2 className="mt-4 font-display text-3xl leading-snug text-petrol sm:text-4xl">
           5 Sterne für Körpergfüh.
         </h2>
-        <div className="mt-6 flex flex-col items-center gap-1">
+        <div className="mt-5 flex flex-col items-center gap-1">
           <Stars rating={Math.round(googleRating.average)} />
-          <span className="font-sans text-sm text-petrol/70">
+          <span className="font-sans text-xs text-petrol/70">
             {googleRating.average.toLocaleString("de-AT", {
               minimumFractionDigits: 1,
             })}{" "}
             von 5 Sternen auf Google
           </span>
-          <span className="mt-1 font-sans text-xs uppercase tracking-[0.2em] text-petrol/40">
+          <span className="mt-1 font-sans text-[10px] uppercase tracking-[0.2em] text-petrol/40">
             Google Bewertungen
           </span>
         </div>
       </div>
 
-      <div className="mt-16 grid gap-6 lg:grid-cols-6 lg:items-start">
+      <div className="mt-12 grid gap-5 lg:grid-cols-6 lg:items-start">
         {/* Featured: große Karte links, dunkles Petrol als bewusster Anker */}
         <blockquote
-          className={`reveal reveal-d1 relative flex flex-col justify-between rounded-2xl p-7 sm:p-8 lg:col-span-3 ${cardTones.petrol}`}
+          className={`reveal reveal-d1 relative flex flex-col justify-between rounded-xl p-5 sm:p-6 lg:col-span-3 ${cardTones.petrol}`}
         >
           <div>
             <QuoteMark dark />
             <Stars rating={featured.rating ?? 5} dark />
-            <p className="mt-4 whitespace-pre-line font-display text-lg leading-relaxed text-cream sm:text-xl">
+            <p className="mt-3 whitespace-pre-line font-display text-base leading-relaxed text-cream sm:text-lg">
               {featured.text}
             </p>
           </div>
-          <footer className="mt-6 border-t border-cream/20 pt-4 font-sans text-sm font-medium text-cream/90">
+          <footer className="mt-5 border-t border-cream/20 pt-3 font-sans text-xs font-medium text-cream/90">
             {featured.name}
           </footer>
         </blockquote>
 
-        <div className="flex flex-col gap-6 lg:col-span-3">
+        <div className="flex flex-col gap-5 lg:col-span-3">
           {secondaryA && (
             <blockquote
-              className={`reveal reveal-d2 relative flex flex-col justify-between rounded-2xl p-7 ${cardTones.mint}`}
+              className={`reveal reveal-d2 relative flex flex-col justify-between rounded-xl p-5 ${cardTones.mint}`}
             >
               <div>
                 <QuoteMark />
                 <Stars rating={secondaryA.rating ?? 5} />
-                <p className="mt-3 font-sans text-base leading-relaxed text-petrol/85">
+                <p className="mt-2.5 font-sans text-sm leading-relaxed text-petrol/85">
                   {secondaryA.text}
                 </p>
               </div>
-              <footer className="mt-5 font-sans text-sm font-medium text-petrol">
+              <footer className="mt-4 font-sans text-xs font-medium text-petrol">
                 {secondaryA.name}
               </footer>
             </blockquote>
@@ -105,16 +108,16 @@ export function Testimonials() {
 
           {secondaryB && (
             <blockquote
-              className={`reveal reveal-d3 relative flex flex-col justify-between rounded-2xl p-7 ${cardTones.cream}`}
+              className={`reveal reveal-d3 relative flex flex-col justify-between rounded-xl p-5 ${cardTones.cream}`}
             >
               <div>
                 <QuoteMark />
                 <Stars rating={secondaryB.rating ?? 5} />
-                <p className="mt-3 font-sans text-base leading-relaxed text-petrol/85">
+                <p className="mt-2.5 font-sans text-sm leading-relaxed text-petrol/85">
                   {secondaryB.text}
                 </p>
               </div>
-              <footer className="mt-5 font-sans text-sm font-medium text-petrol">
+              <footer className="mt-4 font-sans text-xs font-medium text-petrol">
                 {secondaryB.name}
               </footer>
             </blockquote>
@@ -123,23 +126,23 @@ export function Testimonials() {
       </div>
 
       {others.length > 0 && (
-        <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {others.map((testimonial, index) => {
             const tone =
               index % 2 === 0 ? cardTones.greige : cardTones.mint;
             return (
               <blockquote
                 key={testimonial.name}
-                className={`reveal reveal-d${((index + 3) % 4) + 1} relative flex flex-col justify-between rounded-2xl p-7 ${tone}`}
+                className={`reveal reveal-d${((index + 3) % 4) + 1} relative flex flex-col justify-between rounded-xl p-5 ${tone}`}
               >
                 <div>
                   <QuoteMark />
                   <Stars rating={testimonial.rating ?? 5} />
-                  <p className="mt-3 font-sans text-base leading-relaxed text-petrol/85">
+                  <p className="mt-2.5 font-sans text-sm leading-relaxed text-petrol/85">
                     {testimonial.text}
                   </p>
                 </div>
-                <footer className="mt-5 font-sans text-sm font-medium text-petrol">
+                <footer className="mt-4 font-sans text-xs font-medium text-petrol">
                   {testimonial.name}
                 </footer>
               </blockquote>
