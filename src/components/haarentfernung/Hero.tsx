@@ -13,12 +13,12 @@ export function HaarentfernungHero() {
     <section className="mx-auto max-w-6xl px-6 pt-16 pb-8 lg:px-10 lg:pt-24">
       <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
         <div>
-          <p className="font-sans text-xs font-medium tracking-[0.2em] text-mint-deep">
+          <h1 className="font-sans text-xs font-medium tracking-[0.2em] text-mint-deep">
             DAUERHAFTE HAARENTFERNUNG IN LAMBACH
-          </p>
-          <h1 className="mt-4 font-display text-4xl leading-tight text-petrol sm:text-5xl lg:text-6xl">
-            Glatte Haut. Ohne ständig daran denken zu müssen.
           </h1>
+          <p className="mt-4 font-display text-4xl leading-tight text-petrol sm:text-5xl lg:text-6xl">
+            Glatte Haut. Ohne ständig daran denken zu müssen.
+          </p>
           <p className="mt-6 font-sans text-lg leading-relaxed text-petrol/80">
             Rasieren, Stoppeln und immer wieder von vorne anfangen?
             Dauerhafte Haarentfernung kann dir dabei helfen, unerwünschte

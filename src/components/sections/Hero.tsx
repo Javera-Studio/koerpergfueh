@@ -29,12 +29,12 @@ export function Hero() {
 
         <div className="relative mx-auto w-full max-w-6xl px-6 lg:px-10">
           <div className="w-full pt-14 lg:w-[56%] lg:py-0">
-            <p className="hero-intro-1 font-sans text-xs font-medium tracking-[0.2em] text-gold">
-              KÖRPERGFÜH · LAMBACH
-            </p>
+            <h1 className="hero-intro-1 font-sans text-xs font-medium tracking-[0.2em] text-gold">
+              FUSSPFLEGE &amp; DAUERHAFTE HAARENTFERNUNG · LAMBACH
+            </h1>
             <div className="hero-intro-1 mt-3 h-px w-10 bg-gold" />
 
-            <h1 className="hero-intro-2 mt-5 max-w-md font-display text-4xl leading-tight text-petrol sm:text-5xl lg:text-[3.25rem]">
+            <p className="hero-intro-2 mt-5 max-w-md font-display text-4xl leading-tight text-petrol sm:text-5xl lg:text-[3.25rem]">
               Gepflegte Füße.
               <br />
               Glatte Haut.
@@ -42,7 +42,7 @@ export function Hero() {
               Und Zeit,
               <br />
               dich wohlzufühlen.
-            </h1>
+            </p>
             <p className="hero-intro-3 mt-5 max-w-sm font-sans text-base text-petrol/80 sm:text-lg">
               Professionelle Fußpflege &amp; dauerhafte Haarentfernung in
               Lambach.
