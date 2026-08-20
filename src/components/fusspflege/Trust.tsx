@@ -10,7 +10,7 @@ export function FusspflegeTrust() {
           {/* Gemeinsames Foto statt reinem Viktoria-Portrait: Carina wird
               hier sympathisch sichtbar, aber klar untergeordnet – nur eine
               kleine, überlappende Notiz, keine eigene große Card. */}
-          <div className="relative mx-auto max-w-sm lg:order-2 lg:mx-0">
+          <div className="relative order-2 mx-auto max-w-sm lg:order-2 lg:mx-0">
             <ImagePlaceholder
               label="Viktoria & Carina"
               offset="top-left"
@@ -48,7 +48,7 @@ export function FusspflegeTrust() {
             </div>
           </div>
 
-          <div className="lg:order-1">
+          <div className="order-1 lg:order-1">
             <h2 className="font-display text-4xl leading-snug text-petrol sm:text-5xl">
               Bei deinen Füßen zählt nicht nur die Behandlung. Sondern auch,
               wem du sie anvertraust.
