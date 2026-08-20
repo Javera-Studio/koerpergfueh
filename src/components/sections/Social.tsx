@@ -11,7 +11,7 @@ export function Social() {
   if (business.socials.length === 0) return null;
 
   return (
-    <section className="border-y border-mint-pale/60 bg-cream">
+    <section className="bg-greige/50">
       <div className="mx-auto max-w-3xl px-6 py-16 text-center lg:px-10">
         <h2 className="reveal font-display text-2xl text-petrol sm:text-3xl">
           {socialTeaser.heading}
@@ -20,7 +20,7 @@ export function Social() {
           {socialTeaser.text}
         </p>
 
-        <div className="reveal reveal-d2 mt-6 flex items-center justify-center gap-6">
+        <div className="reveal reveal-d2 mt-7 flex items-center justify-center gap-8">
           {business.socials.map((social) => (
             <a
               key={social.href}
@@ -31,9 +31,9 @@ export function Social() {
               className="text-petrol/50 transition-colors duration-300 hover:text-gold"
             >
               {social.label === "Instagram" ? (
-                <InstagramIcon className="h-5 w-5" />
+                <InstagramIcon className="h-8 w-8" />
               ) : (
-                <FacebookIcon className="h-5 w-5" />
+                <FacebookIcon className="h-8 w-8" />
               )}
             </a>
           ))}
