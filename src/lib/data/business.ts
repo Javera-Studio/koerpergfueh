@@ -1,6 +1,10 @@
 // Zentrale Unternehmensdaten – Körpergfüh by Viki
 // Alle Kontakt-, Adress- und Öffnungszeiten-Angaben ausschließlich hier pflegen.
 
+const whatsappNumber = "436763884671";
+const buildWhatsappHref = (message: string) =>
+  `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
 export const business = {
   name: "Körpergfüh by Viki",
   owner: "Viktoria Ollinger",
@@ -16,9 +20,14 @@ export const business = {
   phoneHref: "tel:+436763884671",
   email: "koerpergfueh.23@gmail.com",
   emailHref: "mailto:koerpergfueh.23@gmail.com",
-  whatsappHref: `https://wa.me/436763884671?text=${encodeURIComponent(
+  whatsappHref: buildWhatsappHref(
     "Hallo Viki, ich bin über deine Website auf Körpergfüh aufmerksam geworden und hätte eine Frage zu einem Termin. 😊"
-  )}`,
+  ),
+  // Eigener, spezifischerer Vorausfüll-Text für den zentralen
+  // "Über WhatsApp Termin anfragen"-CTA unter den Leistungskarten.
+  whatsappHrefTermin: buildWhatsappHref(
+    "Hallo Viki, ich bin über deine Website auf Körpergfüh aufmerksam geworden und möchte gerne einen Termin anfragen. 😊"
+  ),
   domain: "koerpergfuel.at",
   socials: [
     { label: "Instagram", href: "https://www.instagram.com/koerpergfueh/" },
