@@ -1,6 +1,7 @@
 import { business } from "@/lib/data/business";
 import { ContactForm } from "@/components/ui/ContactForm";
 import { Signature } from "@/components/ui/Signature";
+import { InstagramIcon, FacebookIcon } from "@/components/ui/SocialIcons";
 
 export function Contact() {
   return (
@@ -24,14 +25,9 @@ export function Contact() {
             </p>
 
             <div className="mt-10 font-sans text-base text-petrol">
-              <p className="font-medium">{business.owner}</p>
-              <p className="mt-1 text-petrol/80">{business.address.street}</p>
-              <p className="text-petrol/80">
-                {business.address.zip} {business.address.city}
-              </p>
               <a
                 href={business.phoneHref}
-                className="mt-3 block font-medium text-mint-deep transition-colors hover:text-gold"
+                className="block font-medium text-mint-deep transition-colors hover:text-gold"
               >
                 {business.phone}
               </a>
@@ -41,6 +37,27 @@ export function Contact() {
               >
                 {business.email}
               </a>
+
+              {business.socials.length > 0 && (
+                <div className="mt-4 flex items-center gap-5">
+                  {business.socials.map((social) => (
+                    <a
+                      key={social.href}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={social.label}
+                      className="text-gold/70 transition-colors duration-300 hover:text-gold"
+                    >
+                      {social.label === "Instagram" ? (
+                        <InstagramIcon className="h-5 w-5" />
+                      ) : (
+                        <FacebookIcon className="h-5 w-5" />
+                      )}
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
 
