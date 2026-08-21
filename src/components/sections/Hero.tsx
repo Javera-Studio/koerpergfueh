@@ -62,18 +62,6 @@ export function Hero() {
                 >
                   Behandlungen entdecken
                 </Link>
-                <Link
-                  href="/#kontakt"
-                  className="group inline-flex items-center gap-1.5 border-b border-gold pb-0.5 font-sans text-sm font-medium text-petrol transition-colors hover:text-mint-deep"
-                >
-                  Termin anfragen
-                  <span
-                    aria-hidden
-                    className="motion-safe:transition-transform motion-safe:duration-300 motion-safe:ease-out motion-safe:group-hover:translate-x-1"
-                  >
-                    →
-                  </span>
-                </Link>
               </div>
             </div>
           </div>
