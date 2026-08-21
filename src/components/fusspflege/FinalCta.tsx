@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { business } from "@/lib/data/business";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppFloatingButton";
 
 export function FusspflegeFinalCta() {
   return (
@@ -26,10 +27,13 @@ export function FusspflegeFinalCta() {
             Termin anfragen
           </Link>
           <a
-            href={business.phoneHref}
-            className="font-sans text-sm font-medium text-mint-deep hover:underline"
+            href={business.whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-mint-deep px-6 py-3 font-sans text-sm font-medium text-mint-deep transition-colors hover:bg-mint-deep hover:text-cream"
           >
-            {business.phone}
+            <WhatsAppIcon className="h-4 w-4" />
+            Über WhatsApp anfragen
           </a>
         </div>
 
@@ -47,14 +51,6 @@ export function FusspflegeFinalCta() {
             →
           </span>
         </Link>
-
-        <div className="mt-6 font-sans text-sm text-petrol/70">
-          <p className="font-medium text-petrol">{business.name}</p>
-          <p>{business.address.street}</p>
-          <p>
-            {business.address.zip} {business.address.city}
-          </p>
-        </div>
       </div>
     </section>
   );
