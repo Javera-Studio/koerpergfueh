@@ -19,21 +19,15 @@ export function FusspflegeFinalCta() {
           brauchen.
         </p>
 
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-6">
-          <Link
-            href="/#kontakt"
-            className="rounded-full bg-mint px-7 py-3 font-sans text-sm font-medium text-petrol transition-colors hover:bg-mint-deep hover:text-cream"
-          >
-            Termin anfragen
-          </Link>
+        <div className="mt-10 flex justify-center">
           <a
             href={business.whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-mint-deep px-6 py-3 font-sans text-sm font-medium text-mint-deep transition-colors hover:bg-mint-deep hover:text-cream"
+            className="inline-flex items-center gap-2 rounded-full bg-mint px-7 py-3 font-sans text-sm font-medium text-petrol transition-colors hover:bg-mint-deep hover:text-cream"
           >
             <WhatsAppIcon className="h-4 w-4" />
-            Über WhatsApp anfragen
+            Per WhatsApp schreiben
           </a>
         </div>
 

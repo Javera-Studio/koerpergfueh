@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { business } from "@/lib/data/business";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppFloatingButton";
 
 export function HaarentfernungFinalCta() {
   return (
@@ -20,12 +22,15 @@ export function HaarentfernungFinalCta() {
         </p>
 
         <div className="mt-10 flex justify-center">
-          <Link
-            href="/#kontakt"
-            className="rounded-full bg-mint px-7 py-3 font-sans text-sm font-medium text-petrol transition-colors hover:bg-mint-deep hover:text-cream"
+          <a
+            href={business.whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-mint px-7 py-3 font-sans text-sm font-medium text-petrol transition-colors hover:bg-mint-deep hover:text-cream"
           >
-            Termin anfragen
-          </Link>
+            <WhatsAppIcon className="h-4 w-4" />
+            Per WhatsApp schreiben
+          </a>
         </div>
 
         <Link

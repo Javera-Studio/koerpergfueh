@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { business } from "@/lib/data/business";
 
 /**
  * Bewusst ohne Bild: Sobald ein echtes Foto von Viktoria für diesen Bereich
@@ -34,12 +34,14 @@ export function HaarentfernungPersonalCare() {
             </p>
           </div>
 
-          <Link
-            href="/#kontakt"
+          <a
+            href={business.whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-8 inline-block rounded-full bg-mint px-7 py-3 font-sans text-sm font-medium text-petrol transition-colors hover:bg-mint-deep hover:text-cream"
           >
             Frage vorab stellen
-          </Link>
+          </a>
         </div>
       </div>
     </section>
