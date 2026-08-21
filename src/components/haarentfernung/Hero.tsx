@@ -47,12 +47,12 @@ export function HaarentfernungHero() {
           offset="top-right"
           rectTone="mint"
           aspect="aspect-[4/3]"
-          className="mx-auto max-w-[480px] lg:mx-0"
+          className="mx-auto max-w-[576px] lg:mx-0"
           image={{
             src: "/images/haarentfernung-hero.jpg",
             alt: "Dauerhafte Haarentfernung am Bein bei Körpergfüh by Viki in Lambach",
             preload: true,
-            sizes: "(min-width: 1024px) 480px, 90vw",
+            sizes: "(min-width: 1024px) 576px, 90vw",
             objectPosition: "object-[50%_35%]",
           }}
         />
