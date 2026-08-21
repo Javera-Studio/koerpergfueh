@@ -3,17 +3,32 @@
 
 export const acceptingNewCustomers = true; // Neukundenstatus zentral steuerbar
 
-// Wortgetreu freigegebener Text für die "Mit besonderer Sorgfalt"-Section
-// (SensitiveCare.tsx). Bewusst keine medizinischen Aussagen/Heilversprechen
-// ergänzen oder Behandlungen als während einer Krebstherapie geeignet
-// darstellen – vermittelt Sorgfalt/Erfahrung, keine medizinische Sicherheit.
-export const sensitiveCare = {
-  eyebrow: "MIT BESONDERER SORGFALT",
+// Wortgetreu freigegebener Text für die zusammengeführte
+// Onkologisch-kosmetische-Fußpflege-Section (Oncology.tsx). Bewusst keine
+// medizinischen Aussagen/Heilversprechen ergänzen oder Behandlungen als
+// während einer Krebstherapie medizinisch geeignet darstellen – vermittelt
+// Sorgfalt/Erfahrung, keine medizinische Sicherheit.
+export const oncologyCare = {
+  eyebrow: "ONKOLOGISCH-KOSMETISCHE FUSSPFLEGE",
   heading: "Wenn deine Füße besondere Aufmerksamkeit brauchen.",
-  text: "Gerade in sensiblen Lebensphasen darf Fußpflege mehr sein als reine Pflege. Mir ist wichtig, mir Zeit zu nehmen, genau hinzusehen und die Behandlung behutsam an deine persönliche Situation anzupassen.",
-  highlight:
-    "Auch während oder nach einer onkologischen Erkrankung können sich die Bedürfnisse von Haut, Nägeln und Füßen verändern. Ein besonders sorgfältiger und einfühlsamer Umgang ist mir deshalb wichtig.",
-  cta: "Persönlich anfragen",
+  paragraphs: [
+    "Als zertifizierte onkologische Fußpflegerin weiß ich, dass sich Haut, Nägel und Füße während oder nach einer Krebserkrankung und insbesondere durch bestimmte Therapien verändern können.",
+    "Deshalb nehme ich mir bewusst Zeit, deine aktuelle Situation anzusehen und die Behandlung individuell darauf abzustimmen. Mit Fachwissen, Ruhe und Einfühlungsvermögen möchte ich dafür sorgen, dass du dich nicht nur fachlich gut betreut, sondern auch menschlich gut aufgehoben fühlst.",
+  ],
+  imageQuote: "Besondere Lebensphasen brauchen besondere Sorgfalt.",
+  includesHeading: "Was zu dieser besonderen Betreuung gehört",
+  includes: [
+    "Individuelle Begutachtung",
+    "Fußinspektion",
+    "Anamnese",
+    "Verlaufsdokumentation",
+    "Individuell abgestimmte Fußpflege",
+  ],
+  treatmentTitle: "Onkologisch-kosmetische Fußpflege",
+  price: "74 €",
+  questionText:
+    "Du bist dir unsicher oder möchtest vor deinem ersten Termin etwas mit mir besprechen? Manche Fragen lassen sich am besten persönlich klären.",
+  cta: "Frage vorab stellen",
 } as const;
 
 export const mainTreatments = [
@@ -57,18 +72,6 @@ export const mainTreatments = [
     cta: "Termin anfragen",
   },
 ] as const;
-
-export const oncologyTreatment = {
-  title: "Onkologisch-kosmetische Fußpflege",
-  includes: [
-    "individuelle Begutachtung",
-    "Fußinspektion",
-    "Anamnese",
-    "Verlaufsdokumentation",
-    "individuell abgestimmte Fußpflege",
-  ],
-  price: "74 €",
-} as const;
 
 export const nailAndProblemServices = [
   { label: "Eingewachsener Nagel", price: "20 € je" },

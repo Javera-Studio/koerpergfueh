@@ -8,7 +8,6 @@ import { FusspflegePainpoints } from "@/components/fusspflege/Painpoints";
 import { FusspflegeAtmospherePhoto } from "@/components/fusspflege/AtmospherePhoto";
 import { FusspflegeTransition } from "@/components/fusspflege/Transition";
 import { FusspflegeMainTreatments } from "@/components/fusspflege/MainTreatments";
-import { FusspflegeSensitiveCare } from "@/components/fusspflege/SensitiveCare";
 import { FusspflegeOncology } from "@/components/fusspflege/Oncology";
 import { FusspflegeMoreServices } from "@/components/fusspflege/MoreServices";
 import { FusspflegeManicure } from "@/components/fusspflege/Manicure";
@@ -44,7 +43,6 @@ export default function FusspflegePage() {
       <FusspflegeAtmospherePhoto />
       <FusspflegeTransition />
       <FusspflegeMainTreatments />
-      <FusspflegeSensitiveCare />
       <FusspflegeOncology />
       <FusspflegeMoreServices />
       <FusspflegeManicure />
