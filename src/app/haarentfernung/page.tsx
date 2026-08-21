@@ -9,6 +9,7 @@ import { HaarentfernungAtmospherePhoto } from "@/components/haarentfernung/Atmos
 import { HaarentfernungSolution } from "@/components/haarentfernung/Solution";
 import { HaarentfernungPricing } from "@/components/haarentfernung/Pricing";
 import { HaarentfernungNinePlusOne } from "@/components/haarentfernung/NinePlusOne";
+import { HaarentfernungFullBodyPhoto } from "@/components/haarentfernung/FullBodyPhoto";
 import { HaarentfernungPackages } from "@/components/haarentfernung/Packages";
 import { HaarentfernungPersonalCare } from "@/components/haarentfernung/PersonalCare";
 import { HaarentfernungProcess } from "@/components/haarentfernung/Process";
@@ -44,6 +45,7 @@ export default function HaarentfernungPage() {
       <HaarentfernungSolution />
       <HaarentfernungPricing />
       <HaarentfernungNinePlusOne />
+      <HaarentfernungFullBodyPhoto />
       <HaarentfernungPackages />
       <HaarentfernungPersonalCare />
       <HaarentfernungProcess />
