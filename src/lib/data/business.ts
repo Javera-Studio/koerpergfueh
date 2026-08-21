@@ -16,6 +16,9 @@ export const business = {
   phoneHref: "tel:+436763884671",
   email: "koerpergfueh.23@gmail.com",
   emailHref: "mailto:koerpergfueh.23@gmail.com",
+  whatsappHref: `https://wa.me/436763884671?text=${encodeURIComponent(
+    "Hallo Viki, ich bin über deine Website auf Körpergfüh aufmerksam geworden und hätte eine Frage zu einem Termin. 😊"
+  )}`,
   domain: "koerpergfuel.at",
   socials: [
     { label: "Instagram", href: "https://www.instagram.com/koerpergfueh/" },

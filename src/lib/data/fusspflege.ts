@@ -3,6 +3,19 @@
 
 export const acceptingNewCustomers = true; // Neukundenstatus zentral steuerbar
 
+// Wortgetreu freigegebener Text für die "Mit besonderer Sorgfalt"-Section
+// (SensitiveCare.tsx). Bewusst keine medizinischen Aussagen/Heilversprechen
+// ergänzen oder Behandlungen als während einer Krebstherapie geeignet
+// darstellen – vermittelt Sorgfalt/Erfahrung, keine medizinische Sicherheit.
+export const sensitiveCare = {
+  eyebrow: "MIT BESONDERER SORGFALT",
+  heading: "Wenn deine Füße besondere Aufmerksamkeit brauchen.",
+  text: "Gerade in sensiblen Lebensphasen darf Fußpflege mehr sein als reine Pflege. Mir ist wichtig, mir Zeit zu nehmen, genau hinzusehen und die Behandlung behutsam an deine persönliche Situation anzupassen.",
+  highlight:
+    "Auch während oder nach einer onkologischen Erkrankung können sich die Bedürfnisse von Haut, Nägeln und Füßen verändern. Ein besonders sorgfältiger und einfühlsamer Umgang ist mir deshalb wichtig.",
+  cta: "Persönlich anfragen",
+} as const;
+
 export const mainTreatments = [
   {
     title: "Basisfußpflege",
